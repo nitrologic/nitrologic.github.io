@@ -1,4 +1,4 @@
-// nitrologic markup.js
+// markup.js
 // (C)2024 nitrologic
 // ALL RIGHTS RESERVED
 

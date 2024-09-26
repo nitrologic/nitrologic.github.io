@@ -1,8 +1,10 @@
-// nitro.js
+// nitrologic.js
+// (C)2024 nitrologic
+// ALL RIGHTS RESERVED
 
 async function getPage(url){
 	try {
-		const response = await fetch(url);
+		const response = await fetch(url,{headers: {"Content-Type": "text/markdown", "Accept": "text/markdown"}});
 		if (!response.ok) {
 		  throw new Error(`Response status: ${response.status}`);
 		}
