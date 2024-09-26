@@ -236,6 +236,7 @@ function markdownLine(line){
 		const raw=split[1];
 		if(raw){
 			let content=escapeHTML(raw);
+			content=markList(content,'*',"<li bulle>","</li>");
 			content=markTags(content,'**','<strong>','</strong>');
 			content=markTags(content,'__','<strong>','</strong>');
 			content=markTags(content,'*','<em>','</em>');
@@ -270,6 +271,13 @@ function markdownCells(cells){
 	}
 	html+="</tr>\n";
 	return html;
+}
+
+function markList(line,prefix,pre,post){
+	if(line.startsWith(prefix)){
+		return pre+line.substring(1)+post;
+	}	
+	return line;
 }
 
 function markTags(raw,sep,pre,post){
