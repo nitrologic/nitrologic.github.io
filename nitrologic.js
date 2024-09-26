@@ -8,7 +8,7 @@ async function getPage(url){
 		if (!response.ok) {
 		  throw new Error(`Response status: ${response.status}`);
 		}
-		const markdown = await response.text;
+		const markdown = await response.text();
 		console.log(markdown);
 		
 	} catch (error) {
