@@ -272,8 +272,6 @@ function markdownCells(cells){
 	return html;
 }
 
-// copilot was here with odd check...
-
 function markTags(raw,sep,pre,post){
 	var bits=raw.split(sep);
 	if(bits.length>1){
@@ -282,10 +280,6 @@ function markTags(raw,sep,pre,post){
 			raw+=bits[i]+pre+bits[i+1]+post;
 		}
 	}
-	// Include the last part if the number of parts is odd
-	if (bits.length&1) {
-//		raw += bits[bits.length - 1];
-	}	
 	return raw;
 }
 
