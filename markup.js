@@ -272,3 +272,98 @@ function markdownLine(line){
 	}
 	return buffer;
 }
+
+
+function markUp(md){
+    var lines=md?md.split("\n"):[""];
+    var html="";
+    var incode=false;
+    var fenced=false;
+    var lang="";
+    var intable=false;
+    var header=null;
+    var pre=[];
+    var latex={};
+    for(var line of lines){
+        var fence=line.startsWith("```")
+        if (fenced){
+            if(fence){
+                switch(lang){
+                    case "latex":
+                        var tex=pre.join(" \\\\\n");
+                        var markup = katex.renderToString(tex, {throwOnError: false, displayMode:true});
+                        html+=markup;
+                        break;	
+                    case "csv":
+                        html+=csvHTML(pre);
+                        break
+                    case "html":
+                        html+=pre.join("\n");
+                        break;
+                    default:
+                        var raw=escapeHTML(pre.join("\n"));
+                        html+="<pre>"+raw+"</pre>";
+                }
+                pre=[];
+                fenced=false;
+            }else{
+                pre.push(line);
+            }
+            continue;
+        }else{
+            if(fence){
+                lang=line.substring(3);
+                fenced=true;
+                continue;
+            }
+        }
+        var dented=line.startsWith('\t') || line.startsWith("    ");
+        if(dented){
+            if(!incode){					
+                html+="<pre>\n";
+                incode=true;
+            }
+            html+=line+"\n";
+        }else{
+            if(incode){
+                html+="</pre>\n";
+                incode=false;
+            }
+            var cells=line.split('|');
+            if(cells.length>1){
+                if(!intable){
+                    html+="<table>";
+                    intable=true;
+                    header=cells;
+                    continue;						
+                }
+                if(header){
+                    var dashes=cells[0].includes('---');
+                    if(dashes){
+                        html+="<thead>";
+                        html+=markdownHeaders(header,dashes);
+                        html+="</thead><tbody>";
+                        header=null;
+                        continue;
+                    }else{
+                        html+="<tbody>";
+                        html+=markdownCells(header);
+                    }
+                    header=null;
+                }
+                html+=markdownCells(cells);
+            }else{
+                if(header){
+                    html+=markdownCells(header);
+                    header=null;
+                }
+                if(intable){
+                    html+="</tbody></table>"
+                    intable=false;
+                }
+                html+=markdownLine(line);
+            }
+        }
+    }
+    return html;
+}

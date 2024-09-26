@@ -9,7 +9,11 @@ async function getPage(url){
 		  throw new Error(`Response status: ${response.status}`);
 		}
 		const markdown = await response.text();
-		console.log(markdown);
+//		console.log(markdown);
+		const markup = markUp(markdown);
+
+		const div = document.getElementById("content1");
+		div.innerHTML = markup;
 		
 	} catch (error) {
 		console.error(error.message);
