@@ -236,7 +236,7 @@ function markdownLine(line){
 		const raw=split[1];
 		if(raw){
 			let content=escapeHTML(raw);
-			content=markList(content,'*',"<li bulle>","</li>");
+			content=markList(content,'*',"<li>","</li>");
 			content=markTags(content,'**','<strong>','</strong>');
 			content=markTags(content,'__','<strong>','</strong>');
 			content=markTags(content,'*','<em>','</em>');
