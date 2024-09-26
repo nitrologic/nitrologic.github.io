@@ -8,8 +8,8 @@ async function getPage(url){
 		if (!response.ok) {
 		  throw new Error(`Response status: ${response.status}`);
 		}
-		const json = await response.json();
-		console.log(json);
+		const markdown = await response.text;
+		console.log(markdown);
 		
 	} catch (error) {
 		console.error(error.message);
