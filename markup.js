@@ -103,28 +103,6 @@ function escapeChars(text){
 	return text;
 }
 
-function markdownHeaders(cells,dashes){
-	var html="<tr>";
-	var n=cells.length;
-	for(var i=0;i<n;i++){
-		var cell=cells[i];
-		var dash=dashes[i];
-		html+="<th>"+markdownLine(cell)+"</th>\n";
-	}
-	html+="</tr>\n";
-	return html;
-}
-
-function markdownCells(cells){
-	var html="<tr>";
-	for(var cell of cells){
-		html+="<td>"+markdownLine(cell)+"</td>\n";
-	}
-	html+="</tr>\n";
-	return html;
-}
-
-
 function markdownLine(line){
 	let tabindex=1;
 	let buffer='';
@@ -273,6 +251,27 @@ function markdownLine(line){
 	return buffer;
 }
 
+function markdownHeaders(cells,dashes){
+	var html="<tr>";
+	var n=cells.length;
+	for(var i=0;i<n;i++){
+		var cell=cells[i];
+		var dash=dashes[i];
+		html+="<th>"+markdownLine(cell)+"</th>\n";
+	}
+	html+="</tr>\n";
+	return html;
+}
+
+function markdownCells(cells){
+	var html="<tr>";
+	for(var cell of cells){
+		html+="<td>"+markdownLine(cell)+"</td>\n";
+	}
+	html+="</tr>\n";
+	return html;
+}
+
 // copilot was here with odd check...
 
 function markTags(raw,sep,pre,post){
@@ -285,7 +284,7 @@ function markTags(raw,sep,pre,post){
 	}
 	// Include the last part if the number of parts is odd
 	if (bits.length&1) {
-		raw += bits[bits.length - 1];
+//		raw += bits[bits.length - 1];
 	}	
 	return raw;
 }
