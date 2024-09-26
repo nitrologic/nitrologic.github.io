@@ -1,3 +1,6 @@
 <iframe src="https://skid.nz"></iframe>
 
 <meta name="apple-mobile-web-app-capable" content="yes">   
+
+	overflow: none;
+    height: 100%;
