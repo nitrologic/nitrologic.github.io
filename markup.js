@@ -244,6 +244,7 @@ function markdownLine(line){
 			if(hash){
 				content='<h'+hash+'>'+content+'</h'+hash+'>';
 			}
+			if(content.length==0) content="<br>";
 			buffer=buffer.concat(content);
 		}else{
 //			buffer=buffer.concat("<br>");
