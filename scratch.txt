@@ -4,3 +4,22 @@
 
 	overflow: none;
     height: 100%;
+
+
+## 2023 Highlights
+
+* new factory test fixture system for local electronics industry
+* promotion of the oceania topo toitu te whenua 
+* skid30 headless Amiga 
+* Senior Developer at Serato
+* plainview 
+
+Providing proprietary tech to the local electronics industry is a real honour. 
+
+## Plainview
+
+Refreshing graphics chops and GL muscle memory in order to host a native client.
+
+Summer/New Zealand/Date (2024)
+
+Fri, 22 Dec 2023 – Wed, 20 Mar 2024

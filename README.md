@@ -1,33 +1,16 @@
 # nitrologic.github.io
-homebase for the nitrologic repository
+A homebase for the nitrologic repositories
 
-## NZ Summer 2024
+## Blog
 
-A seasonal greetings to you and your loved ones.
+An independent developer since September 2024 keeps notes.
 
-Here is a quick update on code I have been hacking on.
+### Week 3
 
-### But first
+GitHub Copilot and I have been learning about the Motorola 6800 chip.
 
-A quick recap on 2023 in which 
+In particular, the MC6800 instruction set and the Robotron 2048 video game that used a pair for it's fun and sound generators.
 
-* new factory test fixture system for local electronics industry
-* promotion of the oceania topo toitu te whenua 
-* skid30 headless Amiga 
-* Senior Developer at Serato
-* plainview 
+Pasting HTML 6800 opcode tables at the top of our header file provided Copilot with extra training for it's suggestions to be truly useful as we build disassembler and emulator functions in vanilla C++.
 
-Providing proprietary tech to the local electronics industry is a real honour. 
-
-## Plainview
-
-Refreshing graphics chops and GL muscle memory in order to host a native client.
-
-
-
-
-
-
-Summer/New Zealand/Date (2024)
-
-Fri, 22 Dec 2023 – Wed, 20 Mar 2024
+A Lightwave 2024 license has been purchased for no particular reason.
