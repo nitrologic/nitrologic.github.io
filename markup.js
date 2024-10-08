@@ -103,7 +103,18 @@ function escapeChars(text){
 	return text;
 }
 
+function markdownImage(line){
+	return '<img class="src=image/"'+line+'">';
+}
+
 function markdownLine(line){
+	const sp1=line.split(' ');
+	if(sp1.length==1){
+		if(line.endswith(".png")||line.endswith(".jpg")){
+			return maekdownImage(line);
+		}
+	}
+
 	let tabindex=1;
 	let buffer='';
 	let depth=0;
