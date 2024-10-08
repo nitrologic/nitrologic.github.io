@@ -110,8 +110,8 @@ function markdownImage(line){
 function markdownLine(line){
 	const sp1=line.split(' ');
 	if(sp1.length==1){
-		if(line.endswith(".png")||line.endswith(".jpg")){
-			return maekdownImage(line);
+		if(line.endsWith(".png")||line.endsWith(".jpg")){
+			return markdownImage(line);
 		}
 	}
 
