@@ -25,6 +25,10 @@ Too many rabbit holes appearing at Uncle Jippty Farm
 
 chatgptgood.png
 
+Tyres have been kicked and notes taken
+
+halfcarryquestion.png
+
 More research into the initial inspiration, 2 micro controller at a time.
 
 renderstargate.png
@@ -52,4 +56,9 @@ Some initial engineering on the remasters r us front
 
 modeller.png
 
-zombieapicalypse.png
+A bunch of gaming
+
+wos1.png
+chaos1.png
+chaos2.png
+
