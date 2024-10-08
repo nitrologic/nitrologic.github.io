@@ -104,7 +104,7 @@ function escapeChars(text){
 }
 
 function markdownImage(line){
-	return '<img class="src=image/"'+line+'">';
+	return '<img class="nitrologic" src="image/'+line+'">';
 }
 
 function markdownLine(line){

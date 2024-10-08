@@ -2,6 +2,13 @@
 	--bg:#333;
 }
 
+image.nitrologic {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
 html, body {
     margin: 0;
 	padding: 10px;
