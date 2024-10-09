@@ -25,7 +25,7 @@ Too many rabbit holes appearing at Uncle Jippty Farm
 
 chatgptgood.png
 
-Tyres have been kicked and notes taken
+Tyres have been kicked and notes taken, including with the wonderful chat pdf
 
 halfcarryquestion.png
 
@@ -59,6 +59,11 @@ modeller.png
 A bunch of gaming
 
 wos1.png
+
+Including finally a crack on the original Archimedes version of this beauty.
+
+https://archi.medes.live/
+
 chaos1.png
 chaos2.png
 
