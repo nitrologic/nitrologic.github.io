@@ -1,3 +1,87 @@
+			if(roagrid || topogrid) {
+				headers.append("Cache-Control","max-age=31536000, immutable");
+			}
+
+
+				if(topogrid || roagrid || path.endsWith(".gz")) {
+					const raw=await readRaw(path);
+					content=raw;
+					contentLength=raw.length;
+					contentEncoding="gzip";
+				}else if(vox){
+					const blob=await readVox(path);
+					content=JSON.stringify(blob);
+					contentLength=content.length;
+				}else if(my3d){
+					const blob=await readMy3d(path);
+					content=JSON.stringify(blob);
+					contentLength=content.length;
+				}else{
+
+
+			headers.append("X-ROA-VERSION",RoaVersion);
+			const aerialgrid=filepath.startsWith("/aerialgrid/");
+			const roagrid=filepath.startsWith("/roagrid/");
+			const topogrid=filepath.startsWith("/topogrid/");
+			const my3d=filepath.startsWith("/my3d/");
+			const vox=filepath.startsWith("/voxels/");
+            const path:string = roagrid?(RoaPath+filepath.slice(8)+".gz"):
+								topogrid?(TopoPath+filepath.slice(9)+".gz"):
+								aerialgrid?(AerialPath+filepath.slice(11)):
+								(RootPath+filepath);
+	//		console.log(extension);
+//			const rawfile=roagrid && (extension in RawEncoding);
+
+
+			if(filepath=="/fetch"){
+				const body=await request.json();
+				const reply=await onFetch(body as FetchBody);
+				await requestEvent.respondWith(reply);
+				continue;
+			}
+			const bounce=
+				BounceList.indexOf(filepath)!=-1 ||
+				filepath.indexOf("..")!=-1 ||
+				filepath.startsWith("./") ||
+				filepath.startsWith("/.git/") ||
+				filepath.endsWith(".php") ;
+
+			if(bounce){
+				const redirect=bounceRequest(filepath,origin);
+				await requestEvent.respondWith(redirect);
+				continue;
+			}
+
+
+
+//			console.log(url.pathname +" => " + filepath);
+
+			if(filepath=="/github"){
+				console.log("/github redirect to github.com to authorise");
+				const address="https://github.com/login/oauth/authorize?client_id="+git_clientid+"&state="+git_secret;
+				const redirect = Response.redirect(address,307);
+				await requestEvent.respondWith(redirect);
+				continue;
+			}
+
+			if(filepath=="/authorise-steam"){
+				const reply="";//await authoriseSteamUser(url);
+				console.log("/authorise reply:",reply);
+				const redirect=Response.redirect("https://roa.nz/");
+				await requestEvent.respondWith(redirect);
+				continue;
+			}
+
+			if(filepath=="/authorise-github"){
+				const reply=await authoriseGitUser(url);
+				console.log("/authorise reply:",reply);
+				const redirect=Response.redirect("https://roa.nz/");
+				await requestEvent.respondWith(redirect);
+				continue;
+			}
+
+
+
 <iframe src="https://skid.nz"></iframe>
 
 <meta name="apple-mobile-web-app-capable" content="yes">   
