@@ -1,6 +1,16 @@
 # nitrologic.github.io
 A homebase for the nitrologic repositories
 
+# 2025Q1
+
+## Requiem for a friend
+
+A collection of memories as I continue to reflect on more loss.
+
+Mental graphing the maxima, facing the dusk, drinking our fill.
+
+# 2024Q4
+
 ## Blog
 
 An independent developer since September 2024 keeps notes.
@@ -67,3 +77,33 @@ https://archi.medes.live/
 chaos1.png
 chaos2.png
 
+
+# Priors
+
+## Latest
+
+Punk Ethic
+
+Acid Software the video game brand was a product of the 1990s.
+
+Peak grunge, peak Amiga, peak Metallica, a post punk melee of a decade.
+
+Simon Armstrong returned to Auckland after several years in Fort Wayne Indiana.
+
+Flush with success of Color Vision point of sale system.
+
+A new lease on 10 St Kevins Arcade.
+
+Excitement over Blitz programming language by chum Mark Sibly.
+
+An office for Paul and Rod. 
+
+And a door to knock on for Chris Blackbourn.
+
+Blitz BASIC 2
+
+An Amiga development system beyond 68000 assembler.
+
+Phonebook C manuals.
+
+Intuition is off.
