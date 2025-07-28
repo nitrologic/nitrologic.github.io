@@ -1,7 +1,34 @@
 # nitrologic.github.io
 A homebase for the nitrologic repositories
 
+# 2025Q3
+
+## Slop Fountain
+
+Using Deno.js to forge yet more LLM middleware...
+
+The forge text interfaces is designed for research tools such as Slop Fountain⛲ to chat and share files with models under test.
+
+Antics of interest incoming.
+
 # 2025Q1
+
+## Synth Vicious
+
+A record button appears on my sonic side project.
+
+Built inside DSPTool which I began in 2020.
+
+Vanilla JS has plenty to offer high performance bare metal enthusiasts.
+
+* the transfer argument of MessagePort postMessage
+
+https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage
+
+The Synth Vicious project is a port from monkey2.
+
+
+
 
 ## Requiem for a friend
 
