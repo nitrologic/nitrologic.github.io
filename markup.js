@@ -1,7 +1,6 @@
 // markup.js
-// (C)2024 nitrologic
+// (C)2025 nitrologic
 // ALL RIGHTS RESERVED
-
 // https://datatracker.ietf.org/doc/html/rfc4180
 
 const github_href='/github';

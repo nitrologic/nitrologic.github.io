@@ -27,9 +27,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage
 
 The Synth Vicious project is a port from monkey2.
 
-
-
-
 ## Requiem for a friend
 
 A collection of memories as I continue to reflect on more loss.

@@ -10,7 +10,8 @@ img.nitrologic {
 }
 
 html, body {
+	background-color: #222;
     margin: 0;
-	padding: 10px;
+	padding: 20px;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
