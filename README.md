@@ -3,17 +3,9 @@ A homebase for the nitrologic repositories
 
 # 2025Q3
 
-## Slop Fountain
-
-Using Deno.js to forge yet more LLM middleware...
-
-The forge text interfaces is designed for research tools such as Slop Fountain⛲ to chat and share files with models under test.
-
-Antics of interest incoming.
-
 ## Slop Shop
 
-Alongside the LLM project is an experiment in worker scripts.
+Alongside LLM research project is an experiment in worker scripts.
 
 Text based terminals with unicode support = cool roots computing with candy.
 
@@ -48,6 +40,13 @@ The width of unicode codepoints is tracked more accurately in Slop Fountain wher
 
 ```
 
+## Slop Fountain
+
+Using Deno.js to forge yet more LLM middleware...
+
+The forge text interfaces is designed for research tools such as Slop Fountain⛲ to chat and share files with models under test.
+
+Antics of interest incoming.
 
 # 2025Q1
 
@@ -141,8 +140,6 @@ chaos2.png
 
 
 # Priors
-
-## Latest
 
 Punk Ethic
 
