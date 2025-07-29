@@ -8,7 +8,10 @@ img.nitrologic {
 	margin-right: auto;
 	max-width: 80%;
 }
-
+video{
+	display:block;
+	margin:auto;	
+}
 html, body {
 	background-color: #121;
 	color:#898;
