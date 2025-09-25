@@ -12,10 +12,14 @@ video{
 	display:block;
 	margin:auto;	
 }
+a {
+    color: #3498db;
+    text-decoration: none;
+}
 html, body {
-	background-color: #121;
+	background-color: #147;
 	color:#898;
-    margin: 0;
+	margin: 0;
 	padding: 20px;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
