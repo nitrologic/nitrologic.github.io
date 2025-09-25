@@ -21,9 +21,8 @@ async function getPage(url){
 }
 
 function load(){
-	console.log("nitro.js helloworld");
-
-	const url="README.md";
-
+	const search=location.search;
+	console.log("nitro.js helloworld"),search;
+	const url=search.length?search.substring(1):"README.md";
 	getPage(url);
 }
