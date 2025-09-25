@@ -144,8 +144,7 @@ function markdownLine(line){
 					href=name;
 					code='<a href="'+href+'" target="blank">'+name+'</a>';
 				}else if (name.startsWith("?")){
-					code='<a href="'+name+'" target="_self">'+name+'</a>';
-				}
+					code='<a href="'+name+'" target="_self">'+name+'</a>';				
 				}else if (name.startsWith("/#")){
 					// yuck - expand local anchors to json arrays
 					href="/#["+name.substring(2)+"]";
