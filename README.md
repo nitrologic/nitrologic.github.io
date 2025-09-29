@@ -2,16 +2,6 @@
 
 A homebase for the nitrologic repositories
 
-## Latest
-
-* Fountain now responds with slop.
-
-* bibli now has more interesting bits
-
-* AWS EC2 instance is back sydney.nz t3.micro
-
-Previous ramblings [?2025Q3.md]
-
 
 ## Serendipity
 
@@ -19,11 +9,21 @@ Previous ramblings [?2025Q3.md]
 
 The new services are opt in so from the AWS console we find something to click,
 
-https://media/enablenewzealand1.png
+!(media/enablenewzealand1.png)
 
 And click,
 
-https://media/enablenewzealand2.png
+!(media/enablenewzealand2.png)
 
-And wait
+And wait...
 
+
+## Previously
+
+* Fountain now responds with slop.
+
+* bibli now has more interesting bits
+
+* AWS EC2 instance is back sydney.nz t3.micro
+
+Older ramblings [?2025Q3.md]
