@@ -18,7 +18,7 @@ Second click, we locate New Zealand and voila, we Enable our new home.
 
 https://ap-southeast-6.console.aws.amazon.com/ec2/home
 
-### Step 2 EC2 instance is cheap t3.micro with 88GB NVME
+### Step 1 Select a cheap t3.micro EC2 instance and boost the storage to 88GB NVME
 
 So cheap, and as of September 2025 AWS is now a local resident. :celebrate:
 
@@ -30,9 +30,9 @@ Will update later in October with actual pricing, the spec remains the same.
 
 ![bits](media/awsec2bits.png)
 
-### Step 3 8GB SWAP
+### Step 2 8GB SWAP
 
-The following effectively doubles our RAM making Visual Studio remote sessions reliable on the small foot print t3.micro.
+The following adds 8GB of swap to our 1GB t3.micro making Visual Studio remote sessions reliable on such a small footprint.
 
 ```
 fallocate -l 8G /swapfile
@@ -40,6 +40,10 @@ chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
 ```
+
+### Step 3 nginx and certbot shenanigans
+
+Server side simon saliently slides silent style seventies sadd skills.
 
 ### Step 4 Sync grid5 geo tiles
 
