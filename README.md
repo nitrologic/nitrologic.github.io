@@ -22,7 +22,7 @@ https://ap-southeast-6.console.aws.amazon.com/ec2/home
 
 So cheap, and as of September 2025 AWS is now a local resident. :celebrate:
 
-No more hops across the Tasman for my synth vicious audio packets...
+No more hops across the Tasman for synth vicious audio packets to do the rounds.
 
 ![ping](media/pingsoutheast6.png)
 
