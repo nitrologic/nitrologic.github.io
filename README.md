@@ -9,11 +9,11 @@ A homebase for the nitrologic repositories
 
 The new services are opt in so from the AWS console we find something to click,
 
-!(media/enablenewzealand1.png)
+![enable1](media/enablenewzealand1.png)
 
 And click,
 
-!(media/enablenewzealand2.png)
+![enable2](media/enablenewzealand2.png)
 
 And wait...
 
