@@ -32,6 +32,8 @@ Will update later in October with actual pricing, the spec remains the same.
 
 ### Step 3 8GB SWAP
 
+The following effectively doubles our RAM making Visual Studio remote sessions reliable on the small foot print t3.micro.
+
 ```
 fallocate -l 8G /swapfile
 chmod 600 /swapfile
@@ -41,13 +43,18 @@ swapon /swapfile
 
 ### Step 4 Sync grid5 geo tiles
 
-continues...
+```
+rsync -az --info=progress2 /grid5 ec2-user@skid:/home/ec2-user/grid5/
+```
+
+The script must go on...
 
 ![rsync](media/sync1a.png)
 ![rsync](media/sync1b.png)
-rsync -az --info=progress2 /grid5 ec2-user@skid:/home/ec2-user/grid5/
 
-## reset the nitrologic fit3 webserver
+## Step 5 reset the nitrologic fit3 webserver
+
+Our 2024 C++ web server project jumps back into service to attempt delivery of many bare metal pings.
 
 ```
 sudo hostname -b skid
@@ -58,6 +65,10 @@ pushd dsptool/native/bin
 #gdb -ex "set print thread-events off" -ex=run ./fit3
 popd
 ```
+
+## Step 6 document the DSPHost stack
+
+Will hide the Synth Vicious project aside in order to showcase recent LLM research.
 
 Service now intermittent at https://skid.nz
 
