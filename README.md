@@ -2,24 +2,23 @@
 
 A homebase for the nitrologic repositories
 
-
 ## Serendipity
 
 > [kia ora AWS, welcome to New Zealand](https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-new-zealand-region/) - Simon Armstrong
 
-The new services are opt in so from the AWS console we find something to click,
+The new services are opt in so from the AWS console we find something to click
 
-![enable1](media/enablenewzealand1.png)
+<img src="media/enablenewzealand1.png" alt="drawing" width="200"/>
 
-And click,
+First click we select the Manage Regions
 
 ![enable2](media/enablenewzealand2.png)
 
-And voila, we have a new home.
+Second click, we locate New Zealand and voila, we Enable our new home.
 
 https://ap-southeast-6.console.aws.amazon.com/ec2/home
 
-### EC2 instance is cheap t3.micro with 88GB NVME
+### Step 2 EC2 instance is cheap t3.micro with 88GB NVME
 
 So cheap, and as of September 2025 AWS is now a local resident. :celebrate:
 
@@ -31,7 +30,7 @@ Will update later in October with actual pricing, the spec remains the same.
 
 ![bits](media/awsec2bits.png)
 
-### 8GB SWAP
+### Step 3 8GB SWAP
 
 ```
 fallocate -l 8G /swapfile
@@ -40,13 +39,28 @@ mkswap /swapfile
 swapon /swapfile
 ```
 
-### Sync grid5 geo tiles
+### Step 4 Sync grid5 geo tiles
 
 continues...
 
 ![rsync](media/sync1a.png)
 ![rsync](media/sync1b.png)
 rsync -az --info=progress2 /grid5 ec2-user@skid:/home/ec2-user/grid5/
+
+## reset the nitrologic fit3 webserver
+
+```
+sudo hostname -b skid
+sudo systemctl start redis6
+sudo service nginx start
+pushd dsptool/native/bin
+./fit3
+#gdb -ex "set print thread-events off" -ex=run ./fit3
+popd
+```
+
+Service now intermittent at https://skid.nz
+
 
 ## Previously
 
