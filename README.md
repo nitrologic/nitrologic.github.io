@@ -54,7 +54,7 @@ The script must go on...
 
 ## Step 5 reset the nitrologic fit3 webserver
 
-Our 2024 C++ web server project jumps back into service to attempt delivery of many bare metal pings.
+Our pet C++ web server fit3 jumps into service in search of bare metal pings.
 
 ```
 sudo hostname -b skid
