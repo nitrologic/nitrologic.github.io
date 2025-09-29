@@ -15,7 +15,7 @@ And click,
 
 ![enable2](media/enablenewzealand2.png)
 
-And we are home!
+And voila, we have a new home.
 
 https://ap-southeast-6.console.aws.amazon.com/ec2/home
 
@@ -26,6 +26,10 @@ So cheap, and as of September 2025 AWS is now a local resident. :celebrate:
 No more hops across the Tasman for my synth vicious audio packets...
 
 ![ping](media/pingsoutheast6.png)
+
+Will update later in October with actual pricing, the spec remains the same.
+
+![bits](media/awsec2bits.png)
 
 ### 8GB SWAP
 
@@ -38,10 +42,11 @@ swapon /swapfile
 
 ### Sync grid5 geo tiles
 
+continues...
 
-![rsync](mesida/rsync.png)
+![rsync](media/sync1a.png)
+![rsync](media/sync1b.png)
 rsync -az --info=progress2 /grid5 ec2-user@skid:/home/ec2-user/grid5/
-
 
 ## Previously
 
