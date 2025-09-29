@@ -1,3 +1,12 @@
+<video controls width="1048" height="454">
+<source src="media/shortbump.mp4" type="video/mp4" />
+</video>
+<hr>
+<div banner id="banner1">
+<img class="nitrologic" src="image/operational.gif" alt="operational" />
+</div>
+
+
 			if(roagrid || topogrid) {
 				headers.append("Cache-Control","max-age=31536000, immutable");
 			}
