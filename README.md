@@ -14,7 +14,7 @@ First click we select the Manage Regions
 
 ![enable2](media/enablenewzealand2.png)
 
-Second click, we locate New Zealand and voila, we Enable our new home.
+Second click, we locate New Zealand and voila, we bookmark our new home.
 
 https://ap-southeast-6.console.aws.amazon.com/ec2/home
 
