@@ -4,7 +4,7 @@ A homebase for the nitrologic repositories
 
 ## Serendipity
 
-> [kia ora AWS, welcome to New Zealand](https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-new-zealand-region/) - Simon Armstrong
+> [KIA ORA AWS, welcome to Asia Pacific region 6 motu](https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-new-zealand-region/) - Simon Armstrong
 
 The new services are opt in so from the AWS console we find something to click
 
@@ -30,12 +30,12 @@ Will update later in October with actual pricing, the spec remains the same.
 
 ![bits](media/awsec2bits.png)
 
-### Step 2 8GB SWAP
+### Step 2 24GB SWAP
 
-The following adds 8GB of swap to our 1GB t3.micro making Visual Studio remote sessions reliable on such a small footprint.
+The following adds 24GB of swap to our 1GB t3.micro making Visual Studio remote sessions reliable on such a small footprint.
 
 ```
-fallocate -l 8G /swapfile
+fallocate -l 24G /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
