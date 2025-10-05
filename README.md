@@ -2,6 +2,8 @@
 
 A homebase for the nitrologic repositories
 
+* DSP Tool User Guide [dsptool.md]
+
 ## Serendipity
 
 > [KIA ORA AWS, welcome to Asia Pacific region 6 motu](https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-new-zealand-region/) - Simon Armstrong
