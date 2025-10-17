@@ -2,7 +2,7 @@
 
 A homebase for the nitrologic repositories
 
-* DSP Tool User Guide [dsptool.md]
+* DSP Tool User Guide [dsptool.md](./dsptool.md)
 
 ## Serendipity
 
