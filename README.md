@@ -6,7 +6,9 @@ A homebase for the nitrologic repositories
 
 ## Serendipity
 
-> [KIA ORA AWS, welcome to Asia Pacific region 6 motu](https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-new-zealand-region/) - Simon Armstrong
+Local titans are in the hood. Woop woop.
+
+> [KIA ORA AWS, welcome to our Asia Pacific South East 6 motu](https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-new-zealand-region/) - Simon Armstrong
 
 The new services are opt in so from the AWS console we find something to click
 

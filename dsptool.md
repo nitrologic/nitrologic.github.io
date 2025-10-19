@@ -29,6 +29,22 @@ Various modules of questionable status include:
 * keys
 * synth
 * wiki
-* 
+* grid
+
+
+### synth
+
+This is third iteration of a personal noise generator,  based on synth vicious inside [skid monkey2 m2](https://github.com/nitrologic/m2) project.
+
+
+### grid
+
+Image data courtesy Land Information New Zealand
+
+https://data.linz.govt.nz/
+
+LICENSE: Creative Commons Attribution 4.0 International
+
+https://data.linz.govt.nz/license/attribution-4-0-international/
 
 ![media/grid.png](media/grid.png)
