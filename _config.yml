@@ -1,23 +1,15 @@
-# Site settings
-title: DSP Tool
-description: A media lab software stack for macro managers
-baseurl: ""  # Use "/dsptool" if serving from nitrologic.github.io/dsptool
-url: "https://nitrologic.github.io"  # Adjust if using /dsptool
+title: nitrologic archives
+description: Root pages for local software resarch
+baseurl: ""
+url: "https://nitrologic.github.io"
 author:
   name: Simon Armstrong
 
-# Disable default theme header
 show_header: false
-
-# Plugins
 plugins:
   - jekyll-seo-tag
-
-# SEO settings
 github:
   is_project_page: false  # Prevents GitHub repo link
 seo:
   exclude_from_sitemap: true  # Optional: Keeps page lean
-
-# Output settings
 permalink: pretty

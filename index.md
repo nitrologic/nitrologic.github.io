@@ -1,4 +1,6 @@
 ---
 layout: default
-title: DSP Tool
+title: Nitrologic Index
 ---
+
+# nitrologic index
