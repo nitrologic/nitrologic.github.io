@@ -2,7 +2,7 @@
 
 A media lab software stack for macro managers.
 
-<img src="media/meter2.png" alt="drawing" width="92%"/>
+<img src="./media/meter2.png" alt="drawing" width="92%"/>
 
 ## Hosting 
 
@@ -10,7 +10,7 @@ Serving from a local AWS EC2 instance is a reality in AK2025.
 
 > [KIA ORA AWS! Welcome to Asia Pacific region 6](https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-new-zealand-region/) - Simon Armstrong
 
-<img src="media/skidnzlogin.png" alt="drawing" width="92%"/>
+<img src="./media/skidnzlogin.png" alt="drawing" width="92%"/>
 
 Yes that is a lot of swap. 
 
