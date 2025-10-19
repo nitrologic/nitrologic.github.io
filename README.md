@@ -2,103 +2,9 @@
 
 A homebase for the nitrologic repositories
 
-* DSP Tool User Guide [dsptool.md](./dsptool.md)
+* DSP Tool User Guide [dsptool.md](dsptool)
 
-## Serendipity
-
-Local titans are in the hood. Woop woop.
-
-> [KIA ORA AWS, welcome to our Asia Pacific South East 6 motu](https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-new-zealand-region/) - Simon Armstrong
-
-The new services are opt in so from the AWS console we find something to click
-
-<img src="media/enablenewzealand1.png" alt="drawing" width="200"/>
-
-First click we select the Manage Regions
-
-![enable2](media/enablenewzealand2.png)
-
-Second click, we locate New Zealand and voila, we bookmark our new home.
-
-https://ap-southeast-6.console.aws.amazon.com/ec2/home
-
-### Step 1 Select a cheap t3.micro EC2 instance and boost the storage to 88GB NVME
-
-So cheap, and as of September 2025 AWS is now a local resident. :celebrate:
-
-No more hops across the Tasman for synth vicious audio packets to do the rounds.
-
-![ping](media/pingsoutheast6.png)
-
-Will update later in October with actual pricing, the spec remains the same.
-
-![bits](media/awsec2bits.png)
-
-### Step 2 24GB SWAP
-
-The following adds 24GB of swap to our 1GB t3.micro making Visual Studio remote sessions reliable on such a small footprint.
-
-```
-fallocate -l 24G /swapfile
-chmod 600 /swapfile
-mkswap /swapfile
-swapon /swapfile
-```
-
-### Step 3 nginx and certbot shenanigans
-
-Server side simon saliently slides silent style seventies sadd skills.
-
-> sudo certbot certonly --standalone -d skid.nz
-
-### Step 4 Sync grid5 geo tiles
-
-```
-rsync -az --info=progress2 /grid5 ec2-user@skid:/home/ec2-user/grid5/
-```
-
-The script must go on...
-
-![rsync](media/sync1a.png)
-![rsync](media/sync1b.png)
-
-## Step 5 reset the nitrologic fit3 webserver
-
-Our pet C++ web server fit3 jumps into service in search of bare metal pings.
-
-```
-sudo hostname -b skid
-sudo systemctl start redis6
-sudo service nginx start
-pushd dsptool/native/bin
-./fit3
-#gdb -ex "set print thread-events off" -ex=run ./fit3
-popd
-```
-
-## Step 6 document the DSPHost stack
-
-Will hide the Synth Vicious project aside in order to showcase recent LLM research.
-
-Service now intermittent at https://skid.nz
-
-## Step 7 Check the CPU flags for unfamiliar things
-
-```
-fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov 
-pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb 
-rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc 
-cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid 
-sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer 
-aes xsave avx f16c rdrand hypervisor lahf_lm abm 
-3dnowprefetch cpuid_fault invpcid_single pti 
-fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx 
-avx512f avx512dq rdseed adx smap clflushopt clwb 
-avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves 
-ida arat pku ospke
-
-```
-
+* AWS Zone 6 Details [apacsezone6.md](apacsezone6)
 
 ## Previously
 
@@ -108,4 +14,4 @@ ida arat pku ospke
 
 * AWS EC2 instance is back sydney.nz t3.micro
 
-Older ramblings [?2025Q3.md]
+[Older ramblings](2025Q3)
