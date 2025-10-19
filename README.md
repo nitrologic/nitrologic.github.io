@@ -2,9 +2,9 @@
 
 A homebase for the nitrologic repositories
 
-* DSP Tool User Guide [dsptool.md](dsptool)
+* DSP Tool User Guide [dsptool.md](dsptool.md)
 
-* AWS Zone 6 Details [apacsezone6.md](apacsezone6)
+* AWS Zone 6 Details [apacsezone6.md](apacsezone6.md)
 
 ## Previously
 
