@@ -4,12 +4,11 @@ baseurl: ""
 url: "https://nitrologic.github.io"
 author:
   name: Simon Armstrong
-
-show_header: false
+show_header: true
 plugins:
   - jekyll-seo-tag
 github:
-  is_project_page: false  # Prevents GitHub repo link
+  is_project_page: false
 seo:
-  exclude_from_sitemap: true  # Optional: Keeps page lean
+  exclude_from_sitemap: true
 permalink: pretty

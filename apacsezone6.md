@@ -8,11 +8,11 @@ Local titans are in the hood. Woop woop.
 
 The new services are opt in so from the AWS console we find something to click
 
-<img src="media/enablenewzealand1.png" alt="drawing" width="200"/>
+<img src="./media/enablenewzealand1.png" alt="drawing" width="200"/>
 
 First click we select the Manage Regions
 
-![enable2](media/enablenewzealand2.png)
+![enable2](./media/enablenewzealand2.png)
 
 Second click, we locate New Zealand and voila, we bookmark our new home.
 

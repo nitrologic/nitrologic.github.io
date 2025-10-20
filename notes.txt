@@ -1,0 +1,23 @@
+# Nitrologic Archives - GitHub Pages Documentation Links
+
+Key resources for setting up and managing GitHub Pages.
+
+- GitHub Pages Documentation: https://docs.github.com/en/pages
+  Official guide for creating and configuring GitHub Pages sites.
+
+- Jekyll Documentation: https://jekyllrb.com/docs/
+  Official docs for Jekyll, the static site generator used by GitHub Pages.
+
+- GitHub Pages Basics: https://docs.github.com/en/pages/getting-started-with-github-pages
+  Step-by-step guide to getting started with GitHub Pages.
+
+- Configuring Jekyll on GitHub Pages: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll
+  Instructions for setting up Jekyll for GitHub Pages.
+
+- Supported Jekyll Plugins: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins
+  List of plugins supported by GitHub Pages, including jekyll-seo-tag.
+
+- Custom Domains on GitHub Pages: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+  Guide to setting up a custom domain for your site.
+
+Add more GitHub Pages-related links as needed!
