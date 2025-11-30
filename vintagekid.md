@@ -8,7 +8,7 @@ location: Auckland, New Zealand
 
 host: AWS://ap-southeast-6
 
-home: https://skid.nz
+home: [https://skid.nz](https://skid.nz)
 
 ## RP2040 designs
 
