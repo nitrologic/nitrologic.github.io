@@ -1,4 +1,4 @@
-<img src="./media/segaskid2.jpg" alt="drawing" width="66%"/>
+<img src="https://nitrologic.github.io/media/segaskid2.jpg" alt="drawing" width="66%"/>
 
 # vintage kid
 
