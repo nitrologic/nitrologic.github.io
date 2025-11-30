@@ -14,6 +14,9 @@ home: https://skid.nz
 C64 composite video capture via LM319 comparators.
 2-bit greyscale, 320x200 @ 50Hz. Optional chroma/audio mods.
 
+### joy
+Read and drive multiple joystick connections.
+
 ### fifteen
 Triple network bridge: C64 IEC serial, GBA link, Megadrive EXT.
 Point-to-point wiring, no PCB required.
