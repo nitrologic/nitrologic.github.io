@@ -1,3 +1,5 @@
+<img src="./media/segaskid2.jpg" alt="drawing" width="66%"/>
+
 # vintage kid
 
 name: studio vibes and feels
@@ -8,7 +10,7 @@ host: AWS://ap-southeast-6
 
 home: https://skid.nz
 
-## products
+## RP2040 designs
 
 ### luma2
 C64 composite video capture via LM319 comparators.
