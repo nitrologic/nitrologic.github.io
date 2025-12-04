@@ -10,7 +10,10 @@ host: AWS://ap-southeast-6
 
 home: [https://skid.nz](https://skid.nz)
 
-## RP2040 designs
+## 1:6 Scale C= RP2040 designs
+
+![alt text](crispc64.png) 
+
 
 ### luma2
 C64 composite video capture via LM319 comparators.
@@ -38,3 +41,5 @@ Full bus access via shift registers and FETs.
 ### crumpet
 Megadrive cartridge interface. 64-pin edge connector.
 16-bit bus via shift registers and latches.
+
+![alt text](teensyc64.png)>
