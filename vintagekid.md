@@ -42,6 +42,11 @@ Full bus access via shift registers and FETs.
 Megadrive cartridge interface. 64-pin edge connector.
 16-bit bus via shift registers and latches.
 
+# research
+
+a bibli book of Commodore
+
+https://github.com/nitrologic/biblispec/blob/main/books/commodore.json
 
 # playscale retro computer scene
 
