@@ -6,6 +6,10 @@ name: studio vibes and feels
 
 location: Auckland, New Zealand
 
+> WORK IN PROGRESS
+
+
+
 host: AWS://ap-southeast-6
 
 home: [https://skid.nz](https://skid.nz)
@@ -13,7 +17,6 @@ home: [https://skid.nz](https://skid.nz)
 ## 1:6 Scale C= RP2040 designs
 
 ![alt text](crispc64.png) 
-
 
 ### luma2
 C64 composite video capture via LM319 comparators.
@@ -42,15 +45,12 @@ Full bus access via shift registers and FETs.
 Megadrive cartridge interface. 64-pin edge connector.
 16-bit bus via shift registers and latches.
 
-# research
+# reference work
 
-a bibli book of Commodore
-
-https://github.com/nitrologic/biblispec/blob/main/books/commodore.json
+[Bibli book of Commodore](https://github.com/nitrologic/biblispec/blob/main/books/commodore.json)
 
 # playscale retro computer scene
 
-RetroComputersMuseum
-https://www.etsy.com/nz/shop/RetroComputersMuseum?ref=shop_profile&listing_id=4304605536
+[RetroComputersMuseum](https://www.etsy.com/nz/shop/RetroComputersMuseum)
 
 ![alt text](teensyc64.png)>
