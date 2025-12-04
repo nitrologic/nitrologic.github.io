@@ -42,4 +42,10 @@ Full bus access via shift registers and FETs.
 Megadrive cartridge interface. 64-pin edge connector.
 16-bit bus via shift registers and latches.
 
+
+# playscale retro computer scene
+
+RetroComputersMuseum
+https://www.etsy.com/nz/shop/RetroComputersMuseum?ref=shop_profile&listing_id=4304605536
+
 ![alt text](teensyc64.png)>
