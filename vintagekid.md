@@ -2,13 +2,9 @@
 
 # vintage kid
 
-name: studio vibes and feels
-
 location: Auckland, New Zealand
 
 > WORK IN PROGRESS
-
-
 
 host: AWS://ap-southeast-6
 
