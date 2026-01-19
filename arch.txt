@@ -1,0 +1,35 @@
+sudo systemctl start sddm
+
+[skid@archlinux nitrologic]$ vulkaninfo | grep deviceName
+
+'DISPLAY' environment variable not set... skipping surface info
+        deviceName        = NVIDIA GeForce RTX 3060 Ti
+        deviceName        = AMD Ryzen 5 7600 6-Core Processor (RADV RAPHAEL_MENDOCINO)
+
+sudo 
+
+# pacman -Syu 
+
+* plasma-meta 
+* sddm 
+* kde-applications-meta
+* git
+* openssh
+* vulkan-radeon
+* vulkaninfo | grep deviceName
+* corectrl
+* nvidia-open
+* nvidia-utils
+* certbot
+
+# systemctl enable --now 
+
+* sshd
+* valkey
+* sddm
+
+> chmod 600 authorized_keys 
+> sudo nano /etc/valkey/valkey.conf 
+
+> git config --global user.email nitrologic@gmail.com
+> git config --global user.name "simon arch"
