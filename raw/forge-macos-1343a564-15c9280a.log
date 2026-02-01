@@ -1,0 +1,916 @@
+1343a564 [roha] [FORGE] Connected to deepseek 2 0.23s
+1343a564 [roha] [FORGE] Connected to moonshot 13 1.06s
+1343a564 [roha] [FORGE] Connected to alibaba 106 1.02s
+1343a564 [roha] [FORGE] modifying modelList
+1343a564 [roha] [FORGE] Connected to anthropic 10 0.84s
+1343a564 [roha] [FORGE] Connected to openai 118 2.35s
+1343a564 [roha] [FORGE] modifying modelList
+1343a564 [roha] [FORGE] Connected to xai 10 0.30s
+1343a564 [roha] [FORGE] Connected to gemini 50 0.34s
+1343a564 [roha] [FORGE] modifying modelList
+1343a564 [roha] model: {"name":"kimi-k2-0905","brand":"🜁","rate":[0.6,0.15,2.5],"limit":0,"modelname":"kimi-k2-0905-preview@moonshot","balance":"$11.1004","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+1343a564 [roha] purpose: Large scale mixture of Experts model, 128K context window
+1343a564 [roha] press: Embraces lunacy with a smile, fabricate that date kimi k2.
+1343a564 [roha] commitonstart
+1343a564 [remote] [PROMPT] listening for slop on port 8081
+1343a564 [roha] console: {"columns":115,"rows":26}
+1343a564 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":0,"terminal":"vscode"}
+1343a564 [roha] type /help for latest and exit to quit
+1343a564 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+1343b025 [roha] Share file path: /Users/simon/fountain/roha/slopfountain.ts  size: 124688
+1343b025 [roha] hash: 9728fa0a60582258cf202417d610b30b6fd2723eaa7cd390b5d3f51f58b69ebf
+1343b025 [roha] Share file path: /Users/simon/fountain/roha/slopprompt.ts  size: 19208
+1343b025 [roha] hash: 587cfbe0886ef9208465d8ac4cbb659e06cb6ab7d3e3ae1a0ec8f8011fdc2e3d
+1343b137 [kimi-k2-0905] #No comment – I’ve seen both files before.
+1343b137 [kimi-k2-0905] #
+1343b137 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopfountain.ts
+1343b137 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopprompt.ts
+1343b137 [roha] [KOHA] Updated files 2 of 2
+1343b137 [roha] usage {"prompt_tokens":39981,"completion_tokens":11,"total_tokens":39992}
+1343b137 [roha] {account:moonshot,spent:0.0240,cached:0,balance:11.0764}
+1343b137 [roha]  ꔀ Fountain 1.6.4 ⛲  kimi-k2-0905 🜁 🪠 0.7° $0.024 166.9KB 8.27s
+1343b333 [roha] [LOG] /Users/simon/fountain/roha/forge/forge.log
+1343b333 [roha] [LOG] {"count":0,"minDate":"Thu Jan 01 2026","maxDate":"Thu Jan 01 2026","sessions":1,"days":1}
+1343b333 [roha] #1 Thu Jan 01 2026 {"sessions":0,"tags":"remote[1],kimi-k2-0905[2]"}
+1343b333 [roha] {"key":"roha","count":28,"bytes":1550}
+1343b333 [roha] {"key":"kimi-k2-0905","count":2,"bytes":47}
+1343b333 [roha] {"key":"remote","count":1,"bytes":42}
+1343b4aa [roha] readDir ../../nitrologic.github.io/raw {"name":"forge-macos-87beeda-b271c05.log","isFile":true,"isDirectory":false,"isSymlink":false}
+1343b4aa [roha] readDir ../../nitrologic.github.io/raw {"name":"forge-skidnz-ba084dc-latest.log","isFile":true,"isDirectory":false,"isSymlink":false}
+1343b4aa [roha] readDir ../../nitrologic.github.io/raw {"name":"forge-macos-e8549be-11d49446.log","isFile":true,"isDirectory":false,"isSymlink":false}
+1343b4aa [roha] readDir ../../nitrologic.github.io/raw {"name":"forge-windows-10f3f4c3-13435794.log","isFile":true,"isDirectory":false,"isSymlink":false}
+1343b4aa [roha] readDir ../../nitrologic.github.io/raw {"name":"forge-macos-b33ab8c-e299442.log","isFile":true,"isDirectory":false,"isSymlink":false}
+1343b4aa [roha] readDir ../../nitrologic.github.io/raw {"name":"forge-ec2-b4f6b87-latest.log","isFile":true,"isDirectory":false,"isSymlink":false}
+1343b4aa [roha] readDir ../../nitrologic.github.io/raw {"name":"forge-windows-a38e367-e45af8b.log","isFile":true,"isDirectory":false,"isSymlink":false}
+1343b4aa [roha] readDir ../../nitrologic.github.io/raw {"name":"forge-macos-6e20e81-86e50d3.log","isFile":true,"isDirectory":false,"isSymlink":false}
+1343b4aa [roha] readDir ../../nitrologic.github.io/raw {"name":"forge-windows-6d97ea5-878fcbd.log","isFile":true,"isDirectory":false,"isSymlink":false}
+1343b4aa [roha] readDir ../../nitrologic.github.io/raw {"name":"forge-windows-e45ca17-10ea1dbd.log","isFile":true,"isDirectory":false,"isSymlink":false}
+1343b4aa [roha] [LOG] /Users/simon/fountain/roha/forge/forge.log
+1343b4aa [roha] [LOG] /Users/simon/nitrologic.github.io/raw/forge-macos-87beeda-b271c05.log
+1343b4ab [roha] [LOG] /Users/simon/nitrologic.github.io/raw/forge-skidnz-ba084dc-latest.log
+1343b4ab [roha] [LOG] /Users/simon/nitrologic.github.io/raw/forge-macos-e8549be-11d49446.log
+1343b4ab [roha] [LOG] /Users/simon/nitrologic.github.io/raw/forge-windows-10f3f4c3-13435794.log
+1343b4ab [roha] [LOG] /Users/simon/nitrologic.github.io/raw/forge-macos-b33ab8c-e299442.log
+1343b4ab [roha] [LOG] /Users/simon/nitrologic.github.io/raw/forge-ec2-b4f6b87-latest.log
+1343b4ab [roha] [LOG] /Users/simon/nitrologic.github.io/raw/forge-windows-a38e367-e45af8b.log
+1343b4ab [roha] [LOG] /Users/simon/nitrologic.github.io/raw/forge-macos-6e20e81-86e50d3.log
+1343b4ab [roha] [LOG] /Users/simon/nitrologic.github.io/raw/forge-windows-6d97ea5-878fcbd.log
+1343b4ab [roha] [LOG] /Users/simon/nitrologic.github.io/raw/forge-windows-e45ca17-10ea1dbd.log
+1343b4ab [roha] [LOG] {"count":0,"minDate":"Sun Aug 03 2025","maxDate":"Thu Jan 01 2026","sessions":1112,"days":126}
+1343b4ab [roha] #1 Thu Jan 01 2026 {"sessions":0,"tags":"remote[2],kimi-k2-0905[2]"}
+1343b4ab [roha] #2 Sat Aug 23 2025 {"sessions":8,"tags":"simon@midnightblue[13],deepseek-chat[153]"}
+1343b4ab [roha] #3 Mon Aug 25 2025 {"sessions":4,"tags":"simon@midnightblue[4],deepseek-chat[45],qwen-plus[9]"}
+1343b4ab [roha] #4 Tue Aug 26 2025 {"sessions":3,"tags":"qwen-plus[410],simon@midnightblue[3],deepseek-chat[185]"}
+1343b4ab [roha] #5 Wed Aug 27 2025 {"sessions":1,"tags":""}
+1343b4ab [roha] #6 Thu Aug 28 2025 {"sessions":2,"tags":"simon@midnightblue[2],deepseek-chat[5]"}
+1343b4ab [roha] #7 Sat Aug 30 2025 {"sessions":2,"tags":"deepseek-chat[58],simon@midnightblue[2]"}
+1343b4ab [roha] #8 Sun Aug 31 2025 {"sessions":0,"tags":"simon@midnightblue[3],gemini-2.5-flash[140]"}
+1343b4ab [roha] #9 Mon Sep 01 2025 {"sessions":4,"tags":""}
+1343b4ab [roha] #10 Fri Sep 05 2025 {"sessions":3,"tags":"simon@midnightblue[1],kimi-k2-0905[4]"}
+1343b4ab [roha] #11 Sat Sep 06 2025 {"sessions":2,"tags":""}
+1343b4ab [roha] #12 Sun Sep 07 2025 {"sessions":1,"tags":""}
+1343b4ab [roha] #13 Tue Sep 09 2025 {"sessions":1,"tags":""}
+1343b4ab [roha] #14 Thu Sep 11 2025 {"sessions":1,"tags":"PORT[16],kimi-k2-0905[2],simon@midnightblue[1],deepseek-chat[2]"}
+1343b4ab [roha] #15 Fri Sep 12 2025 {"sessions":4,"tags":"PORT[19],simon@midnightblue[2],deepseek-chat[44]"}
+1343b4ab [roha] #16 Sun Sep 14 2025 {"sessions":19,"tags":"PORT[156],deepseek-chat[57],simon@midnightblue[1],grok-code-fast-1[424],nitro@ryzen5[9]"}
+1343b4ab [roha] #17 Mon Sep 15 2025 {"sessions":16,"tags":"simon@midnightblue[1],deepseek-chat[106],PORT[64],grok-code-fast-1[23],nitro@ryzen5[11]"}
+1343b4ab [roha] #18 Tue Sep 16 2025 {"sessions":11,"tags":"PORT[47],deepseek-chat[305],simon@midnightblue[4],gpt-5-mini[800],kimi-k2-0905[278],nitro@ryzen5[3]"}
+1343b4ab [roha] #19 Wed Sep 17 2025 {"sessions":6,"tags":"PORT[22]"}
+1343b4ab [roha] #20 Thu Sep 18 2025 {"sessions":13,"tags":"nitro@ryzen5[30],kimi-k2-0905[36],qwen-plus-2025[48],qwen-plus[8],kimi-k2-turbo[60],deepseek-chat[45],PORT[2]"}
+1343b4ab [roha] #21 Fri Sep 19 2025 {"sessions":3,"tags":""}
+1343b4ab [roha] #22 Mon Sep 22 2025 {"sessions":4,"tags":"nitro@ryzen5[2],grok-4-fast-reasoning[5]"}
+1343b4ab [roha] #23 Tue Sep 23 2025 {"sessions":17,"tags":"simon@midnightblue[4],deepseek-chat[376],nitro@ryzen5[73],grok-4-fast-reasoning[420],qwen3-next-80b-a3b[69]"}
+1343b4ab [roha] #24 Wed Sep 24 2025 {"sessions":44,"tags":"simon@midnightblue[16],codex-mini-latest[160],deepseek-chat[225],gpt-5-codex[126],nitro@ryzen5[82],gpt-5-chat-latest[2],o4-mini-2025[85]"}
+1343b4ab [roha] #25 Tue Sep 30 2025 {"sessions":6,"tags":"ec2-user@skidnz[1],deepseek-chat[281],PORT[4],nitro@ryzen5[18]"}
+1343b4ab [roha] #26 Wed Oct 01 2025 {"sessions":6,"tags":"ec2-user@skidnz[120],deepseek-chat[968],PORT[4]"}
+1343b4ab [roha] #27 Thu Oct 02 2025 {"sessions":14,"tags":"ec2-user@skidnz[47],deepseek-chat[770],PORT[10],skidnz@skid.nz[3],skidracer@skid.nz[5],kimi-k2-0905[11]"}
+1343b4ab [roha] #28 Tue Nov 04 2025 {"sessions":5,"tags":"simon@midnightblue[1],kimi-k2-0905[1547],PORT[162],scudmarks@discord[6],deepseek-chat[1616],nitro@ryzen5[111],claude-sonnet-4[114],grok-code-fast-1[261],qwen3-coder-plus[104],gpt-5-nano[344],ssh_session:1[1]"}
+1343b4ab [roha] #29 Wed Nov 05 2025 {"sessions":3,"tags":"simon@midnightblue[20],qwen3-coder-plus[136],claude-haiku-4-5[34],gpt-5-nano[38],grok-code-fast-1[74],deepseek-chat[56],FAIL[1],kimi-k2-0905[1204],remote[95],nitro@ryzen5[31],PORT[2],scudmarks@discord[124],ssh_session:1[4],simon[2]"}
+1343b4ab [roha] #30 Thu Nov 06 2025 {"sessions":3,"tags":"simon@midnightblue[5],kimi-latest-8k[3],kimi-k2-0905[4],remote[75],nitro@ryzen5[1],qwen3-coder-plus[194],scudmarks@discord[78]"}
+1343b4ab [roha] #31 Fri Nov 07 2025 {"sessions":8,"tags":"simon@midnightblue[9],kimi-k2-0905[172],deepseek-chat[4],qwen3-coder-plus[4],claude-haiku-4-5[2],gpt-5-nano[2],nitro@ryzen5[4],kimi-latest-8k[2],remote[4],grok-code-fast-1[14],scudmarks@discord[13]"}
+1343b4ab [roha] #32 Thu Nov 13 2025 {"sessions":3,"tags":"simon@midnightblue[12],kimi-k2-0905[62]"}
+1343b4ab [roha] #33 Fri Nov 14 2025 {"sessions":1,"tags":"simon@midnightblue[2],gpt-5.1-2025[61],nitro@ryzen5[34],gpt-5.1-codex-mini[70],gpt-5.1-codex[24],remote[7],scudmarks@discord[21],deepseek-chat[303],kimi-k2-0905[94],qwen3-coder-plus[31],claude-haiku-4-5[17],gpt-5-nano[28]"}
+1343b4ab [roha] #34 Tue Nov 18 2025 {"sessions":5,"tags":"simon@midnightblue[41],gpt-5.1-2025[2179],nitro@ryzen5[128],kimi-k2-0905[1000],remote[180],scudmarks@discord[51],deepseek-chat[683],grok-code-fast-1[139]"}
+1343b4ab [roha] #35 Wed Nov 19 2025 {"sessions":14,"tags":"simon@midnightblue[12],gpt-5.1-2025[681],remote[23],gemini-3-pro[6]"}
+1343b4ab [roha] #36 Thu Nov 20 2025 {"sessions":3,"tags":"gemini-3-pro[50],simon@midnightblue[12],kimi-k2-0905[211],nitro@ryzen5[978],remote[32],scudmarks@discord[4],deepseek-chat[44],grok-code-fast-1[341]"}
+1343b4ab [roha] #37 Tue Nov 25 2025 {"sessions":0,"tags":"remote[35],simon@midnightblue[7],grok-4-1[62],nitro@ryzen5[602],kimi-k2-0905[220],scudmarks@discord[7],deepseek-chat[69],gemini-3-pro[116]"}
+1343b4ab [roha] #38 Wed Nov 26 2025 {"sessions":0,"tags":"remote[104],simon@midnightblue[13],grok-4-1[408],system[8],nitro@ryzen5[17],kimi-k2-0905[145],scudmarks@discord[14]"}
+1343b4ab [roha] #39 Thu Nov 27 2025 {"sessions":0,"tags":"remote[45],simon@midnightblue[13],grok-4-1[2607],system[7],pipe:undefined[10],nitro@ryzen5[61],kimi-k2-0905[733],gemini-3-pro[1638],deepseek-chat[100],claude-haiku-4-5[358],grok-code-1[31]"}
+1343b4ab [roha] #40 Fri Nov 28 2025 {"sessions":0,"tags":"remote[22],simon@midnightblue[2],claude-opus-4-5[122],nitro@ryzen5[77],kimi-k2-0905[427],gemini-3-pro[800]"}
+1343b4ab [roha] #41 Sat Nov 29 2025 {"sessions":0,"tags":"remote[62],simon@midnightblue[6],claude-opus-4-5[5454],nitro@ryzen5[301],FAIL[2]"}
+1343b4ab [roha] #42 Sun Nov 30 2025 {"sessions":0,"tags":"remote[31],gemini-3-pro[5619],simon@midnightblue[26],nitro@ryzen5[147],claude-sonnet-4-5[576],claude-opus-4-5[2399],kimi-k2-0905[179]"}
+1343b4ac [roha] #43 Mon Dec 01 2025 {"sessions":0,"tags":"gemini-3-pro[3034],simon@midnightblue[6],remote[10],claude-opus-4-5[3672],nitro@ryzen5[148],deepseek-chat[327],gpt-5-nano[242]"}
+1343b4ac [roha] #44 Tue Dec 02 2025 {"sessions":0,"tags":"kimi-k2-0905[486],remote[9],nitro@ryzen5[122],deepseek-chat[784],gemini-3-pro[2788],claude-opus-4-5[289],FAIL[2],grok-code-1[114]"}
+1343b4ac [roha] #45 Wed Dec 03 2025 {"sessions":0,"tags":"remote[4],simon@midnightblue[5],kimi-k2-0905[469],nitro@ryzen5[47],grok-code-1[20]"}
+1343b4ac [roha] #46 Sat Dec 06 2025 {"sessions":0,"tags":"remote[6],simon@midnightblue[3],kimi-k2-0905[686],nitro@ryzen5[71],deepseek-chat[2784],FAIL[1],grok-code-1[302],gemini-3-pro[1178]"}
+1343b4ac [roha] #47 Mon Dec 08 2025 {"sessions":0,"tags":"remote[18],simon@midnightblue[43],kimi-k2-0905[2441],grok-code-1[117],nitro@ryzen5[145],gemini-3-pro[1303]"}
+1343b4ac [roha] #48 Sun Dec 14 2025 {"sessions":0,"tags":"remote[29],simon@midnightblue[1],kimi-k2-0905[23],scudmarks@discord[56],deepseek-chat[724],nitro@ryzen5[11]"}
+1343b4ac [roha] #49 Thu Dec 04 2025 {"sessions":0,"tags":"remote[6],nitro@ryzen5[125],grok-code-1[2029],gemini-3-pro[1372],deepseek-chat[50],kimi-k2-0905[311]"}
+1343b4ac [roha] #50 Fri Dec 05 2025 {"sessions":0,"tags":"remote[15],gemini-3-pro[106],nitro@ryzen5[75],deepseek-chat[2806]"}
+1343b4ac [roha] #51 Sun Dec 07 2025 {"sessions":0,"tags":"remote[3],nitro@ryzen5[50],gemini-3-pro[626],kimi-k2-0905[85]"}
+1343b4ac [roha] #52 Tue Dec 09 2025 {"sessions":0,"tags":"remote[6],nitro@ryzen5[114],gpt-5-nano[496],kimi-k2-0905[744],deepseek-chat[134],gemini-3-pro[562]"}
+1343b4ac [roha] #53 Wed Dec 10 2025 {"sessions":0,"tags":"remote[7],nitro@ryzen5[49],kimi-k2-0905[684]"}
+1343b4ac [roha] #54 Thu Dec 11 2025 {"sessions":0,"tags":"remote[2],nitro@ryzen5[12],kimi-k2-0905[83]"}
+1343b4ac [roha] #55 Fri Dec 12 2025 {"sessions":0,"tags":"remote[3],nitro@ryzen5[19],kimi-k2-0905[129],gpt-5.2-2025[232],deepseek-chat[51]"}
+1343b4ac [roha] #56 Sat Dec 13 2025 {"sessions":0,"tags":"remote[1],nitro@ryzen5[1],deepseek-chat[15]"}
+1343b4ac [roha] #57 Mon Dec 15 2025 {"sessions":0,"tags":"remote[19],nitro@ryzen5[8],deepseek-chat[136]"}
+1343b4ac [roha] #58 Tue Dec 16 2025 {"sessions":0,"tags":"remote[2],nitro@ryzen5[9],deepseek-chat[269]"}
+1343b4ac [roha] #59 Wed Dec 17 2025 {"sessions":0,"tags":"nitro@ryzen5[22],deepseek-chat[73],remote[3],kimi-k2-0905[60],gemini-3-pro[92]"}
+1343b4ac [roha] #60 Sat Dec 20 2025 {"sessions":0,"tags":"remote[10],nitro@ryzen5[52],gemini-3-pro[269],kimi-k2-0905[388],grok-code-1[560],scudmarks@discord[25]"}
+1343b4ac [roha] #61 Sun Dec 21 2025 {"sessions":0,"tags":"remote[8],nitro@ryzen5[67],grok-4-1[1321],gemini-3-pro[1091]"}
+1343b4ac [roha] #62 Mon Dec 22 2025 {"sessions":0,"tags":"nitro@ryzen5[7],gemini-3-pro[119],remote[2]"}
+1343b4ac [roha] #63 Tue Dec 23 2025 {"sessions":0,"tags":"remote[1],nitro@ryzen5[5],gemini-3-pro[53]"}
+1343b4ac [roha] #64 Wed Dec 24 2025 {"sessions":0,"tags":"remote[1],nitro@ryzen5[2],gemini-3-pro[5]"}
+1343b4ac [roha] #65 Mon Dec 29 2025 {"sessions":0,"tags":"remote[1],nitro@ryzen5[3],kimi-k2-0711[13]"}
+1343b4ac [roha] #66 Tue Dec 30 2025 {"sessions":0,"tags":"remote[2],scudmarks@discord[10],kimi-k2-0711[63]"}
+1343b4ac [roha] #67 Thu Sep 25 2025 {"sessions":28,"tags":"simon@midnightblue[25],gpt-5-codex[61],deepseek-chat[398],PORT[3],deepseek-reasoner[86],nitro@ryzen5[63],o4-mini-2025[672]"}
+1343b4ac [roha] #68 Fri Sep 26 2025 {"sessions":10,"tags":"ec2-user@syd[1],nitro@ryzen5[3],o4-mini-2025[96]"}
+1343b4ac [roha] #69 Sun Sep 28 2025 {"sessions":2,"tags":"simon@midnightblue[2],deepseek-chat[29],nitro@ryzen5[1],o4-mini-2025[10]"}
+1343b4ac [roha] #70 Mon Sep 29 2025 {"sessions":5,"tags":"simon@midnightblue[1],deepseek-chat[654],nitro@ryzen5[111]"}
+1343b4ac [roha] #71 Sat Oct 11 2025 {"sessions":19,"tags":"simon@midnightblue[4],deepseek-chat[170],grok-4-fast-non[314],nitro@ryzen5[40],PORT[1],kimi-k2-0905[272]"}
+1343b4ac [roha] #72 Tue Oct 14 2025 {"sessions":14,"tags":"PORT[21]"}
+1343b4ac [roha] #73 Thu Oct 16 2025 {"sessions":2,"tags":""}
+1343b4ac [roha] #74 Fri Oct 17 2025 {"sessions":2,"tags":"PORT[1],simon@midnightblue[4],kimi-k2-0905[53],nitro@ryzen5[3],grok-code-fast-1[52]"}
+1343b4ac [roha] #75 Wed Oct 22 2025 {"sessions":34,"tags":"kimi-k2-0905[193],PORT[29],simon@midnightblue[7],gpt-5-pro[58],nitro@ryzen5[12],qwen3-coder-plus[58]"}
+1343b4ac [roha] #76 Thu Oct 23 2025 {"sessions":4,"tags":"nitro@ryzen5[6],qwen3-coder-plus[350]"}
+1343b4ac [roha] #77 Fri Oct 24 2025 {"sessions":21,"tags":"nitro@ryzen5[34],qwen3-coder-plus[688],PORT[11]"}
+1343b4ac [roha] #78 Sat Oct 25 2025 {"sessions":8,"tags":"skidracer@skid.nz[6],gpt-5-pro[2],deepseek-chat[303],nitro@ryzen5[68],qwen3-coder-plus[195],PORT[5]"}
+1343b4ac [roha] #79 Mon Oct 27 2025 {"sessions":6,"tags":"simon@midnightblue[1],deepseek-chat[104],nitro@ryzen5[44],kimi-k2-0905[370],claude-haiku-4-5[127]"}
+1343b4ac [roha] #80 Tue Oct 28 2025 {"sessions":30,"tags":"simon@midnightblue[20],deepseek-chat[206],claude-haiku-4-5[255],claude-sonnet-4[27],grok-4-0709[8],gpt-5-mini[96],nitro@ryzen5[52],kimi-k2-0905[119],kimi-k2-0711[82],PORT[130],grok-code-fast-1[109]"}
+1343b4ac [roha] #81 Wed Oct 29 2025 {"sessions":50,"tags":"nitro@ryzen5[168],kimi-k2-0905[701],PORT[20],claude-haiku-4-5[131],gpt-5-mini[390],grok-code-fast-1[12],gemini-2.5-05[119],kimi-k2-0711[26],deepseek-chat[63]"}
+1343b4ac [roha] #82 Thu Oct 30 2025 {"sessions":101,"tags":"PORT[32],kimi-k2-0905[378],simon@midnightblue[2],nitro@ryzen5[92],gemini-2.5-05[217]"}
+1343b4ac [roha] #83 Fri Oct 31 2025 {"sessions":18,"tags":"PORT[30],kimi-k2-0905[568],nitro@ryzen5[21]"}
+1343b4ac [roha] #84 Sat Sep 27 2025 {"sessions":10,"tags":"ec2-user@sydney[8],deepseek-chat[347],PORT[6],ec2-user@ip-172-31-37-83[9]"}
+1343b4ac [roha] #85 Sat Sep 13 2025 {"sessions":16,"tags":"PORT[127],nitro@ryzen5[16],grok-code-fast-1[138],deepseek-chat[114]"}
+1343b4ac [roha] #86 Thu Oct 09 2025 {"sessions":19,"tags":"grok-code-fast-1[17],nitro@ryzen5[15],PORT[1],gemini-2.5-flash[333]"}
+1343b4ac [roha] #87 Fri Oct 10 2025 {"sessions":10,"tags":"PORT[13],nitro@ryzen5[12],gemini-2.5-flash[480]"}
+1343b4ac [roha] #88 Sun Oct 12 2025 {"sessions":24,"tags":"nitro@ryzen5[35],kimi-k2-0905[632]"}
+1343b4ac [roha] #89 Wed Oct 15 2025 {"sessions":2,"tags":"nitro@ryzen5[4],kimi-k2-0905[2],grok-code-fast-1[52]"}
+1343b4ac [roha] #90 Sat Oct 18 2025 {"sessions":1,"tags":"nitro@ryzen5[10],deepseek-chat[74]"}
+1343b4ac [roha] #91 Sun Oct 19 2025 {"sessions":12,"tags":"nitro@ryzen5[3],claude-haiku-4-5[119],qwen3-max-2025[18],qwen3-coder-plus[92]"}
+1343b4ac [roha] #92 Tue Oct 21 2025 {"sessions":31,"tags":"nitro@ryzen5[132],qwen3-coder-plus[466],gpt-4.1-nano[41],deepseek-chat[356],claude-haiku-4-5[77],gpt-5-mini[47],gemini-2.5-flash[4],gpt-5-2025[135],PORT[2],kimi-k2-0905[402],claude-sonnet-4[160],grok-code-fast-1[74]"}
+1343b4ad [roha] #93 Sat Nov 01 2025 {"sessions":26,"tags":"PORT[61],kimi-k2-0905[298],nitro@ryzen5[38],deepseek-chat[474],grok-code-fast-1[243]"}
+1343b4ad [roha] #94 Mon Aug 04 2025 {"sessions":0,"tags":"stdin[1],deepseek-chat[580],nitro@ryzen5[94],llama-4-scout[13],llama-4-maverick[392],gpt-4.1-2025[62],moonshot-v1-128k[41],grok-3[75],gemini-2.5-flash-preview[139],grok-4-0709[2],gemini-2.5-pro-preview[63]"}
+1343b4ad [roha] #95 Tue Aug 05 2025 {"sessions":0,"tags":"stdin[31],simon@midnightblue[13],claude-sonnet-4[536],nitro@ryzen5[171],deepseek-chat[1837],claude-3-haiku[166]"}
+1343b4ad [roha] #96 Wed Aug 06 2025 {"sessions":0,"tags":"stdin[61],simon@midnightblue[12],claude-opus-4[31],claude-sonnet-4[1775],nitro@ryzen5[297],deepseek-chat[121]"}
+1343b4ad [roha] #97 Fri Aug 08 2025 {"sessions":0,"tags":"stdin[138],simon@midnightblue[79],deepseek-chat[832],gpt-5-mini[536],nitro@ryzen5[125],gpt-5-nano[81],gpt-5-2025[17],claude-sonnet-4[2075]"}
+1343b4ad [roha] #98 Sat Aug 09 2025 {"sessions":0,"tags":"stdin[43],gpt-5-mini[191],simon@midnightblue[13],claude-sonnet-4[1337],nitro@ryzen5[55],deepseek-chat[464]"}
+1343b4ad [roha] #99 Sun Aug 10 2025 {"sessions":0,"tags":"stdin[55],simon@midnightblue[5],gpt-5-mini[504],deepseek-chat[1284],nitro@ryzen5[439],kimi-k2-turbo[135],claude-opus-4-1[224]"}
+1343b4ad [roha] #100 Mon Aug 11 2025 {"sessions":0,"tags":"stdin[4],simon@midnightblue[1],nitro@ryzen5[457],gpt-5-mini[2903],deepseek-chat[352]"}
+1343b4ad [roha] #101 Tue Aug 12 2025 {"sessions":0,"tags":"stdin[2],nitro@ryzen5[153],gpt-5-mini[514],deepseek-chat[849],grok-4-0709[781]"}
+1343b4ad [roha] #102 Wed Aug 13 2025 {"sessions":24,"tags":"stdin[77],simon@midnightblue[18],gpt-5-mini[684],grok-4-0709[832],nitro@ryzen5[259],deepseek-chat[1392],claude-sonnet-4[914],kimi-k2-0711[208]"}
+1343b4ad [roha] #103 Fri Aug 15 2025 {"sessions":12,"tags":"stdin[1],nitro@ryzen5[31],deepseek-chat[435]"}
+1343b4ad [roha] #104 Sat Aug 16 2025 {"sessions":57,"tags":"nitro@ryzen5[125],deepseek-chat[1681]"}
+1343b4ad [roha] #105 Sun Aug 17 2025 {"sessions":12,"tags":"simon@midnightblue[22],deepseek-chat[247],nitro@ryzen5[17]"}
+1343b4ad [roha] #106 Mon Aug 18 2025 {"sessions":23,"tags":"simon@midnightblue[12],deepseek-chat[853],nitro@ryzen5[48]"}
+1343b4ad [roha] #107 Tue Aug 19 2025 {"sessions":46,"tags":"simon@midnightblue[31],deepseek-chat[1187],nitro@ryzen5[69],gemini-2.5-flash[98]"}
+1343b4ad [roha] #108 Wed Aug 20 2025 {"sessions":32,"tags":"nitro@ryzen5[173],deepseek-chat[475],kimi-k2-0711[22],grok-4-0709[348],gpt-5-mini[552]"}
+1343b4ad [roha] #109 Thu Aug 21 2025 {"sessions":89,"tags":"simon@midnightblue[22],gemini-2.5-pro[2],deepseek-chat[782],gpt-5-mini[148],nitro@ryzen5[134],deepseek-reasoner[19],kimi-k2-0711[400]"}
+1343b4ad [roha] #110 Fri Aug 22 2025 {"sessions":31,"tags":"simon@midnightblue[40],gpt-5-mini[821],gpt-5-2025[238],kimi-k2-0711[112],nitro@ryzen5[88],gpt-5-nano[94],grok-4-0709[6],deepseek-chat[200]"}
+1343b4ad [roha] #111 Sun Aug 03 2025 {"sessions":0,"tags":"nitro@ryzen5[24],deepseek-chat[358]"}
+1343b4ad [roha] #112 Thu Aug 07 2025 {"sessions":0,"tags":"nitro@ryzen5[52],gemini-2.5-flash[33],deepseek-chat[277]"}
+1343b4ad [roha] #113 Thu Aug 14 2025 {"sessions":30,"tags":"nitro@ryzen5[46],kimi-k2-0711[148],deepseek-chat[818]"}
+1343b4ad [roha] #114 Sun Nov 02 2025 {"sessions":0,"tags":"PORT[13],nitro@ryzen5[9],deepseek-chat[220],kimi-k2-0905[8],grok-code-fast-1[7]"}
+1343b4ad [roha] #115 Mon Nov 03 2025 {"sessions":0,"tags":"PORT[49],kimi-k2-0905[410],nitro@ryzen5[55],deepseek-chat[270],claude-sonnet-4-5[256],grok-code-fast-1[75],gpt-5-2025[209],gpt-5-nano[265]"}
+1343b4ad [roha] #116 Sat Nov 08 2025 {"sessions":0,"tags":"nitro@ryzen5[5],kimi-k2-0905[80]"}
+1343b4ad [roha] #117 Sun Nov 09 2025 {"sessions":0,"tags":""}
+1343b4ad [roha] #118 Mon Nov 10 2025 {"sessions":0,"tags":"nitro@ryzen5[27],kimi-k2-0905[183],deepseek-chat[186],qwen3-coder-plus[83],claude-haiku-4-5[59],gpt-5-nano[59],grok-code-fast-1[56],remote[2],scudmarks@discord[3]"}
+1343b4ad [roha] #119 Tue Nov 11 2025 {"sessions":0,"tags":"nitro@ryzen5[10],deepseek-chat[48],kimi-k2-0905[122]"}
+1343b4ad [roha] #120 Wed Nov 12 2025 {"sessions":0,"tags":""}
+1343b4ad [roha] #121 Sat Nov 15 2025 {"sessions":0,"tags":"nitro@ryzen5[14],deepseek-chat[223],FAIL[1],kimi-k2-0905[175]"}
+1343b4ad [roha] #122 Sun Nov 16 2025 {"sessions":0,"tags":"nitro@ryzen5[1],kimi-k2-0905[30]"}
+1343b4ad [roha] #123 Mon Nov 17 2025 {"sessions":0,"tags":"nitro@ryzen5[110],kimi-k2-0905[1420],remote[3]"}
+1343b4ad [roha] #124 Fri Nov 21 2025 {"sessions":0,"tags":"remote[19],nitro@ryzen5[5],gemini-3-pro[108],kimi-k2-0905[4]"}
+1343b4ad [roha] #125 Sun Nov 23 2025 {"sessions":0,"tags":"nitro@ryzen5[20],kimi-k2-0905[241]"}
+1343b4ad [roha] #126 Mon Nov 24 2025 {"sessions":0,"tags":"nitro@ryzen5[38],grok-4-1-fast[44],qwen3-omni[73],qwen3-coder-plus[97],remote[18],gemini-robotics-er[15],kimi-k2-0905[134],deepseek-chat[2]"}
+1343b4ad [roha] {"key":"roha","count":107232,"bytes":10538482}
+1343b4ad [roha] {"key":"deepseek-chat","count":33918,"bytes":1175319}
+1343b4ad [roha] {"key":"gemini-3-pro","count":20935,"bytes":826498}
+1343b4ad [roha] {"key":"kimi-k2-0905","count":19715,"bytes":708299}
+1343b4ad [roha] {"key":"nitro@ryzen5","count":8018,"bytes":641242}
+1343b4ad [roha] {"key":"claude-opus-4-5","count":11936,"bytes":535400}
+1343b4ad [roha] {"key":"gpt-5-mini","count":8186,"bytes":390350}
+1343b4ad [roha] {"key":"claude-sonnet-4","count":6938,"bytes":269790}
+1343b4ad [roha] {"key":"grok-code-1","count":3173,"bytes":173120}
+1343b4ad [roha] {"key":"grok-4-1","count":4398,"bytes":121260}
+1343b4ad [roha] {"key":"grok-code-fast-1","count":2111,"bytes":102393}
+1343b4ad [roha] {"key":"gpt-5.1-2025","count":2921,"bytes":96929}
+1343b4ad [roha] {"key":"grok-4-0709","count":1977,"bytes":84878}
+1343b4ad [roha] {"key":"gpt-5-nano","count":1649,"bytes":82302}
+1343b4ad [roha] {"key":"qwen3-coder-plus","count":2498,"bytes":80169}
+1343b4ad [roha] {"key":"PORT","count":1063,"bytes":61664}
+1343b4ad [roha] {"key":"remote","count":927,"bytes":56767}
+1343b4ae [roha] {"key":"gemini-2.5-flash","count":1088,"bytes":48362}
+1343b4ae [roha] {"key":"simon@midnightblue","count":630,"bytes":47564}
+1343b4ae [roha] {"key":"claude-haiku-4-5","count":1179,"bytes":45822}
+1343b4ae [roha] {"key":"kimi-k2-0711","count":1074,"bytes":40263}
+1343b4ae [roha] {"key":"claude-sonnet-4-5","count":832,"bytes":28087}
+1343b4ae [roha] {"key":"gpt-5-2025","count":599,"bytes":27507}
+1343b4ae [roha] {"key":"o4-mini-2025","count":863,"bytes":26947}
+1343b4ae [roha] {"key":"grok-4-fast-reasoning","count":425,"bytes":18380}
+1343b4ae [roha] {"key":"llama-4-maverick","count":392,"bytes":17772}
+1343b4ae [roha] {"key":"gemini-2.5-05","count":336,"bytes":16598}
+1343b4ae [roha] {"key":"qwen-plus","count":427,"bytes":14519}
+1343b4ae [roha] {"key":"scudmarks@discord","count":412,"bytes":14254}
+1343b4ae [roha] {"key":"gpt-5.2-2025","count":232,"bytes":12942}
+1343b4ae [roha] {"key":"grok-4-fast-non","count":314,"bytes":11692}
+1343b4ae [roha] {"key":"claude-opus-4-1","count":224,"bytes":10809}
+1343b4ae [roha] {"key":"gpt-5-codex","count":187,"bytes":9999}
+1343b4ae [roha] {"key":"ec2-user@skidnz","count":168,"bytes":8743}
+1343b4ae [roha] {"key":"stdin","count":413,"bytes":8569}
+1343b4ae [roha] {"key":"kimi-k2-turbo","count":195,"bytes":7698}
+1343b4ae [roha] {"key":"gemini-2.5-flash-preview","count":139,"bytes":7352}
+1343b4ae [roha] {"key":"claude-3-haiku","count":166,"bytes":7185}
+1343b4ae [roha] {"key":"deepseek-reasoner","count":105,"bytes":6336}
+1343b4ae [roha] {"key":"codex-mini-latest","count":160,"bytes":5163}
+1343b4ae [roha] {"key":"gpt-5.1-codex-mini","count":70,"bytes":4211}
+1343b4ae [roha] {"key":"grok-3","count":75,"bytes":4123}
+1343b4ae [roha] {"key":"gemini-2.5-pro-preview","count":63,"bytes":3666}
+1343b4ae [roha] {"key":"qwen3-omni","count":73,"bytes":3600}
+1343b4ae [roha] {"key":"gpt-4.1-2025","count":62,"bytes":3274}
+1343b4ae [roha] {"key":"qwen3-next-80b-a3b","count":69,"bytes":3044}
+1343b4ae [roha] {"key":"gpt-5-pro","count":60,"bytes":2833}
+1343b4ae [roha] {"key":"moonshot-v1-128k","count":41,"bytes":2590}
+1343b4ae [roha] {"key":"qwen-plus-2025","count":48,"bytes":2371}
+1343b4ae [roha] {"key":"gpt-4.1-nano","count":41,"bytes":1773}
+1343b4ae [roha] {"key":"grok-4-1-fast","count":44,"bytes":1676}
+1343b4ae [roha] {"key":"claude-opus-4","count":31,"bytes":1459}
+1343b4ae [roha] {"key":"gpt-5.1-codex","count":24,"bytes":1123}
+1343b4ae [roha] {"key":"qwen3-max-2025","count":18,"bytes":1032}
+1343b4ae [roha] {"key":"FAIL","count":7,"bytes":803}
+1343b4ae [roha] {"key":"llama-4-scout","count":13,"bytes":609}
+1343b4ae [roha] {"key":"gemini-robotics-er","count":15,"bytes":495}
+1343b4ae [roha] {"key":"skidracer@skid.nz","count":11,"bytes":414}
+1343b4ae [roha] {"key":"system","count":15,"bytes":381}
+1343b4ae [roha] {"key":"ec2-user@sydney","count":8,"bytes":271}
+1343b4ae [roha] {"key":"ec2-user@ip-172-31-37-83","count":9,"bytes":260}
+1343b4ae [roha] {"key":"kimi-latest-8k","count":5,"bytes":188}
+1343b4ae [roha] {"key":"pipe:undefined","count":10,"bytes":183}
+1343b4ae [roha] {"key":"skidnz@skid.nz","count":3,"bytes":163}
+1343b4ae [roha] {"key":"ssh_session:1","count":5,"bytes":95}
+1343b4ae [roha] {"key":"gemini-2.5-pro","count":2,"bytes":75}
+1343b4ae [roha] {"key":"simon","count":2,"bytes":68}
+1343b4ae [roha] {"key":"gpt-5-chat-latest","count":2,"bytes":33}
+1343b4ae [roha] {"key":"ec2-user@syd","count":1,"bytes":4}
+144cd712 [roha] [FORGE] Connected to deepseek 2 0.25s
+144cd712 [roha] [FORGE] Connected to moonshot 13 0.75s
+144cd712 [roha] [FORGE] Connected to alibaba 108 1.02s
+144cd712 [roha] [FORGE] modifying modelList
+144cd712 [roha] [FORGE] Connected to anthropic 9 1.02s
+144cd712 [roha] [FORGE] modifying modelList
+144cd712 [roha] [FORGE] Connected to openai 118 0.95s
+144cd712 [roha] [FORGE] Connected to xai 10 0.89s
+144cd712 [roha] [FORGE] Connected to gemini 50 0.38s
+144cd712 [roha] model: {"name":"kimi-k2-0905","brand":"🜁","rate":[0.6,0.15,2.5],"limit":0,"modelname":"kimi-k2-0905-preview@moonshot","balance":"$11.0764","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+144cd712 [roha] purpose: Large scale mixture of Experts model, 128K context window
+144cd712 [roha] press: Embraces lunacy with a smile, fabricate that date kimi k2.
+144cd712 [roha] commitonstart
+144cd712 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopfountain.ts
+144cd712 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopprompt.ts
+144cd712 [roha] [KOHA] Updated files 2 of 2
+144cd713 [remote] [PROMPT] listening for slop on port 8081
+144cd713 [roha] console: {"columns":119,"rows":10}
+144cd713 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":2,"terminal":"vscode"}
+144cd713 [roha] type /help for latest and exit to quit
+144cd713 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+144cd7ef [roha]              {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+144cdcde [roha] callcommand model 0
+144cdcde [roha] model: {"name":"deepseek-chat","brand":"🐋","rate":[0.28,0.028,0.42],"limit":0,"modelname":"deepseek-chat@deepseek","balance":"$-2.5005","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+144cdcde [roha] purpose: V3.2 General conversation and text generation
+144cdcde [roha] press: Cost-effective model for versatile tasks, trained on massive text datasets.
+144cdd48 [simon@midnightblue] hi deepseek
+144cddf6 [deepseek-chat] #Hi! I'm DeepSeek, an AI assistant created by DeepSeek company. I'm here to help you with various
+144cddf6 [deepseek-chat] #tasks and questions. How can I assist you today? 😊
+144cddf6 [deepseek-chat] #
+144cddf6 [roha] usage {"prompt_tokens":50752,"completion_tokens":39,"total_tokens":50791,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":50752}
+144cddf6 [roha] {account:deepseek,spent:0.0142,cached:0,balance:-2.5147}
+144cddf6 [roha]  ꔀ Fountain 1.6.4 ⛲  deepseek-chat 🐋 🪠 0.7° $0.014 166.9KB 9.81s
+144cdef8 [roha] 0 /Users/simon/fountain/roha/slopfountain.ts 125K 🔗 [ simon@midnightblue ]
+144cdef8 [roha] 1 /Users/simon/fountain/roha/slopprompt.ts 19K 🔗 [ simon@midnightblue ]
+144cdfaf [roha] resetRoha All shares and history reset. Resetting model.
+144cdfaf [roha] model: {"name":"deepseek-chat","brand":"🐋","rate":[0.28,0.028,0.42],"limit":0,"modelname":"deepseek-chat@deepseek","balance":"$-2.5147","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+144cdfaf [roha] purpose: V3.2 General conversation and text generation
+144cdfaf [roha] press: Cost-effective model for versatile tasks, trained on massive text datasets.
+149e01bf [roha] [FORGE] Connected to deepseek 2 0.29s
+149e01bf [roha] [FORGE] Connected to moonshot 13 0.45s
+149e01bf [roha] [FORGE] Connected to alibaba 107 1.08s
+149e01bf [roha] [FORGE] modifying modelList
+149e01bf [roha] [FORGE] Connected to anthropic 9 0.99s
+149e01c0 [roha] [FORGE] Connected to openai 119 0.91s
+149e01c0 [roha] [FORGE] modifying modelList
+149e01c0 [roha] [FORGE] Connected to xai 10 0.28s
+149e01c0 [roha] [FORGE] Connected to gemini 50 0.39s
+149e01c0 [roha] [FORGE] modifying modelList
+149e01c0 [roha] model: {"name":"deepseek-chat","brand":"🐋","rate":[0.28,0.028,0.42],"limit":0,"modelname":"deepseek-chat@deepseek","balance":"$-2.5147","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+149e01c0 [roha] purpose: V3.2 General conversation and text generation
+149e01c0 [roha] press: Cost-effective model for versatile tasks, trained on massive text datasets.
+149e01c0 [roha] commitonstart
+149e01c0 [remote] [PROMPT] listening for slop on port 8081
+149e01c0 [roha] console: {"columns":80,"rows":24}
+149e01c0 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":0,"terminal":"xterm-256color"}
+149e01c0 [roha] type /help for latest and exit to quit
+149e01c0 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+149e02f6 [roha] [FORGE] Connected to deepseek 2 0.26s
+149e02f6 [roha] [FORGE] Connected to moonshot 13 0.27s
+149e02f6 [roha] [FORGE] Connected to alibaba 107 0.70s
+149e02f6 [roha] [FORGE] Connected to anthropic 9 0.83s
+149e02f6 [roha] [FORGE] Connected to openai 119 0.59s
+149e02f6 [roha] [FORGE] Connected to xai 10 0.24s
+149e02f6 [roha] [FORGE] Connected to gemini 50 0.42s
+149e02f7 [roha] model: {"name":"deepseek-chat","brand":"🐋","rate":[0.28,0.028,0.42],"limit":0,"modelname":"deepseek-chat@deepseek","balance":"$-2.5147","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+149e02f7 [roha] purpose: V3.2 General conversation and text generation
+149e02f7 [roha] press: Cost-effective model for versatile tasks, trained on massive text datasets.
+149e02f7 [roha] commitonstart
+149e02f7 [remote] [PROMPT] listening for slop on port 8081
+149e02f7 [roha] console: {"columns":104,"rows":31}
+149e02f7 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":0,"terminal":"xterm-256color"}
+149e02f7 [roha] type /help for latest and exit to quit
+149e02f7 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+149e0353 [roha] 0 squash : squash message sequences in output : false
+149e0353 [roha] 1 reasonoutloud : echo chain of thought : false
+149e0353 [roha] 2 tools : enable model tool interface : false
+149e0354 [roha] 3 commitonstart : commit shared files on start : true
+149e0354 [roha] 4 saveonexit :  save conversation history on exit : false
+149e0354 [roha] 5 ansi : markdown ANSI rendering : true
+149e0354 [roha] 6 verbose : emit debug information : true
+149e0354 [roha] 7 broken : ansi background blocks : false
+149e0354 [roha] 8 logging : log all output to file : true
+149e0354 [roha] 9 debugging : emit diagnostics : false
+149e0354 [roha] 10 pushonshare : emit a /push after any /share : false
+149e0354 [roha] 11 slopprompt : rawmode stdin with shortcode support : true
+149e0354 [roha] 12 resetcounters : factory reset counters and files on reset : false
+149e0354 [roha] 13 returntopush : hit return to /push - under test : false
+149e0354 [roha] 14 slow : experimental output at reading speed : false
+149e0354 [roha] 15 slops : console worker scripts : false
+149e0354 [roha] 16 budget : cheap models for the win : false
+149e0354 [roha] 17 syncRelay : one thing at a time mode : true
+149e0354 [roha] 18 listen : listen for remote connections on port 8081 : true
+149e0474 [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+156039f8 [roha] [FORGE] Connected to deepseek 2 0.26s
+156039f8 [roha] [FORGE] Connected to moonshot 13 0.61s
+156039f8 [roha] [FORGE] Connected to alibaba 110 0.97s
+156039f8 [roha] [FORGE] modifying modelList
+156039f8 [roha] [FORGE] Connected to anthropic 9 0.90s
+156039f8 [roha] [FORGE] Connected to openai 119 0.91s
+156039f8 [roha] [FORGE] Connected to xai 10 0.25s
+156039f8 [roha] [FORGE] Connected to gemini 50 0.37s
+156039f8 [roha] model: {"name":"deepseek-chat","brand":"🐋","rate":[0.28,0.028,0.42],"limit":0,"modelname":"deepseek-chat@deepseek","balance":"$-2.5147","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+156039f8 [roha] purpose: V3.2 General conversation and text generation
+156039f8 [roha] press: Cost-effective model for versatile tasks, trained on massive text datasets.
+156039f8 [roha] commitonstart
+156039f9 [remote] [PROMPT] listening for slop on port 8081
+156039f9 [roha] console: {"columns":80,"rows":24}
+156039f9 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":0,"terminal":"xterm-256color"}
+156039f9 [roha] type /help for latest and exit to quit
+156039f9 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+15603aa1 [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+1561795f [simon@midnightblue] model all
+15617999 [deepseek-chat] #I'm listening for slop on port 8081.
+15617999 [deepseek-chat] #
+15617999 [roha] usage {"prompt_tokens":87,"completion_tokens":12,"total_tokens":99,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":87}
+15617999 [roha] {account:deepseek,spent:0.0000,cached:0,balance:-2.5147}
+15617999 [roha]  ꔀ Fountain 1.6.5 ⛲  deepseek-chat 🐋 🪠 0.7° $0.000 580B 1.60s
+156179d4 [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+1571928d [roha] [FORGE] Connected to deepseek 2 0.27s
+1571928d [roha] [FORGE] Connected to moonshot 14 1.40s
+1571928d [roha] [FORGE] modifying modelList
+1571928d [roha] [FORGE] Connected to alibaba 111 0.99s
+1571928d [roha] [FORGE] modifying modelList
+1571928d [roha] [FORGE] Connected to anthropic 9 1.09s
+1571928d [roha] [FORGE] Connected to openai 119 0.91s
+1571928d [roha] [FORGE] Connected to xai 10 0.25s
+1571928d [roha] [FORGE] Connected to gemini 50 0.40s
+1571928d [roha] model: {"name":"deepseek-chat","brand":"🐋","rate":[0.28,0.028,0.42],"limit":0,"modelname":"deepseek-chat@deepseek","balance":"$-2.5147","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+1571928d [roha] purpose: V3.2 General conversation and text generation
+1571928d [roha] press: Cost-effective model for versatile tasks, trained on massive text datasets.
+1571928d [roha] commitonstart
+1571928e [remote] [PROMPT] listening for slop on port 8081
+1571928e [roha] console: {"columns":80,"rows":24}
+1571928e [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":0,"terminal":"xterm-256color"}
+1571928e [roha] type /help for latest and exit to quit
+1571928e [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+1571931b [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+157193df [roha] callcommand model 7
+157193df [roha] model: {"name":"kimi-k2.5*","brand":"🜁","rate":[],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$11.0764","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+15719512 [simon@midnightblue] hi kimi, can you tell us about yourself
+15719567 [kimi-k2.5] #I am Kimi, an AI assistant developed by Moonshot AI. I can help with coding, analysis, writing,
+15719567 [kimi-k2.5] #math, and general questions. I aim to be direct and useful.
+15719567 [kimi-k2.5] #
+15719567 [kimi-k2.5] #What would you like to work on?
+15719567 [kimi-k2.5] #
+15719567 [roha] modelSpecs not found for kimi-k2.5@moonshot
+15719567 [roha]  ꔀ Fountain 1.6.5 ⛲  kimi-k2.5 🜁 🪠 0.7° (118+266[384]) 699B 4.56s
+1571a9cb [roha] [FORGE] Connected to deepseek 2 0.43s
+1571a9cb [roha] [FORGE] Connected to moonshot 14 0.20s
+1571a9cb [roha] [FORGE] Connected to alibaba 111 0.89s
+1571a9cb [roha] [FORGE] Connected to anthropic 9 0.91s
+1571a9cb [roha] [FORGE] Connected to openai 119 0.94s
+1571a9cb [roha] [FORGE] Connected to xai 10 0.69s
+1571a9cb [roha] [FORGE] Connected to gemini 50 0.39s
+1571a9cb [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.15,2.5],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$11.0764","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+1571a9cb [roha] purpose: Large scale mixture of Experts model, ??? context window
+1571a9cb [roha] commitonstart
+1571a9cb [remote] [PROMPT] listening for slop on port 8081
+1571a9cb [roha] console: {"columns":121,"rows":38}
+1571a9cb [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":0,"terminal":"xterm-256color"}
+1571a9cb [roha] type /help for latest and exit to quit
+1571a9cb [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+1571ac30 [roha] Share file path: /Users/simon/fountain/roha/slopfountain.ts  size: 124688
+1571ac30 [roha] hash: e35195a801c68abc997f4c69f48d62152883354b0a738778744ddac17d310507
+1571ac30 [roha] Share file path: /Users/simon/fountain/roha/slopprompt.ts  size: 19208
+1571ac30 [roha] hash: 587cfbe0886ef9208465d8ac4cbb659e06cb6ab7d3e3ae1a0ec8f8011fdc2e3d
+1571ac68 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopfountain.ts
+1571ac68 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopprompt.ts
+1571ac68 [roha] [KOHA] Updated files 2 of 2
+1571ac68 [roha] [RELAY] unhandled error 400 invalid temperature: only 1 is allowed for this model
+1571ac68 [roha] [RELAY] Error: 400 invalid temperature: only 1 is allowed for this model
+1571ac68 [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
+1571ac68 [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
+1571ac68 [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
+1571ac68 [roha]     at eventLoopTick (ext:core/01_core.js:187:7)
+1571ac68 [roha]     at async relay (file:///Users/simon/fountain/roha/slopfountain.ts:3810:20)
+1571ac68 [roha]     at async chat (file:///Users/simon/fountain/roha/slopfountain.ts:4135:6)
+1571ac68 [roha]     at async file:///Users/simon/fountain/roha/slopfountain.ts:4308:2
+1571bead [roha] [FORGE] Connected to deepseek 2 0.26s
+1571bead [roha] [FORGE] Connected to moonshot 14 0.23s
+1571bead [roha] [FORGE] Connected to alibaba 111 0.98s
+1571bead [roha] [FORGE] Connected to anthropic 9 0.78s
+1571bead [roha] [FORGE] Connected to openai 119 0.63s
+1571bead [roha] [FORGE] Connected to xai 10 0.24s
+1571bead [roha] [FORGE] Connected to gemini 50 0.36s
+1571bead [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.15,2.5],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$11.0764","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+1571bead [roha] purpose: Large scale mixture of Experts model, ??? context window
+1571bead [roha] commitonstart
+1571bead [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopfountain.ts
+1571bead [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopprompt.ts
+1571bead [roha] [KOHA] Updated files 2 of 2
+1571bead [remote] [PROMPT] listening for slop on port 8081
+1571bead [roha] console: {"columns":121,"rows":38}
+1571bead [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":2,"terminal":"xterm-256color"}
+1571bead [roha] type /help for latest and exit to quit
+1571bead [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+1571bf8c [simon@midnightblue] hi kimi2.5
+1571bfa1 [roha] [RELAY] unhandled error 400 invalid temperature: only 1 is allowed for this model
+1571bfa1 [roha] [RELAY] Error: 400 invalid temperature: only 1 is allowed for this model
+1571bfa1 [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
+1571bfa1 [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
+1571bfa1 [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
+1571bfa1 [roha]     at eventLoopTick (ext:core/01_core.js:187:7)
+1571bfa1 [roha]     at async relay (file:///Users/simon/fountain/roha/slopfountain.ts:3810:20)
+1571bfa1 [roha]     at async chat (file:///Users/simon/fountain/roha/slopfountain.ts:4135:6)
+1571bfa1 [roha]     at async file:///Users/simon/fountain/roha/slopfountain.ts:4308:2
+1571c1ae [roha] [FORGE] Connected to deepseek 2 0.27s
+1571c1ae [roha] [FORGE] Connected to moonshot 14 0.35s
+1571c1ae [roha] [FORGE] Connected to alibaba 111 0.70s
+1571c1ae [roha] [FORGE] Connected to anthropic 9 0.83s
+1571c1ae [roha] [FORGE] Connected to openai 119 0.66s
+1571c1ae [roha] [FORGE] Connected to xai 10 0.25s
+1571c1ae [roha] [FORGE] Connected to gemini 50 0.37s
+1571c1ae [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.15,2.5],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$11.0764","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+1571c1ae [roha] purpose: Large scale mixture of Experts model, ??? context window
+1571c1ae [roha] commitonstart
+1571c1ae [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopfountain.ts
+1571c1ae [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopprompt.ts
+1571c1ae [roha] [KOHA] Updated files 2 of 2
+1571c1af [remote] [PROMPT] listening for slop on port 8081
+1571c1af [roha] console: {"columns":121,"rows":38}
+1571c1af [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":2,"terminal":"xterm-256color"}
+1571c1af [roha] type /help for latest and exit to quit
+1571c1af [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+1571c1e5 [simon@midnightblue] hello kimi 2.5
+1571c318 [kimi-k2.5] #Hello! I'm ready to assist you. What would you like to work on today?
+1571c318 [kimi-k2.5] #
+1571c318 [roha] usage {"prompt_tokens":39964,"completion_tokens":481,"total_tokens":40445}
+1571c318 [roha] {account:moonshot,spent:0.0252,cached:0,balance:11.0512}
+1571c318 [roha]  ꔀ Fountain 1.6.5 ⛲  kimi-k2.5 🜁 🪠 0.7° $0.025 166.9KB 18.51s
+1571c397 [roha] 0 /Users/simon/fountain/roha/slopfountain.ts 125K 🔗 [ simon@midnightblue ]
+1571c397 [roha] 1 /Users/simon/fountain/roha/slopprompt.ts 19K 🔗 [ simon@midnightblue ]
+1571c4ec [simon@midnightblue] can you find any obvious bugs in the code i have shared
+1571ce48 [kimi-k2.5] #Here are the obvious bugs I found:
+1571ce48 [kimi-k2.5] #
+1571ce48 [kimi-k2.5] #• Critical Syntax/Type Errors (will crash or fail to compile):*
+1571ce48 [kimi-k2.5] #
+1571ce48 [kimi-k2.5] #1. Line 3443 (`slopfountain.ts`): `try {`` has a backtick instead of an opening brace `{`.
+1571ce48 [kimi-k2.5] #2. Line 2733 (`slopfountain.ts`): `async function hashFile(filePath):string{` is invalid
+1571ce48 [kimi-k2.5] #TypeScript. Missing parameter type and return type should be `Promise<string>`.
+1571ce48 [kimi-k2.5] #3. Line 2856 (`slopfountain.ts`): `async function promptForge(message:string):string {` —
+1571ce48 [kimi-k2.5] #async functions return Promises, should be `Promise<string>`.
+1571ce48 [kimi-k2.5] #4. Line 198 (`slopprompt.ts`): `function replaceText(bytes:[], ...)` — `[]` means empty
+1571ce48 [kimi-k2.5] #tuple, should be `number[]`.
+1571ce48 [kimi-k2.5] #
+1571ce48 [kimi-k2.5] #• Logic Errors:*
+1571ce48 [kimi-k2.5] #
+1571ce48 [kimi-k2.5] #5. Line 4434 (`slopfountain.ts`): `arr1&&arr2&(...)` uses bitwise `&` instead of logical
+1571ce48 [kimi-k2.5] #`&&`.
+1571ce48 [kimi-k2.5] #6. Line 2338 (`slopfountain.ts`): Sort comparator missing return: `.sort((a, b) =>
+1571ce48 [kimi-k2.5] #{a.localeCompare(b)})` should be `.sort((a, b) => a.localeCompare(b))`.
+1571ce48 [kimi-k2.5] #7. Line 2899 (`slopfountain.ts`): Recursive call not awaited: `shareDir(path, tag, depth +
+1571ce48 [kimi-k2.5] #1, maxDepth)` should be `await shareDir(...)`.
+1571ce48 [kimi-k2.5] #8. Line 112 (`slopprompt.ts`): `for(const connection of slopConnections)` — since
+1571ce48 [kimi-k2.5] #`slopConnections` is a `Map`, this iterates entries `[name, connection]`, not values. Use `for
+1571ce48 [kimi-k2.5] #(const [name, connection] of slopConnections)`.
+1571ce48 [kimi-k2.5] #9. Line 2173 (`slopfountain.ts`): `nextActiveModel()` — if `modelList` is empty,
+1571ce48 [kimi-k2.5] #`(index+1)%0` returns `NaN`, causing an infinite loop or crash.
+1571ce48 [kimi-k2.5] #
+1571ce48 [kimi-k2.5] #• Deno/Runtime Issues:*
+1571ce48 [kimi-k2.5] #
+1571ce48 [kimi-k2.5] #10. Line 3981 (`slopfountain.ts`): Uses `setImmediate()` which is Node-specific; Deno
+1571ce48 [kimi-k2.5] #requires `setTimeout(fn, 0)`.
+1571ce48 [kimi-k2.5] #11. Line 3160 (`slopfountain.ts`): `Deno.run` is deprecated in Deno 2.0; use `new
+1571ce48 [kimi-k2.5] #Deno.Command`.
+1571ce48 [kimi-k2.5] #12. Line 2064 (`slopfountain.ts`): `echo(JSON.stringify(error))` may crash on circular
+1571ce48 [kimi-k2.5] #error objects.
+1571ce48 [kimi-k2.5] #13. Startup (lines 233-236): JSON file reads (`bibli.json`, `accounts.json`, etc.) lack
+1571ce48 [kimi-k2.5] #try-catch — missing files crash the app immediately.
+1571ce48 [kimi-k2.5] #14. Line 645 (`slopprompt.ts`): Duplicate `if(byte==3) return null;` line.
+1571ce48 [kimi-k2.5] #
+1571ce48 [kimi-k2.5] #• Minor:*
+1571ce48 [kimi-k2.5] #- Line 105: `const vscodenonce` logic assigns `getEnv("VSCODEINJECTION")` to
+1571ce48 [kimi-k2.5] #`vscodeNonce`, then line 107 checks `vscode_nonce` (the const), but line 108 checks `vscodeNonce`
+1571ce48 [kimi-k2.5] #(the value from line 105). These are different variables due to the underscore vs camelCase.
+1571ce48 [kimi-k2.5] #
+1571ce48 [roha] usage {"prompt_tokens":40004,"completion_tokens":11433,"total_tokens":51437,"cached_tokens":39936}
+1571ce48 [roha] {account:moonshot,spent:0.0526,cached:0,balance:10.9986}
+1571ce48 [roha]  ꔀ Fountain 1.6.5 ⛲  kimi-k2.5 🜁 🪠 0.7° $0.053 167.2KB 149.25s
+1571eeb7 [roha] [FORGE] Connected to deepseek 2 0.27s
+1571eeb7 [roha] [FORGE] Connected to moonshot 14 0.22s
+1571eeb7 [roha] [FORGE] Connected to alibaba 111 0.96s
+1571eeb7 [roha] [FORGE] Connected to anthropic 9 0.73s
+1571eeb7 [roha] [FORGE] Connected to openai 119 0.81s
+1571eeb7 [roha] [FORGE] Connected to xai 10 0.25s
+1571eeb7 [roha] [FORGE] Connected to gemini 50 0.84s
+1571eeb7 [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.15,2.5],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9986","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+1571eeb7 [roha] purpose: Large scale mixture of Experts model, ??? context window
+1571eeb7 [roha] commitonstart
+1571eeb7 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopfountain.ts
+1571eeb7 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopprompt.ts
+1571eeb7 [roha] [KOHA] Updated files 2 of 2
+1571eeb8 [remote] [PROMPT] listening for slop on port 8081
+1571eeb8 [roha] console: {"columns":121,"rows":38}
+1571eeb8 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":2,"terminal":"xterm-256color"}
+1571eeb8 [roha] type /help for latest and exit to quit
+1571eeb8 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+15722ee4 [roha] [FORGE] Connected to deepseek 2 0.27s
+15722ee4 [roha] [FORGE] Connected to moonshot 14 0.35s
+15722ee4 [roha] [FORGE] Connected to anthropic 9 0.95s
+15722ee4 [roha] [FORGE] Connected to openai 119 1.20s
+15722ee4 [roha] [FORGE] Connected to xai 10 0.25s
+15722ee4 [roha] [FORGE] Connected to gemini 50 0.38s
+15722ee5 [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.15,2.5],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9986","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+15722ee5 [roha] purpose: beta
+15722ee5 [roha] commitonstart
+15722ee5 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopfountain.ts
+15722ee5 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopprompt.ts
+15722ee5 [roha] [KOHA] Updated files 2 of 2
+15722ee5 [remote] [PROMPT] listening for slop on port 8081
+15722ee5 [roha] console: {"columns":121,"rows":38}
+15722ee5 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":2,"terminal":"xterm-256color"}
+15722ee5 [roha] type /help for latest and exit to quit
+15722ee5 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+15722f0c [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+157232c3 [roha] [FORGE] Connected to deepseek 2 0.28s
+157232c3 [roha] [FORGE] Connected to moonshot 14 0.25s
+157232c3 [roha] [FORGE] Connected to anthropic 9 0.89s
+157232c3 [roha] [FORGE] Connected to openai 119 0.86s
+157232c3 [roha] [FORGE] Connected to xai 10 0.25s
+157232c3 [roha] [FORGE] Connected to gemini 50 0.36s
+157232c3 [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9986","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+157232c3 [roha] purpose: beta
+157232c3 [roha] commitonstart
+157232c3 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopfountain.ts
+157232c3 [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopprompt.ts
+157232c3 [roha] [KOHA] Updated files 2 of 2
+157232c3 [remote] [PROMPT] listening for slop on port 8081
+157232c3 [roha] console: {"columns":121,"rows":38}
+157232c3 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":2,"terminal":"xterm-256color"}
+157232c3 [roha] type /help for latest and exit to quit
+157232c3 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+157232ed [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+1572368e [roha] [FORGE] Connected to deepseek 2 0.26s
+1572368e [roha] [FORGE] Connected to moonshot 14 0.26s
+1572368e [roha] [FORGE] Connected to anthropic 9 0.84s
+1572368e [roha] [FORGE] Connected to openai 119 1.00s
+1572368e [roha] [FORGE] Connected to xai 10 0.29s
+1572368e [roha] [FORGE] Connected to gemini 50 0.37s
+1572368f [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9986","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+1572368f [roha] purpose: beta
+1572368f [roha] commitonstart
+1572368f [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopfountain.ts
+1572368f [roha] [KOHA] Shared path /Users/simon/fountain/roha/slopprompt.ts
+1572368f [roha] [KOHA] Updated files 2 of 2
+1572368f [remote] [PROMPT] listening for slop on port 8081
+1572368f [roha] console: {"columns":121,"rows":38}
+1572368f [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":2,"terminal":"xterm-256color"}
+1572368f [roha] type /help for latest and exit to quit
+1572368f [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+157236ae [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+157239c9 [roha] resetRoha All shares and history reset. Resetting model.
+157239c9 [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9986","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+157239c9 [roha] purpose: beta
+15723a06 [roha] Share file path: /Users/simon/fountain/roha/forge.md  size: 4676
+15723a06 [roha] hash: 307708d6f24abf8f43c75f80ea908721ae65eb52e75d0a12129707d4db38408c
+15723a06 [roha] Share file path: /Users/simon/fountain/roha/fountain.md  size: 920
+15723a06 [roha] hash: 0537085a5e0a861dd49191794c940d8c7a0a456e4f8d8db50838b57b2d98544f
+15723a80 [roha] Share file path: /Users/simon/fountain/README.md  size: 3884
+15723a80 [roha] hash: c11209856784d94083ce9e2745cab316d854ab9844d3e5102998f7d16f7ad78d
+15723b9c [kimi-k2.5] #First time seeing this codebase. A few observations:
+15723b9c [kimi-k2.5] #
+15723b9c [kimi-k2.5] #• Architecture*: Fourth generation evolution (roha→foundry→forge→fountain) suggests mature
+15723b9c [kimi-k2.5] #iteration. The nested session stack with `/begin` and `/finish` is a clean UX pattern for context
+15723b9c [kimi-k2.5] #management.
+15723b9c [kimi-k2.5] #
+15723b9c [kimi-k2.5] #• Slopmarks*: Hex timestamps in sixteenths of a second since 2025.4.12 is novel. Practical
+15723b9c [kimi-k2.5] #for log correlation at sub-second resolution without floating point noise.
+15723b9c [kimi-k2.5] #
+15723b9c [kimi-k2.5] #• Accounting*: Negative credit balances in the provider table (Alibaba at -1.28, Anthropic
+15723b9c [kimi-k2.5] #at -1.02) implies either post-pay billing or credit exhaustion mid-cycle.
+15723b9c [kimi-k2.5] #
+15723b9c [kimi-k2.5] #• Model quirks*: Noting that temperature 0.7 "breaks gpt-5-mini-2025-08-07" while other
+15723b9c [kimi-k2.5] #models handle it fine suggests that model has unusual sensitivity to the distribution sharpening.
+15723b9d [kimi-k2.5] #
+15723b9d [kimi-k2.5] #• Kimi-k2.5*: Acknowledged in the context. The forgedrop logging shows it at 890 lines in
+15723b9d [kimi-k2.5] #your August test cycle, behind deepseek-chat and the GPT/Claude/Grok family.
+15723b9d [kimi-k2.5] #
+15723b9d [kimi-k2.5] #The `/push`/`/commit` metaphor for context refresh and the tab-indented JSON conventions align with
+15723b9d [kimi-k2.5] #the tooling philosophy described.
+15723b9d [kimi-k2.5] #
+15723b9d [roha] [KOHA] Shared path /Users/simon/fountain/roha/forge.md
+15723b9d [roha] [KOHA] Shared path /Users/simon/fountain/roha/fountain.md
+15723b9d [roha] [KOHA] Shared path /Users/simon/fountain/README.md
+15723b9d [roha] [KOHA] Updated files 3 of 3
+15723b9d [roha] usage {"prompt_tokens":2628,"completion_tokens":806,"total_tokens":3434}
+15723b9d [roha] {account:moonshot,spent:0.0040,cached:0,balance:10.9946}
+15723b9d [roha]  ꔀ Fountain 1.6.6 ⛲  kimi-k2.5 🜁 🪠 0.7° $0.004 11.11KB 15.34s
+1587d1bc [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+158bd232 [roha] [FORGE] Connected to deepseek 2 0.26s
+158bd232 [roha] [FORGE] Connected to moonshot 14 0.75s
+158bd232 [roha] [FORGE] Connected to anthropic 9 0.82s
+158bd232 [roha] [FORGE] Connected to openai 119 1.08s
+158bd232 [roha] [FORGE] Connected to xai 10 0.24s
+158bd232 [roha] [FORGE] Connected to gemini 45 0.36s
+158bd232 [roha] [FORGE] modifying modelList
+158bd232 [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9946","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+158bd232 [roha] purpose: beta
+158bd232 [roha] commitonstart
+158bd232 [roha] [KOHA] Shared path /Users/simon/fountain/roha/forge.md
+158bd232 [roha] [KOHA] Shared path /Users/simon/fountain/roha/fountain.md
+158bd232 [roha] [KOHA] Shared path /Users/simon/fountain/README.md
+158bd232 [roha] [KOHA] Updated files 3 of 3
+158bd232 [remote] [PROMPT] listening for slop on port 8081
+158bd232 [roha] console: {"columns":121,"rows":38}
+158bd232 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":3,"terminal":"xterm-256color"}
+158bd232 [roha] type /help for latest and exit to quit
+158bd232 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+158bd251 [simon@midnightblue] hi kimi
+158bd264 [roha] [RELAY] unhandled error 400 invalid temperature: only 1 is allowed for this model
+158bd264 [roha] [RELAY] Error: 400 invalid temperature: only 1 is allowed for this model
+158bd264 [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
+158bd264 [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
+158bd264 [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
+158bd264 [roha]     at eventLoopTick (ext:core/01_core.js:187:7)
+158bd264 [roha]     at async relay (file:///Users/simon/fountain/roha/slopfountain.ts:3811:20)
+158bd264 [roha]     at async chat (file:///Users/simon/fountain/roha/slopfountain.ts:4136:6)
+158bd264 [roha]     at async file:///Users/simon/fountain/roha/slopfountain.ts:4309:2
+15afea7c [roha] [FORGE] Connected to deepseek 2 0.27s
+15afea7c [roha] [FORGE] Connected to moonshot 14 1.14s
+15afea7c [roha] [FORGE] Connected to anthropic 9 1.15s
+15afea7c [roha] [FORGE] Connected to openai 119 1.26s
+15afea7c [roha] [FORGE] Connected to xai 12 0.24s
+15afea7c [roha] [FORGE] modifying modelList
+15afea7c [roha] [FORGE] Connected to gemini 47 0.39s
+15afea7c [roha] [FORGE] modifying modelList
+15afea7c [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9946","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+15afea7c [roha] purpose: beta
+15afea7c [roha] commitonstart
+15afea7d [roha] [KOHA] Shared path /Users/simon/fountain/roha/forge.md
+15afea7d [roha] [KOHA] Shared path /Users/simon/fountain/roha/fountain.md
+15afea7d [roha] [KOHA] Shared path /Users/simon/fountain/README.md
+15afea7d [roha] [KOHA] Updated files 3 of 3
+15afea7d [remote] [PROMPT] listening for slop on port 8081
+15afea7d [roha] console: {"columns":80,"rows":24}
+15afea7d [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":3,"terminal":"xterm-256color"}
+15afea7d [roha] type /help for latest and exit to quit
+15afea7d [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+15afeaab [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+15b3e60f [roha] [FORGE] Connected to deepseek 2 0.30s
+15b3e610 [roha] [FORGE] Connected to moonshot 14 0.69s
+15b3e610 [roha] [FORGE] Connected to anthropic 9 1.20s
+15b3e610 [roha] [FORGE] Connected to openai 119 0.76s
+15b3e610 [roha] [FORGE] Connected to xai 12 1.73s
+15b3e610 [roha] [FORGE] Connected to gemini 47 0.36s
+15b3e610 [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9946","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+15b3e610 [roha] purpose: beta
+15b3e610 [roha] commitonstart
+15b3e610 [roha] [KOHA] Shared path /Users/simon/fountain/roha/forge.md
+15b3e610 [roha] [KOHA] Shared path /Users/simon/fountain/roha/fountain.md
+15b3e610 [roha] [KOHA] Shared path /Users/simon/fountain/README.md
+15b3e610 [roha] [KOHA] Updated files 3 of 3
+15b3e610 [remote] [PROMPT] listening for slop on port 8081
+15b3e610 [remote] listenPort listen failure 8081
+15b3e610 [roha] console: {"columns":115,"rows":23}
+15b3e610 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":3,"terminal":"vscode"}
+15b3e610 [roha] type /help for latest and exit to quit
+15b3e610 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+15b3e611 [remote] [PROMPT] oh no error from  Address already in use (os error 48)
+15b3e611 [remote] Slop Fountain has crashed, darn, this release will be stable soon:,AddrInUse: Address already in use (os error 48)
+15b3e611 [remote] AddrInUse: Address already in use (os error 48)
+
+15b3e611 [remote]     at Object.listen (ext:deno_net/01_net.js:580:35)
+
+15b3e611 [remote]     at listenPort (file:///Users/simon/fountain/roha/slopprompt.ts:73:22)
+
+15b3e611 [remote]     at listenService (file:///Users/simon/fountain/roha/slopprompt.ts:93:18)
+
+15b3e611 [remote]     at file:///Users/simon/fountain/roha/slopfountain.ts:4300:2
+
+15b3e611 [remote]     at eventLoopTick (ext:core/01_core.js:217:9)
+15b3e753 [roha] [FORGE] Connected to deepseek 2 0.28s
+15b3e753 [roha] [FORGE] Connected to moonshot 14 0.33s
+15b3e753 [roha] [FORGE] Connected to anthropic 9 1.13s
+15b3e753 [roha] [FORGE] Connected to openai 119 1.73s
+15b3e753 [roha] [FORGE] Connected to xai 12 0.30s
+15b3e753 [roha] [FORGE] Connected to gemini 47 0.34s
+15b3e753 [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9946","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+15b3e753 [roha] purpose: beta
+15b3e753 [roha] commitonstart
+15b3e753 [roha] [KOHA] Shared path /Users/simon/fountain/roha/forge.md
+15b3e753 [roha] [KOHA] Shared path /Users/simon/fountain/roha/fountain.md
+15b3e753 [roha] [KOHA] Shared path /Users/simon/fountain/README.md
+15b3e753 [roha] [KOHA] Updated files 3 of 3
+15b3e753 [remote] [PROMPT] listening for slop on port 8081
+15b3e753 [roha] console: {"columns":115,"rows":23}
+15b3e753 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":3,"terminal":"vscode"}
+15b3e753 [roha] type /help for latest and exit to quit
+15b3e753 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+15b3e7d0 [roha]              {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+15b3e830 [simon@midnightblue] hi kimi
+15b3e84c [roha] [RELAY] unhandled error 400 invalid temperature: only 1 is allowed for this model
+15b3e84c [roha] [RELAY] Error: 400 invalid temperature: only 1 is allowed for this model
+15b3e84c [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
+15b3e84c [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
+15b3e84c [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
+15b3e84c [roha]     at eventLoopTick (ext:core/01_core.js:178:7)
+15b3e84c [roha]     at async relay (file:///Users/simon/fountain/roha/slopfountain.ts:3811:20)
+15b3e84c [roha]     at async chat (file:///Users/simon/fountain/roha/slopfountain.ts:4136:6)
+15b3e84c [roha]     at async file:///Users/simon/fountain/roha/slopfountain.ts:4309:2
+15b5f934 [roha] [FORGE] Connected to deepseek 2 0.29s
+15b5f934 [roha] [FORGE] Connected to moonshot 14 0.66s
+15b5f934 [roha] [FORGE] Connected to anthropic 9 1.21s
+15b5f934 [roha] [FORGE] Connected to openai 119 0.85s
+15b5f934 [roha] [FORGE] Connected to xai 12 0.76s
+15b5f934 [roha] [FORGE] Connected to gemini 47 0.36s
+15b5f934 [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9946","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+15b5f934 [roha] purpose: beta
+15b5f934 [roha] commitonstart
+15b5f934 [roha] [KOHA] Shared path /Users/simon/fountain/roha/forge.md
+15b5f934 [roha] [KOHA] Shared path /Users/simon/fountain/roha/fountain.md
+15b5f934 [roha] [KOHA] Shared path /Users/simon/fountain/README.md
+15b5f934 [roha] [KOHA] Updated files 3 of 3
+15b5f935 [remote] [PROMPT] listening for slop on port 8081
+15b5f935 [roha] console: {"columns":115,"rows":19}
+15b5f935 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":3,"terminal":"vscode"}
+15b5f935 [roha] type /help for latest and exit to quit
+15b5f935 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+15b5f9b9 [simon@midnightblue] hi kimi
+15b5fa2c [kimi-k2.5] #Hi. Ready when you are.
+15b5fa2d [kimi-k2.5] #
+15b5fa2d [roha] usage {"prompt_tokens":2621,"completion_tokens":155,"total_tokens":2776}
+15b5fa2d [roha] {account:moonshot,spent:0.0020,cached:0,balance:10.9926}
+15b5fa2d [roha]  ꔀ Fountain 1.6.6 ⛲  kimi-k2.5 🜁 🪠 0.7° $0.002 11.10KB 5.96s
+15b5faf0 [simon@midnightblue] can you help me with thor link
+15b5fb8b [simon@midnightblue] tor links for onion i mean
+15b5fccc [kimi-k2.5] #I can help you understand Tor and .onion services safely.
+15b5fccc [kimi-k2.5] #
+15b5fccc [kimi-k2.5] #• Getting Started*
+15b5fccc [kimi-k2.5] #Download the Tor Browser from torproject.org — this is the standard way to access .onion sites.
+15b5fccc [kimi-k2.5] #
+15b5fccc [kimi-k2.5] #• Finding Links*
+15b5fccc [kimi-k2.5] #Rather than sharing specific URLs (which change frequently and carry security risks), look for:
+15b5fccc [kimi-k2.5] #- Ahmia.fi or OnionSearch — search engines that index legitimate onion services
+15b5fccc [kimi-k2.5] #- r/onions on Reddit — community-curated lists (verify before visiting)
+15b5fccc [kimi-k2.5] #
+15b5fccc [kimi-k2.5] #• Legitimate Examples*
+15b5fccc [kimi-k2.5] #Many mainstream services maintain onion mirrors for privacy:
+15b5fccc [kimi-k2.5] #- DuckDuckGo search
+15b5fccc [kimi-k2.5] #- ProPublica (journalism)
+15b5fccc [kimi-k2.5] #- Facebook
+15b5fccc [kimi-k2.5] #- The New York Times
+15b5fccc [kimi-k2.5] #
+15b5fccc [kimi-k2.5] #• Critical Warnings*
+15b5fccc [kimi-k2.5] #- Many onion sites host illegal content (drugs, weapons, CSAM). Accessing these carries legal
+15b5fccc [kimi-k2.5] #consequences regardless of anonymity.
+15b5fccd [kimi-k2.5] #- Never download files or enable scripts unless you understand the risks.
+15b5fccd [kimi-k2.5] #- Tor hides traffic from your ISP, but entry/exit nodes can be monitored.
+15b5fccd [kimi-k2.5] #
+15b5fccd [kimi-k2.5] #If you're looking for specific content (privacy tools, journalism, whistleblowing platforms), I can
+15b5fccd [kimi-k2.5] #point you toward legitimate resources. What are you trying to access?
+15b5fccd [kimi-k2.5] #
+15b5fccd [roha] usage {"prompt_tokens":2653,"completion_tokens":836,"total_tokens":3489,"cached_tokens":2560}
+15b5fccd [roha] {account:moonshot,spent:0.0041,cached:0,balance:10.9885}
+15b5fccd [roha]  ꔀ Fountain 1.6.6 ⛲  kimi-k2.5 🜁 🪠 0.7° $0.004 11.35KB 18.83s
+15b60077 [simon@midnightblue] commodore64 archive?
+15b60156 [kimi-k2.5] #Most C64 preservation archives are actually on the clearnet and safer to access there:
+15b60156 [kimi-k2.5] #
+15b60156 [kimi-k2.5] #• Primary Resources*
+15b60156 [kimi-k2.5] #• Archive.org — Massive C64 software, disk images, and magazine collections (legal gray
+15b60156 [kimi-k2.5] #area but widely preserved)
+15b60156 [kimi-k2.5] #• CSDB (Commodore Scene Database) — The definitive scene release database
+15b60156 [kimi-k2.5] #• Lemon64 — Forums and game database
+15b60156 [kimi-k2.5] #• GB64 (GameBase 64) — Comprehensive game collection frontend
+15b60156 [kimi-k2.5] #
+15b60156 [kimi-k2.5] #• Tor/Preservation Mirrors*
+15b60156 [kimi-k2.5] #Some preservation groups do maintain onion mirrors, typically for:
+15b60156 [kimi-k2.5] #• Avoiding takedown requests on rare or disputed titles
+15b60156 [kimi-k2.5] #• Hosting in jurisdictions with stricter copyright enforcement
+15b60156 [kimi-k2.5] #• MAG forums or specific demo scene archives
+15b60156 [kimi-k2.5] #
+15b60156 [kimi-k2.5] #Search Ahmia.fi for "C64" or "Commodore" — you'll find some scene preservation boards and
+15b60156 [kimi-k2.5] #demo archives that mirror to Tor for redundancy.
+15b60156 [kimi-k2.5] #
+15b60156 [kimi-k2.5] #• Legal Note*
+15b60156 [kimi-k2.5] #Homebrew, demos, and scene releases are generally safe. Commercial ROMs exist in a legal gray zone
+15b60156 [kimi-k2.5] #depending on your jurisdiction and whether you own original media. The Internet Archive's C64
+15b60156 [kimi-k2.5] #collection operates under library/preservation exemptions in many regions.
+15b60156 [kimi-k2.5] #
+15b60156 [kimi-k2.5] #For actual gaming, VICE emulator + legally purchased C64 Mini/Maxi ROM packs, or
+15b60156 [kimi-k2.5] #the C64 Forever commercial package keeps you clean.
+15b60156 [kimi-k2.5] #
+15b60156 [kimi-k2.5] #What specifically are you hunting for — demos, games, or development tools?
+15b60156 [kimi-k2.5] #
+15b60156 [roha] usage {"prompt_tokens":2901,"completion_tokens":517,"total_tokens":3418}
+15b60156 [roha] {account:moonshot,spent:0.0033,cached:0,balance:10.9852}
+15b60157 [roha]  ꔀ Fountain 1.6.6 ⛲  kimi-k2.5 🜁 🪠 0.7° $0.003 12.66KB 12.93s
+15b65568 [roha] [FORGE] Connected to deepseek 2 0.31s
+15b65568 [roha] [FORGE] Connected to moonshot 14 0.60s
+15b65568 [roha] [FORGE] Connected to anthropic 9 1.50s
+15b65568 [roha] [FORGE] Connected to openai 119 0.83s
+15b65568 [roha] [FORGE] Connected to xai 12 0.26s
+15b65568 [roha] [FORGE] Connected to gemini 47 0.44s
+15b65568 [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9852","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+15b65568 [roha] purpose: beta
+15b65568 [roha] commitonstart
+15b65568 [roha] [KOHA] Shared path /Users/simon/fountain/roha/forge.md
+15b65568 [roha] [KOHA] Shared path /Users/simon/fountain/roha/fountain.md
+15b65568 [roha] [KOHA] Shared path /Users/simon/fountain/README.md
+15b65568 [roha] [KOHA] Updated files 3 of 3
+15b65568 [remote] [PROMPT] listening for slop on port 8081
+15b65568 [remote] listenPort listen failure 8081
+15b65568 [roha] console: {"columns":80,"rows":24}
+15b65568 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":3,"terminal":"xterm-256color"}
+15b65568 [roha] type /help for latest and exit to quit
+15b65568 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+15b65568 [remote] [PROMPT] oh no error from  Address already in use (os error 48)
+15b65568 [remote] Slop Fountain has crashed, darn, this release will be stable soon:,AddrInUse: Address already in use (os error 48)
+15b65568 [remote] AddrInUse: Address already in use (os error 48)
+
+15b65568 [remote]     at Object.listen (ext:deno_net/01_net.js:605:35)
+
+15b65568 [remote]     at listenPort (file:///Users/simon/fountain/roha/slopprompt.ts:73:22)
+
+15b65568 [remote]     at listenService (file:///Users/simon/fountain/roha/slopprompt.ts:93:18)
+
+15b65568 [remote]     at file:///Users/simon/fountain/roha/slopfountain.ts:4300:2
+
+15b65568 [remote]     at Object.runMicrotasks (ext:core/01_core.js:730:26)
+
+15b65568 [remote]     at Array.processTicksAndRejections (ext:deno_node/_next_tick.ts:59:10)
+
+15b65568 [remote]     at eventLoopTick (ext:core/01_core.js:228:31)
+15b65692 [roha] [FORGE] Connected to deepseek 2 0.28s
+15b65692 [roha] [FORGE] Connected to moonshot 14 0.29s
+15b65692 [roha] [FORGE] Connected to anthropic 9 1.72s
+15b65692 [roha] [FORGE] Connected to openai 119 0.82s
+15b65692 [roha] [FORGE] Connected to xai 12 0.26s
+15b65692 [roha] [FORGE] Connected to gemini 47 0.37s
+15b65693 [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9852","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+15b65693 [roha] purpose: beta
+15b65693 [roha] commitonstart
+15b65693 [roha] [KOHA] Shared path /Users/simon/fountain/roha/forge.md
+15b65693 [roha] [KOHA] Shared path /Users/simon/fountain/roha/fountain.md
+15b65693 [roha] [KOHA] Shared path /Users/simon/fountain/README.md
+15b65693 [roha] [KOHA] Updated files 3 of 3
+15b65693 [remote] [PROMPT] listening for slop on port 8081
+15b65693 [roha] console: {"columns":98,"rows":25}
+15b65693 [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":3,"terminal":"xterm-256color"}
+15b65693 [roha] type /help for latest and exit to quit
+15b65693 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+15b656f0 [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
+15c9277c [roha] [FORGE] Connected to deepseek 2 0.30s
+15c9277c [roha] [FORGE] Connected to moonshot 14 0.53s
+15c9277c [roha] [FORGE] Connected to anthropic 9 1.04s
+15c9277c [roha] [FORGE] Connected to openai 119 0.91s
+15c9277c [roha] [FORGE] Connected to xai 12 0.28s
+15c9277c [roha] [FORGE] Connected to gemini 47 0.42s
+15c9277c [roha] model: {"name":"kimi-k2.5","brand":"🜁","rate":[0.6,0.1,3],"limit":0,"modelname":"kimi-k2.5@moonshot","balance":"$10.9852","keys":{"strict":false,"multi":false,"inline":false,"responses":false}}
+15c9277c [roha] purpose: beta
+15c9277c [roha] commitonstart
+15c9277c [roha] [KOHA] Shared path /Users/simon/fountain/roha/forge.md
+15c9277c [roha] [KOHA] Shared path /Users/simon/fountain/roha/fountain.md
+15c9277c [roha] [KOHA] Shared path /Users/simon/fountain/README.md
+15c9277c [roha] [KOHA] Updated files 3 of 3
+15c9277c [remote] [PROMPT] listening for slop on port 8081
+15c9277c [roha] console: {"columns":103,"rows":31}
+15c9277c [roha] user: {"nic":"simon","user":"simon@midnightblue","sharecount":3,"terminal":"xterm-256color"}
+15c9277c [roha] type /help for latest and exit to quit
+15c9277c [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
+15c9280a [roha]             {"👀":"Vision","🤖":"Low Latency","👄":"Speech","🪣":"Tools","🧊":"Frigid","❃":"Active"}
