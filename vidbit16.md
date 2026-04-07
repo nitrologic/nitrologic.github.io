@@ -147,3 +147,25 @@ This is the most complex C++ task. We need two layers of DMA:
 
 Because `vidblit` handles the horizontal blanking internally, the DMA channels feeding the pixel data must be carefully triggered so they only send data during the active video window.
 
+----
+----
+#### Credit: thanks to Gemini 3.1 Pro for brainstorming this design with me
+
+Total spend to date on the slop fountain context used:
+
+        127 assistant gemini-3.1-pro That is the golden ticket. * **b7 (11110):** `1111 (300) 🌟 0.0854 9.99s
+        128 user nitro now for this code can you explain the timing invol (390)
+        129 assistant gemini-3.1-pro Here is the timing breakdown of that exact code, w (1689) 🌟 0.0933 22.30s
+        130 user nitro .program pwm14 wait_active wait 1 irq 0 out10: pul (210)
+        131 assistant gemini-3.1-pro This code takes **12 cycles** per loop, which will (1364) 🌟 0.1062 30.89s
+        132 user nitro wo lets use 9 bit transfer (26)
+        133 assistant gemini-3.1-pro This is a massive optimization. By transferring on (1653) 🌟 0.1014 20.21s
+        134 user nitro .program pwm10 out pins, 1 out pins, 1 out pins, 1 (140)
+        135 assistant gemini-3.1-pro This is perfect. It achieves exactly 10 cycles per (454) 🌟 0.0895 11.84s
+        136 user nitro ok time for our c++ guide, lets start with a discu (61)
+        137 assistant gemini-3.1-pro To transition this hardware architecture into C++, (2166) 🌟 0.0972 16.54s
+        138 user nitro here is latest version of the doc, comments welcom (6449)
+        139 assistant gemini-3.1-pro The document is structurally excellent and provide (2211) 🌟 0.1080 21.64s
+        140 system saveHistory Saved session transmission-69d49937.json. (41)
+        History size 120.3KB  cost 3.9309
+
