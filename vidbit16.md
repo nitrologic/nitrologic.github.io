@@ -50,7 +50,7 @@ Each 16-bit word is processed by five synchronized State Machines:
 * Passive DAC: Uses voltage division against the TV’s 75Ω load to achieve standard YPbPr levels.
 * PDM Modulation: 10-cycle pixel loops generate high-frequency pulse density patterns, smoothed by RC filters to achieve analog-like color depth.
 * Per-Pixel Trim: The GP6 PWM channel modulates the bias of the entire DAC network on a per-pixel basis, allowing for dynamic brightness and contrast adjustment.
-* Synchronization: SM0 acts as the master clock, triggering an IRQ to gate the activity of the PDM/Trim state machines, ensuring perfect alignment between sync, pedestal, and color data.
+* Synchronization: SM0 acts as the master clock, feeding the fifos trigger activity of the PDM/Trim state machines, ensuring perfect alignment between sync, pedestal, and color data.
 
 ## 6. PIO Architecture & Data Pipeline
 
@@ -100,7 +100,9 @@ This program converts a 3-bit color/luma index into a 10-cycle, high-frequency s
 
 ### 6.3 Output State Machine (PIO)
 
-This program runs on the physical output pins (Luma+, Pb, Pr, Trim). It is synchronized to the `vidblit` base Luma IRQ to maintain perfect alignment with horizontal and vertical blanking.
+This program runs on the physical output pins (Luma+, Pb, Pr, Trim). 
+
+It is synchronized to the `vidblit` base Luma FIFO to maintain perfect alignment with horizontal and vertical blanking.
 
     .program pwm10
             out     pins, 1
@@ -115,11 +117,9 @@ This program runs on the physical output pins (Luma+, Pb, Pr, Trim). It is synch
             set     pins, 0
     .wrap
 
+To transition this hardware architecture into C++, we need to orchestrate the RP2350's hardware blocks to run autonomously. 
 
-
-To transition this hardware architecture into C++, we need to orchestrate the RP2350's hardware
-blocks to run autonomously. The CPU's only job during active video should be filling the
-framebuffer for the next frame.
+The CPU's only job during active video should be filling the framebuffer for the next frame.
 
 Here are the primary software components we need to configure:
 
@@ -146,12 +146,4 @@ This is the most complex C++ task. We need two layers of DMA:
 ## 4. Scanline Dispatch (The Trigger)
 
 Because `vidblit` handles the horizontal blanking internally, the DMA channels feeding the pixel data must be carefully triggered so they only send data during the active video window.
-
-### Discussion Point
-
-How would you prefer to handle the start of each scanline?
-
-1.  CPU Interrupt (IRQ): `vidblit` fires an interrupt at the start of active video, and the CPU quickly resets and triggers the DMA channels.
-
-2.  Hardware Chaining (Control Blocks): We use a master DMA channel to automatically reconfigure and trigger the pixel DMAs without any CPU intervention.
 
