@@ -1,0 +1,9 @@
+--allow-write --allow-sys --allow-run --allow-net --allow-env
+// Returns an iterator that yields each file path matching the given glob pattern. 
+// The file paths are relative to the provided root directory. 
+// If root is not provided, the current working directory is used. 
+// The root directory is not included in the yielded file paths.
+
+for await (const file of expandGlob(glob)){
+//	console.log("file.path",file.path);
+}
