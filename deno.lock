@@ -1,0 +1,16 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@std/datetime@0.225": "0.225.7"
+  },
+  "jsr": {
+    "@std/datetime@0.225.7": {
+      "integrity": "e62c6c454a0ecfc2918fe41e7a621e0f334a6f82605e98fd32eb1e6371999328"
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/datetime@0.225"
+    ]
+  }
+}
