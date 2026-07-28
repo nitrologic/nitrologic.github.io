@@ -7,7 +7,6 @@
 // and store in history/
 
 import { format } from "@std/datetime";
-import PoolStats from "asset:///node/undici/pool-stats.d.ts";
 
 const epoch:number=Date.UTC(2025,4,12);
 
