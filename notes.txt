@@ -1,3 +1,7 @@
+* [biblispec page](https://nitrologic.github.io/biblispec)
+* [biblispec repos](https://github.com/nitrologic/biblispec)
+
+
 { sessionCount: 2608, failCount: 49 }
 {
   alibaba: { connections: 1291, failures: 387, minTime: 0, maxTime: 1.86 },

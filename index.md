@@ -27,6 +27,5 @@ Only 4 new opcodes added to get this far, too cool for school.
 
 # nitrologic index
 
-* [biblispec page](https://nitrologic.github.io/biblispec)
-* [biblispec repos](https://github.com/nitrologic/biblispec)
 * [biblispec testbed](https://nitrologic.github.io/biblispec/maze/vanilla.html)
+* [nitrologic profile](https://github.com/nitrologic)
