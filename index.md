@@ -3,8 +3,24 @@ nitrologic.github.io/index.md
 (c)2026 nitrologic
 all rights reserved
 ```
+# 1541 drive stepping
 
-# recent machine shots
+The 1541 disk drive has it's own 6502 CPU and is running virtual in my terminal.
+
+<img src="./image/reva1541.jpg" alt="drawing" width="42%"/>
+
+We single step throught the first instructions, let it run for a bit, 
+
+25B4A7 cycles later...
+
+and it returns!
+
+Blinking lights incoming.
+
+![VIC-1541](image/vic1541.png)
+
+
+# an appleII in my terminal
 
 Winter 2026 and current appleII emulation development ticks all the boxes in nostalgia section.
 
