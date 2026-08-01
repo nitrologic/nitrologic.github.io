@@ -73,15 +73,23 @@ function parseHeader(line:string){
 }
 
 async function reduce(text:string,name:string):Promise<number>{
+	let lineCount=0;
+	let bigCount=0;
 	let count=0;
 	let inHeader=false;
 	let model="";
 	const result=new Array<string>();  
 	const lines=text.split("\n");
 	for(const line of lines){
+		lineCount++;
 		const trim=line.trim();
 		if(trim.length==0){
 			count++;
+			continue;
+		}
+		if(trim.length>1e6){
+			bigCount++;
+			console.log("BIG!",{name,lineCount});
 			continue;
 		}
 		const s1=trim.indexOf(" ");
@@ -136,9 +144,13 @@ async function reduce(text:string,name:string):Promise<number>{
 
 const dir=await Deno.readDir("raw");
 for await (const file of dir){
-	const lines=await Deno.readTextFile("raw/"+file.name);
-	let count=reduce(lines,file.name);
-	console.log(file.name,lines.length,count);
+	try{
+		const lines=await Deno.readTextFile("raw/"+file.name);
+		let count=reduce(lines,file.name);
+		console.log(file.name,lines.length,count);
+	}catch(e){
+		console.log("[REFINE] error",file.name);
+	}
 }
 
 for (const vendor in vendors) {

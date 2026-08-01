@@ -1,3 +1,59 @@
+nitrologic slop fountain relay usage from 2025-08-03 15:05:16 to 2026-08-01 03:27:18
+{ sessionCount: 2632, failCount: 49 }
+{
+  alibaba: { connections: 1291, failures: 387, minTime: 0, maxTime: 1.86 },
+  anthropic: { connections: 1404, failures: 38, minTime: 0, maxTime: 13.41 },
+  openai: { connections: 1386, failures: 74, minTime: 0, maxTime: 6.38 },
+  gemini: { connections: 1404, failures: 37, minTime: 0, maxTime: 1.59 },
+  mistral: { connections: 840, failures: 329, minTime: 0, maxTime: 4.08 },
+  deepseek: { connections: 1419, failures: 0, minTime: 0.21, maxTime: 1 },
+  moonshot: { connections: 1398, failures: 38, minTime: 0.14, maxTime: 1.49 },
+  xai: { connections: 1398, failures: 39, minTime: 0.23, maxTime: 47.21 },
+  cerebras: { connections: 636, failures: 5, minTime: 0.35, maxTime: 2.06 },
+  nscale: { connections: 636, failures: 5, minTime: 0.36, maxTime: 1.23 },
+  hyperbolic: { connections: 636, failures: 5, minTime: 0.34, maxTime: 2.39 }
+}
+{
+  "[deepseek-chat]": { sessions: 116, prompts: 138, lines: 36669, recent: 2621 },
+  "[kimi-k2-0905]": { sessions: 55, prompts: 78, lines: 20879, recent: 2629 },
+  "[kimi-k2.5]": { sessions: 29, prompts: 33, lines: 5569, recent: 1087 },
+  "[gemini-3-pro]": { sessions: 26, prompts: 27, lines: 20935, recent: 2625 },
+  "[gemini-3.1-pro]": { sessions: 20, prompts: 22, lines: 18585, recent: 1177 },
+  "[claude-haiku-4-5]": { sessions: 19, prompts: 21, lines: 4462, recent: 2554 },
+  "[gemini-3.1-lite]": { sessions: 17, prompts: 17, lines: 7876, recent: 1180 },
+  "[deepseek-v4]": { sessions: 16, prompts: 20, lines: 15854, recent: 1184 },
+  "[gpt-5-nano]": { sessions: 15, prompts: 19, lines: 1715, recent: 2618 },
+  "[gpt-5-mini]": { sessions: 14, prompts: 14, lines: 6949, recent: 2375 },
+  "[grok-code-fast-1]": { sessions: 14, prompts: 25, lines: 2111, recent: 2492 },
+  "[claude-sonnet-4]": { sessions: 12, prompts: 14, lines: 4843, recent: 2451 },
+  "[gpt-5.3-codex]": { sessions: 11, prompts: 12, lines: 13239, recent: 1282 },
+  "[deepseek-reasoner]": { sessions: 9, prompts: 9, lines: 246, recent: 2013 },
+  "[kimi-k2.6]": { sessions: 9, prompts: 10, lines: 3266, recent: 1182 },
+  "[qwen3-coder-plus]": { sessions: 8, prompts: 14, lines: 2498, recent: 2512 },
+  "[claude-opus-4-5]": { sessions: 8, prompts: 8, lines: 11936, recent: 2624 },
+  "[grok-code-1]": { sessions: 8, prompts: 8, lines: 3176, recent: 2631 },
+  "[kimi-k2.7-code]": { sessions: 7, prompts: 7, lines: 540, recent: 1287 },
+  "[grok-4-0709]": { sessions: 7, prompts: 8, lines: 1710, recent: 2029 },
+  "[grok-4-1]": { sessions: 7, prompts: 20, lines: 4461, recent: 2554 },
+  "[kimi-k2-0711]": { sessions: 7, prompts: 8, lines: 904, recent: 2391 },
+  "[grok-build-0.1]": { sessions: 6, prompts: 6, lines: 8542, recent: 1287 },
+  "[gemini-2.5-flash]": { sessions: 6, prompts: 6, lines: 1021, recent: 2277 },
+  "[gemini-2.5-05]": { sessions: 6, prompts: 6, lines: 336, recent: 2420 },
+  "[kimi-latest-8k]": { sessions: 5, prompts: 5, lines: 11, recent: 2453 },
+  "[claude-sonnet-4-6]": { sessions: 5, prompts: 5, lines: 197, recent: 1178 },
+  "[deepseek-v4-flash]": { sessions: 5, prompts: 5, lines: 2999, recent: 1288 },
+  "[gpt-5-2025]": { sessions: 5, prompts: 5, lines: 536, recent: 2451 },
+  "[glm-5.1]": { sessions: 5, prompts: 5, lines: 382, recent: 1104 },
+  "[glm-5]": { sessions: 4, prompts: 4, lines: 171, recent: 960 },
+  "[grok-4.20-0309]": { sessions: 4, prompts: 5, lines: 1161, recent: 1094 },
+  "[kimi-k3]": { sessions: 4, prompts: 4, lines: 1511, recent: 259 },
+  "[gpt-5-codex]": { sessions: 4, prompts: 4, lines: 187, recent: 2160 },
+  "[gpt-5.1-2025]": { sessions: 4, prompts: 4, lines: 2921, recent: 2461 },
+  "[kimi-k2-turbo]": { sessions: 4, prompts: 4, lines: 161, recent: 2106 },
+  "[gpt-5.5-2026]": { sessions: 4, prompts: 4, lines: 616, recent: 1178 },
+
+
+
 * [biblispec page](https://nitrologic.github.io/biblispec)
 * [biblispec repos](https://github.com/nitrologic/biblispec)
 

@@ -83,17 +83,6 @@
 20b9e184 [roha] callcommand model 20
 20b9e184 [roha] model: {"name":"claude-fable-5*","brand":"A\\","rate":[10,50],"limit":0,"balance":"$-1.2573","modelname":"claude-fable-5@anthropic"}
 20b9e223 [simon@midnightblue.local] tell us about yourself
-20b9e22d [roha] [RELAY completions choked
-20b9e22d [roha] [RELAY] unhandled error 404 {"type":"error","error":{"type":"not_found_error","message":"Claude Fable 5 is not available. Please use Opus 4.8. Learn more: https://www.anthropic.com/news/fable-mythos-access"},"request_id":"req_011CbzbyuWc4JHqqVZJ8QaoP"}
-20b9e22d [roha] [RELAY] Error: 404 {"type":"error","error":{"type":"not_found_error","message":"Claude Fable 5 is not available. Please use Opus 4.8. Learn more: https://www.anthropic.com/news/fable-mythos-access"},"request_id":"req_011CbzbyuWc4JHqqVZJ8QaoP"}
-20b9e22d [roha]     at APIError.generate (file:///Users/simon/Library/Caches/deno/npm/registry.npmjs.org/@anthropic-ai/sdk/0.59.0/src/core/error.ts:75:14)
-20b9e22d [roha]     at Anthropic.makeStatusError (file:///Users/simon/Library/Caches/deno/npm/registry.npmjs.org/@anthropic-ai/sdk/0.59.0/src/client.ts:418:28)
-20b9e22d [roha]     at Anthropic.makeRequest (file:///Users/simon/Library/Caches/deno/npm/registry.npmjs.org/@anthropic-ai/sdk/0.59.0/src/client.ts:653:24)
-20b9e22d [roha]     at async Object.create (file:///Users/simon/relay/relay.ts:1569:21)
-20b9e22d [roha]     at async relay (file:///Users/simon/relay/relay.ts:4059:15)
-20b9e22d [roha]     at async chat (file:///Users/simon/relay/relay.ts:4406:6)
-20b9e22d [roha]     at async file:///Users/simon/relay/relay.ts:4595:2
-20cfd8db [remote] [DROP]
 20cfd9fa [roha] model: {"name":"claude-fable-5*","brand":"A\\","rate":[10,50],"limit":0,"balance":"$-1.2573","modelname":"claude-fable-5@anthropic"}
 20cfd9fa [roha] console: {"columns":96,"rows":15}
 20cfd9fa [roha] user: {"nic":"friend","user":"simon@midnightblue.local","project":"roha","sharecount":0,"terminal":"xterm-256color"}
@@ -118,17 +107,6 @@
 20e37061 [roha] 𓅷 𓅸 𓅹 𓅺 𓅻 𓅼 𓅽
 20e37061 [roha] [KEY] loadProject roha
 20e371ca [simon@midnightblue.local] hi claude
-20e371d7 [roha] [RELAY completions choked
-20e371d7 [roha] [RELAY] unhandled error 404 {"type":"error","error":{"type":"not_found_error","message":"Claude Fable 5 is not available. Please use Opus 4.8. Learn more: https://www.anthropic.com/news/fable-mythos-access"},"request_id":"req_011Cc4LLdJXEQeEvbWntiq4H"}
-20e371d7 [roha] [RELAY] Error: 404 {"type":"error","error":{"type":"not_found_error","message":"Claude Fable 5 is not available. Please use Opus 4.8. Learn more: https://www.anthropic.com/news/fable-mythos-access"},"request_id":"req_011Cc4LLdJXEQeEvbWntiq4H"}
-20e371d7 [roha]     at APIError.generate (file:///Users/simon/Library/Caches/deno/npm/registry.npmjs.org/@anthropic-ai/sdk/0.59.0/src/core/error.ts:75:14)
-20e371d7 [roha]     at Anthropic.makeStatusError (file:///Users/simon/Library/Caches/deno/npm/registry.npmjs.org/@anthropic-ai/sdk/0.59.0/src/client.ts:418:28)
-20e371d7 [roha]     at Anthropic.makeRequest (file:///Users/simon/Library/Caches/deno/npm/registry.npmjs.org/@anthropic-ai/sdk/0.59.0/src/client.ts:653:24)
-20e371d7 [roha]     at async Object.create (file:///Users/simon/relay/relay.ts:1569:21)
-20e371d7 [roha]     at async relay (file:///Users/simon/relay/relay.ts:4059:15)
-20e371d7 [roha]     at async chat (file:///Users/simon/relay/relay.ts:4406:6)
-20e371d7 [roha]     at async file:///Users/simon/relay/relay.ts:4595:2
-20e374e7 [roha] callcommand model 11
 20e374e7 [roha] model: {"name":"kimi-k2.7-code*","brand":"🜁","rate":[0.95,0.19,4],"limit":0,"balance":"$-","modelname":"kimi-k2.7-code@moonshot"}
 20e3750a [simon@midnightblue.local] hi kimi
 20e3756c [kimi-k2.7-code] # ꔀ nitrologic Relay 1.8.8 ⛲  kimi-k2.7-code 🜁 🪠 🧊 $0.001 638B 5.79s
@@ -719,15 +697,6 @@
 220aa7db [roha] [SHARE] commitShares {"path":"/Users/simon/biblispec/maze/maze.ts","size":3200,"modified":1782702977944,"hash":"54f090ffbcbff4e9a9c71a8eacba11f7e95a142becfce6c4ffe64ea28292055a","tag":"","id":"share83"}
 220aa7db [roha] [SHARE] commitShares {"path":"/Users/simon/biblispec/maze/relay.md","size":0,"modified":1782702977945,"hash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","tag":"","id":"share84"}
 220aa7db [roha] [SHARE] commitShares {"path":"/Users/simon/biblispec/maze/run.bat","size":18,"modified":1782702977945,"hash":"66691a24b561a2ecf9d481cfdab95a8ce8014700cbf1478181f7c6b964ad3337","tag":"","id":"share85"}
-220aa7db [roha] [RELAY completions choked
-220aa7db [roha] [RELAY] unhandled error 400 Invalid request: the message at position 7 with role 'user' must not be empty
-220aa7db [roha] [RELAY] Error: 400 Invalid request: the message at position 7 with role 'user' must not be empty
-220aa7db [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
-220aa7db [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
-220aa7db [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
-220aa7db [roha]     at async relay (file:///Users/simon/relay/relay.ts:4251:15)
-220aa7db [roha]     at async chat (file:///Users/simon/relay/relay.ts:4600:6)
-220aa7db [roha]     at async file:///Users/simon/relay/relay.ts:4803:2
 220aa892 [roha] [FORGE] callcommand model 0
 220aa97d [roha] 0 /Users/simon/biblispec/maze/maze.md 6.2K 🔗 - [  simon@midnightblue.local maze ]
 220aa97d [roha] 1 /Users/simon/biblispec/maze/maze.ts 3.2K 🔗 - [  simon@midnightblue.local maze ]

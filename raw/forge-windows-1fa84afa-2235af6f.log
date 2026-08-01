@@ -1652,11 +1652,6 @@
 2074870e [roha] callcommand model 19
 2074870e [roha] model: {"name":"claude-fable-5*","brand":"A\\","rate":[],"limit":0,"balance":"$24.0514","modelname":"claude-fable-5@anthropic"}
 207487bd [nitro@ryzen5] hi claude
-207487e6 [FAIL] Oops. invalid_request_error `temperature` may only be set to 1 when thinking is enabled or in adaptive mode. Please consult our documentation at https://docs.claude.com/en/docs/build-with-claude/extended-thinking#important-considerations-when-using-extended-thinking
-207487e7 [roha] [RELAY completions choked
-207487e7 [roha] Oops. invalid_request_error `temperature` may only be set to 1 when thinking is enabled or in adaptive mode. Please consult our documentation at https://docs.claude.com/en/docs/build-with-claude/extended-thinking#important-considerations-when-using-extended-thinking
-207487e7 [roha] Switch model, drop shares or reset history to continue.
-20748cf8 [remote] [DROP]
 20748cf8 [remote] [RELAY] acceptConnections error: Listener has been closed
 20748e65 [roha] model: {"name":"claude-fable-5*","brand":"A\\","rate":[10,50],"limit":0,"balance":"$24.0514","modelname":"claude-fable-5@anthropic"}
 20748e65 [remote] [STATUS] listening for bots on port 8081
@@ -2059,16 +2054,6 @@
 20b33621 [roha] callcommand model 11
 20b33621 [roha] model: {"name":"kimi-k2.7-code*","brand":"🜁","rate":[0.95,0.19,4],"limit":0,"balance":"$-2.1244","modelname":"kimi-k2.7-code@moonshot"}
 20b33644 [nitro@ryzen5] hi kimi
-20b3364b [roha] [RELAY completions choked
-20b3364b [roha] [RELAY] unhandled error 400 invalid temperature: only 1 is allowed for this model
-20b3364b [roha] [RELAY] Error: 400 invalid temperature: only 1 is allowed for this model
-20b3364b [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
-20b3364b [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
-20b3364b [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
-20b3364b [roha]     at async relay (file:///C:/nitrologic/relay/relay.ts:4059:15)
-20b3364b [roha]     at async chat (file:///C:/nitrologic/relay/relay.ts:4406:6)
-20b3364b [roha]     at async file:///C:/nitrologic/relay/relay.ts:4595:2
-20b336dd [remote] [DROP]
 20b336de [remote] [RELAY] acceptConnections error: Listener has been closed
 20b3379e [roha] model: {"name":"kimi-k2.7-code*","brand":"🜁","rate":[0.95,0.19,4],"limit":0,"balance":"$-2.1244","modelname":"kimi-k2.7-code@moonshot"}
 20b3379e [remote] [STATUS] listening for bots on port 8081
@@ -2368,51 +2353,7 @@
 211dfcc8 [roha] [KEY] loadProject roha
 211e0c89 [roha] callcommand model 163
 211e0c89 [roha] model: {"name":"grok-imagine-video*","brand":"𝕏","rate":[],"limit":0,"balance":"$-0.2846","modelname":"grok-imagine-video@xai"}
-211e0cda [nitro@ryzen5] hi grok
-211e0ce2 [roha] [RELAY completions choked
-211e0ce2 [roha] [RELAY] unhandled error 400 "Model not found: grok-imagine-video"
-211e0ce3 [roha] [RELAY] Error: 400 "Model not found: grok-imagine-video"
-211e0ce3 [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
-211e0ce3 [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
-211e0ce3 [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
-211e0ce3 [roha]     at async relay (file:///C:/nitrologic/relay/relay.ts:4059:15)
-211e0ce3 [roha]     at async chat (file:///C:/nitrologic/relay/relay.ts:4406:6)
-211e0ce3 [roha]     at async file:///C:/nitrologic/relay/relay.ts:4595:2
-211e0e42 [roha] model: {"name":"grok-imagine-video*","brand":"𝕏","rate":[],"limit":0,"balance":"$-0.2846","modelname":"grok-imagine-video-1.5@xai"}
 211e0e5f [nitro@ryzen5] hi grok
-211e0e77 [roha] [RELAY completions choked
-211e0e77 [roha] [RELAY] unhandled error 400 "Model not found: grok-imagine-video-1.5"
-211e0e77 [roha] [RELAY] Error: 400 "Model not found: grok-imagine-video-1.5"
-211e0e77 [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
-211e0e77 [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
-211e0e77 [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
-211e0e77 [roha]     at async relay (file:///C:/nitrologic/relay/relay.ts:4059:15)
-211e0e77 [roha]     at async chat (file:///C:/nitrologic/relay/relay.ts:4406:6)
-211e0e77 [roha]     at async file:///C:/nitrologic/relay/relay.ts:4595:2
-211e0fc0 [roha] model: {"name":"grok-imagine-image*","brand":"𝕏","rate":[],"limit":0,"balance":"$-0.2846","modelname":"grok-imagine-image@xai"}
-211e0fd7 [nitro@ryzen5] hi grok
-211e0fe7 [roha] [RELAY completions choked
-211e0fe7 [roha] [RELAY] unhandled error 400 "Model not found: grok-imagine-image"
-211e0fe7 [roha] [RELAY] Error: 400 "Model not found: grok-imagine-image"
-211e0fe7 [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
-211e0fe7 [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
-211e0fe7 [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
-211e0fe7 [roha]     at async relay (file:///C:/nitrologic/relay/relay.ts:4059:15)
-211e0fe7 [roha]     at async chat (file:///C:/nitrologic/relay/relay.ts:4406:6)
-211e0fe7 [roha]     at async file:///C:/nitrologic/relay/relay.ts:4595:2
-211e10ce [roha] model: {"name":"grok-imagine-image-quality*","brand":"𝕏","rate":[],"limit":0,"balance":"$-0.2846","modelname":"grok-imagine-image-quality@xai"}
-211e10e9 [nitro@ryzen5] hi grok
-211e10fa [roha] [RELAY completions choked
-211e10fa [roha] [RELAY] unhandled error 400 "Model not found: grok-imagine-image-quality"
-211e10fb [roha] [RELAY] Error: 400 "Model not found: grok-imagine-image-quality"
-211e10fb [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
-211e10fb [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
-211e10fb [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
-211e10fb [roha]     at async relay (file:///C:/nitrologic/relay/relay.ts:4059:15)
-211e10fb [roha]     at async chat (file:///C:/nitrologic/relay/relay.ts:4406:6)
-211e10fb [roha]     at async file:///C:/nitrologic/relay/relay.ts:4595:2
-211e1131 [roha] model: {"name":"grok-build-0.1*","brand":"𝕏","rate":[],"limit":0,"balance":"$-0.2846","modelname":"grok-build-0.1@xai"}
-211e1151 [nitro@ryzen5] hi grok
 211e1196 [grok-build-0.1] # ꔀ nitrologic Relay 1.8.8 ⛲  grok-build-0.1 𝕏 🪠 0.7° (301+13[314]) 1.154KB 3.95s
 211e1197 [grok-build-0.1] #Hi! I'm Grok. How can I help you today?
 211e1197 [grok-build-0.1] #
@@ -17232,16 +17173,6 @@
 21a02d1b [glm-5.2] #pointer iteration, byte loads, and a dense inner loop of bitwise logic and branching.
 21a02d1b [glm-5.2] #
 21a02f45 [nitro@ryzen5] please provide code for a suitable bitwise function
-21a02f7b [roha] [RELAY completions choked
-21a02f7b [roha] [RELAY] unhandled error 429 Insufficient balance or no resource package. Please recharge.
-21a02f7b [roha] [RELAY] Error: 429 Insufficient balance or no resource package. Please recharge.
-21a02f7b [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:96:14)
-21a02f7b [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
-21a02f7b [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
-21a02f7b [roha]     at async relay (file:///C:/nitrologic/relay/relay.ts:4251:15)
-21a02f7b [roha]     at async chat (file:///C:/nitrologic/relay/relay.ts:4600:6)
-21a02f7b [roha]     at async file:///C:/nitrologic/relay/relay.ts:4802:2
-21a03082 [roha] [FORGE] callcommand model 13
 21a03082 [roha] model: {"name":"kimi-k2.7-code*","brand":"🜁","rate":[0.95,0.19,4],"limit":0,"balance":"$-2.1557","modelname":"kimi-k2.7-code@moonshot"}
 21a030e3 [nitro@ryzen5] hi kimi can you help?
 21a03299 [kimi-k2.7-code] # ꔀ Relay 1.9.4 kimi-k2.7-code 🜁 🪠 🧊 $0.007 17.39KB 26.82s
@@ -17357,16 +17288,6 @@
 21df043b [claude-haiku-4-5] #
 21df04fe [roha] model: {"name":"claude-fable-5*","brand":"A\\","rate":[10,50],"limit":0,"balance":"$24.0357","modelname":"claude-fable-5@anthropic"}
 21df051d [nitro@ryzen5] hi claude
-21df0527 [roha] [RELAY completions choked
-21df0527 [roha] [RELAY] unhandled error 404 {"type":"error","error":{"type":"not_found_error","message":"Claude Fable 5 is not available. Please use Opus 4.8. Learn more: https://www.anthropic.com/news/fable-mythos-access"},"request_id":"req_011CcSuykJAaQaA44zqVxvMK"}
-21df0527 [roha] [RELAY] Error: 404 {"type":"error","error":{"type":"not_found_error","message":"Claude Fable 5 is not available. Please use Opus 4.8. Learn more: https://www.anthropic.com/news/fable-mythos-access"},"request_id":"req_011CcSuykJAaQaA44zqVxvMK"}
-21df0527 [roha]     at APIError.generate (file:///C:/Users/nitro/AppData/Local/deno/npm/registry.npmjs.org/@anthropic-ai/sdk/0.69.0/src/core/error.ts:75:14)
-21df0527 [roha]     at Anthropic.makeStatusError (file:///C:/Users/nitro/AppData/Local/deno/npm/registry.npmjs.org/@anthropic-ai/sdk/0.69.0/src/client.ts:429:28)
-21df0527 [roha]     at Anthropic.makeRequest (file:///C:/Users/nitro/AppData/Local/deno/npm/registry.npmjs.org/@anthropic-ai/sdk/0.69.0/src/client.ts:664:24)
-21df0527 [roha]     at async Object.create (file:///C:/nitrologic/relay/relay.ts:1570:21)
-21df0528 [roha]     at async relay (file:///C:/nitrologic/relay/relay.ts:4251:15)
-21df0528 [roha]     at async chat (file:///C:/nitrologic/relay/relay.ts:4600:6)
-21df0528 [roha]     at async file:///C:/nitrologic/relay/relay.ts:4803:2
 21df0662 [roha] [FORGE] callcommand model 23
 21df0662 [roha] model: {"name":"claude-opus-4-8*","brand":"A\\","rate":[5,25],"limit":0,"balance":"$24.0357","modelname":"claude-opus-4-8@anthropic"}
 21df0683 [nitro@ryzen5] hi claude
@@ -18564,16 +18485,6 @@
 21f00f92 [kimi-k2.7-code] #
 21f00f92 [kimi-k2.7-code] #What are you planning to build or test next with it?
 21f00f92 [kimi-k2.7-code] #
-21f01027 [roha] [RELAY completions choked
-21f01027 [roha] [RELAY] unhandled error 400 Invalid request: the message at position 12 with role 'user' must not be empty
-21f01027 [roha] [RELAY] Error: 400 Invalid request: the message at position 12 with role 'user' must not be empty
-21f01027 [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
-21f01027 [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
-21f01027 [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
-21f01027 [roha]     at async relay (file:///C:/nitrologic/relay/relay.ts:4251:15)
-21f01027 [roha]     at async chat (file:///C:/nitrologic/relay/relay.ts:4600:6)
-21f01027 [roha]     at async file:///C:/nitrologic/relay/relay.ts:4803:2
-21f0157f [remote] [DROP]
 21f0157f [remote] [RELAY] acceptConnections error: Listener has been closed
 21f9afde [roha] model: {"name":"kimi-k2.7-code*","brand":"🜁","rate":[0.95,0.19,4],"limit":0,"balance":"$-2.1684","modelname":"kimi-k2.7-code@moonshot"}
 21f9afde [remote] [STATUS] listening - accepting connections from traffic bots on port 8081
@@ -18633,16 +18544,6 @@
 22065cef [roha] [KOHA] Share file path: C:\nitrologic\biblispec\maze\maze.ts  size: 1705
 22065d0d [roha] [KOHA] commitShares error path C:/nitrologic/biblispec/maze/maze.txt
 22065d0d [roha] [KOHA] commitShares error The system cannot find the file specified. (os error 2): stat 'C:\nitrologic\biblispec\maze\maze.txt'
-22065d0d [roha] [RELAY completions choked
-22065d0e [roha] [RELAY] unhandled error 400 Invalid request: the message at position 5 with role 'user' must not be empty
-22065d0e [roha] [RELAY] Error: 400 Invalid request: the message at position 5 with role 'user' must not be empty
-22065d0e [roha]     at APIError.generate (https://jsr.io/@openai/openai/5.23.0/core/error.ts:72:14)
-22065d0e [roha]     at OpenAI.makeStatusError (https://jsr.io/@openai/openai/5.23.0/client.ts:463:28)
-22065d0e [roha]     at OpenAI.makeRequest (https://jsr.io/@openai/openai/5.23.0/client.ts:713:24)
-22065d0e [roha]     at async relay (file:///C:/nitrologic/relay/relay.ts:4251:15)
-22065d0e [roha]     at async chat (file:///C:/nitrologic/relay/relay.ts:4600:6)
-22065d0e [roha]     at async file:///C:/nitrologic/relay/relay.ts:4803:2
-22065e49 [roha] [FORGE] callcommand model 159
 22065e49 [roha] model: {"name":"grok-build-0.1","brand":"𝕏","rate":[1,0.2,2],"limit":0,"balance":"$-8.9433","modelname":"grok-build-0.1@xai"}
 22065e6f [nitro@ryzen5] hi grok
 22065ed2 [grok-build-0.1] # ꔀ Relay 1.9.4 grok-build-0.1 𝕏 🪠 0.7° $0.001 3.759KB 5.85s
