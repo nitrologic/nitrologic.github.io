@@ -3,6 +3,11 @@ nitrologic.github.io/index.md
 (c)2026 nitrologic
 all rights reserved
 ```
+# VIC20 with json hand label diversions
+
+<img src="./image/vic20.png" alt="drawing" width="88%"/>
+
+
 # 1541 drive stepping
 
 The 1541 disk drive has it's own 6502 CPU and is running virtual in my terminal.
