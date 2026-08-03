@@ -3,10 +3,16 @@ nitrologic.github.io/index.md
 (c)2026 nitrologic
 all rights reserved
 ```
+
+## 1541 blinking leds
+
+Processor diagnostics with precursor, action and status columns.
+
+<img src="./image/1541blink.png" alt="drawing" width="88%"/>
+
 # VIC20 with json hand label diversions
 
 <img src="./image/vic20.png" alt="drawing" width="88%"/>
-
 
 # 1541 drive stepping
 
