@@ -21,11 +21,13 @@ Hurrah, the machine project now has it's own assembler - burn more ROM
 
 ## loading Little Brickout
 
-alterntaive method from program entry using paste and run
+> an alternative method of manual program entry / pasting is the cassette
 
 the load command reads from cassette 
 
-cassette came from the shop, or your mates
+back in the day the cassette came from the shop, or your mates
+
+and FM radio stations popped up blasting 80's synth pop, yeesh...
 
 <img src="./image/loadbricks.png" alt="drawing" width="88%"/>
 
