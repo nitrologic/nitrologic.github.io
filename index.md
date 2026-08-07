@@ -4,6 +4,36 @@ nitrologic.github.io/index.md
 all rights reserved
 ```
 
+## ben eater
+
+
+<img src="./image/beneater.webp" alt="drawing" width="48%"/>
+
+https://eater.net/6502
+
+Hurrah, the machine project now has it's own assembler - burn more ROM
+
+<img src="./image/kitset2.png" alt="drawing" width="48%"/>
+
+
+<img src="./image/6502schem.png" alt="drawing" width="48%"/>
+
+
+## loading Little Brickout
+
+alterntaive method from program entry using paste and run
+
+the load command reads from cassette 
+
+cassette came from the shop, or your mates
+
+<img src="./image/loadbricks.png" alt="drawing" width="88%"/>
+
+tape counter gets to 1407? umm ok
+
+<img src="./image/littlebrickout.png" alt="drawing" width="88%"/>
+
+
 ## 1541 blinking leds
 
 Processor diagnostics with precursor, action and status columns.
