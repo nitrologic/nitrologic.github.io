@@ -9,7 +9,9 @@ all rights reserved
 
 <img src="./image/beneater.webp" alt="drawing" width="48%"/>
 
-https://eater.net/6502
+Learn how computers work by building and programming a computer with the classic 6502 microprocessor. 
+
+[eater.net 6502](https://eater.net/6502)
 
 Hurrah, the machine project now has it's own assembler - burn more ROM
 
