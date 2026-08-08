@@ -4,6 +4,12 @@ nitrologic.github.io/index.md
 all rights reserved
 ```
 
+## Communications Week
+
+![These guys](image/ioweek.png)
+
+We begin with document preparation and liking the correct vintage.
+
 ## VIC20 SAVE
 
 ![VIC20 SAVE](image/vic20save.png)
