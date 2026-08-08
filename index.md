@@ -4,6 +4,12 @@ nitrologic.github.io/index.md
 all rights reserved
 ```
 
+## VIC20 SAVE
+
+![VIC20 SAVE](image/vic20save.png)
+
+The VIC20 machine is quickly catching up to the AppleII with usable keyboard matrix and other IO improvements incoming.
+
 ## ben eater
 
 
