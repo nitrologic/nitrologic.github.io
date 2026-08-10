@@ -6,6 +6,10 @@ all rights reserved
 
 ![PET 2001](image/pet2001.png)
 
+Should the Commodore Plus/4 project be parked to make room for some vintage CBM PET?
+
+[pub/cbm/src/pet] (https://www.zimmers.net/anonftp/pub/cbm/src/pet/index.html)
+
 ## Communications Week
 
 ![These guys](image/ioweek.png)
