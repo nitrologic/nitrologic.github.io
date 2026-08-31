@@ -1,0 +1,1251 @@
+2026-08-06 16:37:10 [simon@midnightblue.local] with apple CGEventSourceKeyState i need array of codes that i can use to give keystate for my 8x8 matrix vic20 emulation
+2026-08-06 16:38:10 [grok-build-0.1] 🟠nitrologic Relay 2.0.1 grok-build-0.1 𝕏 🪠 0.7° $0.004 597B 59.50s
+2026-08-06 16:38:10 [grok-build-0.1] Here's a practical way to handle this for your VIC-20 emulator.
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] Instead of a flat 8x8 array of key codes (which gets messy with shifted symbols), it's cleaner to
+2026-08-06 16:38:10 [grok-build-0.1] have a mapping table from macOS `CGKeyCode` → VIC-20 matrix row/column. Then you poll only
+2026-08-06 16:38:10 [grok-build-0.1] the keys you care about.
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] Recommended Approach
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] #include <Carbon/Carbon.h>   // for CGKeyCode and kVK_* constants
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] typedef struct {
+2026-08-06 16:38:10 [grok-build-0.1]     CGKeyCode   macCode;
+2026-08-06 16:38:10 [grok-build-0.1]     uint8_t     vicRow;
+2026-08-06 16:38:10 [grok-build-0.1]     uint8_t     vicCol;
+2026-08-06 16:38:10 [grok-build-0.1] } KeyMapping;
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] // Main keys we care about for VIC-20 matrix
+2026-08-06 16:38:10 [grok-build-0.1] static const KeyMapping vic20KeyMap[] = {
+2026-08-06 16:38:10 [grok-build-0.1]     // Row 0
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_Delete,        0, 0 },   // DEL
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_3,        0, 1 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_5,        0, 2 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_7,        0, 3 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_9,        0, 4 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Equal,    0, 5 },   // + (unshifted = on Mac)
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Backslash,0, 6 },   // £ (temporary - adjust to taste)
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_1,        0, 7 },
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1]     // Row 1
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_Return,        1, 0 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_W,        1, 1 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_R,        1, 2 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Y,        1, 3 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_I,        1, 4 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_P,        1, 5 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_8,        1, 6 },   // * (shift+8)
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_LeftBracket, 1, 7 }, // ← (left arrow)
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1]     // Row 2
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_DownArrow,     2, 0 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_A,        2, 1 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_D,        2, 2 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_G,        2, 3 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_J,        2, 4 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_L,        2, 5 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Semicolon,2, 6 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_Control,       2, 7 },
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1]     // Row 3
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_F7,            3, 0 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Z,        3, 1 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_C,        3, 2 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_B,        3, 3 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_M,        3, 4 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Period,   3, 5 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_RightShift,    3, 6 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_Escape,        3, 7 },   // RUN/STOP
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1]     // Row 4
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_Space,         4, 0 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_S,        4, 1 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_F,        4, 2 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_H,        4, 3 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_K,        4, 4 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Quote,    4, 5 },   // :
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Minus,    4, 6 },   // =
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_RightArrow,    4, 7 },
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1]     // Row 5
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_F1,            5, 0 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_E,        5, 1 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_T,        5, 2 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_U,        5, 3 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_O,        5, 4 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_2,        5, 5 },   // @ (shift+2)
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_UpArrow,       5, 6 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Q,        5, 7 },
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1]     // Row 6
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_F3,            6, 0 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_Shift,         6, 1 },   // Left Shift
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_X,        6, 2 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_V,        6, 3 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_N,        6, 4 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Comma,    6, 5 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_Slash,    6, 6 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_RightShift,    6, 7 },
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1]     // Row 7
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_F5,            7, 0 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_Option,        7, 1 },   // C= key (Commodore)
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_F,        7, 2 },   // This one is usually not used
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_4,        7, 3 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_6,        7, 4 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_0,        7, 5 },
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_RightBracket, 7, 6 }, // ↑ (up arrow)
+2026-08-06 16:38:10 [grok-build-0.1]     { kVK_ANSI_2,        7, 7 },   // (adjust as needed)
+2026-08-06 16:38:10 [grok-build-0.1] };
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] static const int VIC20_KEY_COUNT = sizeof(vic20KeyMap) / sizeof(vic20KeyMap[0]);
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] How to use it with CGEventSourceKeyState
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] // Call this every frame or on a timer
+2026-08-06 16:38:10 [grok-build-0.1] void updateVIC20Keyboard(uint8_t matrix[8]) {
+2026-08-06 16:38:10 [grok-build-0.1]     // Clear matrix first
+2026-08-06 16:38:10 [grok-build-0.1]     memset(matrix, 0, 8);
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1]     CGEventSourceStateID source = kCGEventSourceStateHIDSystemState;
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1]     for (int i = 0; i < VIC20_KEY_COUNT; i++) {
+2026-08-06 16:38:10 [grok-build-0.1]         const KeyMapping *m = &vic20KeyMap[i];
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1]         if (CGEventSourceKeyState(source, m->macCode)) {
+2026-08-06 16:38:10 [grok-build-0.1]             matrix[m->vicRow] |= (1 << m->vicCol);
+2026-08-06 16:38:10 [grok-build-0.1]         }
+2026-08-06 16:38:10 [grok-build-0.1]     }
+2026-08-06 16:38:10 [grok-build-0.1] }
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] Notes / Improvements
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] - Shift handling: By also mapping `kVK_Shift` and `kVK_RightShift`, upper case and symbols
+2026-08-06 16:38:10 [grok-build-0.1] work naturally.
+2026-08-06 16:38:10 [grok-build-0.1] - £ key: `kVK_ANSI_Backslash` is a placeholder. You can change it to whatever key you
+2026-08-06 16:38:10 [grok-build-0.1] prefer.
+2026-08-06 16:38:10 [grok-build-0.1] - Left arrow (←): Currently mapped to `[`. Change if you want something else.
+2026-08-06 16:38:10 [grok-build-0.1] - Commodore key (C=): Mapped to `Option`. You can change to `Command` if you prefer.
+2026-08-06 16:38:10 [grok-build-0.1] - Function keys: `F1/F3/F5/F7` are mapped directly. `F2/F4/F6/F8` are usually handled by
+2026-08-06 16:38:10 [grok-build-0.1] checking shift + the odd function keys in your emulator logic.
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:10 [grok-build-0.1] Would you like me to also give you a version that handles some shifted symbols more explicitly
+2026-08-06 16:38:10 [grok-build-0.1] (e.g. mapping `Shift + =` properly to the `+` key)?
+2026-08-06 16:38:10 [grok-build-0.1] 
+2026-08-06 16:38:43 [simon@midnightblue.local] are you sure this is correct for vic20
+2026-08-06 16:41:48 [grok-build-0.1] 🟠nitrologic Relay 2.0.1 grok-build-0.1 𝕏 🪠 0.7° $0.003 5.306KB 185.17s
+2026-08-06 16:41:48 [grok-build-0.1] No, the previous mapping had several inaccuracies for the actual VIC-20 keyboard matrix.
+2026-08-06 16:41:48 [grok-build-0.1] 
+2026-08-06 16:41:48 [grok-build-0.1] Key issues included:
+2026-08-06 16:41:48 [grok-build-0.1] - Wrong row for F5 (it belongs in row 7, not mixed in).
+2026-08-06 16:41:48 [grok-build-0.1] - Incorrect or missing assignments for the Commodore (C=) key.
+2026-08-06 16:41:48 [grok-build-0.1] - Some symbol keys were assigned to the wrong matrix positions (e.g. * , + , = , 0, 2, 4, 6, 8).
+2026-08-06 16:41:48 [grok-build-0.1] - The left arrow (←) is at row 1 col 7 (some tables also list it at row 6 col 7, but emulators
+2026-08-06 16:41:48 [grok-build-0.1] typically use row 1 col 7 for the physical key).
+2026-08-06 16:41:48 [grok-build-0.1] - Row 7 was incomplete and had incorrect keys.
+2026-08-06 16:41:48 [grok-build-0.1] - A few Mac key codes were not the most practical matches for the VIC-20 layout.
+2026-08-06 16:41:48 [grok-build-0.1] 
+2026-08-06 16:41:48 [grok-build-0.1] The correct standard VIC-20 8x8 matrix positions (used by emulators like VICE) are:
+2026-08-06 16:41:48 [grok-build-0.1] 
+2026-08-06 16:41:48 [grok-build-0.1] Row 0: DEL, 3, 5, 7, 9, +, £, 1
+2026-08-06 16:41:48 [grok-build-0.1] Row 1: RETURN, W, R, Y, I, P, *, ←
+2026-08-06 16:41:48 [grok-build-0.1] Row 2: ↓, A, D, G, J, L, ;, CTRL
+2026-08-06 16:41:48 [grok-build-0.1] Row 3: F7, Z, C, B, M, ., R SHIFT, STOP
+2026-08-06 16:41:48 [grok-build-0.1] Row 4: SPACE, S, F, H, K, :, =, →
+2026-08-06 16:41:48 [grok-build-0.1] Row 5: F1, E, T, U, O, @, ↑, Q
+2026-08-06 16:41:48 [grok-build-0.1] Row 6: F3, L SHIFT, X, V, N, ,, /, ← (per some tables)
+2026-08-06 16:41:48 [grok-build-0.1] Row 7: F5, C=, (mostly unused)
+2026-08-06 16:41:48 [grok-build-0.1] 
+2026-08-06 16:41:48 [grok-build-0.1] Would you like me to provide the corrected mapping array and the update function using
+2026-08-06 16:41:48 [grok-build-0.1] CGEventSourceKeyState?
+2026-08-06 16:41:48 [grok-build-0.1] 
+2026-08-09 12:57:12 [simon@midnightblue.local] hi grok
+2026-08-09 12:57:52 [simon@midnightblue.local] hi grok
+2026-08-09 15:50:41 [simon@midnightblue.local] oh no
+2026-08-09 15:51:42 [deepseek-v4-flash] 🟠nitrologic Relay 2.0.1 deepseek-v4-flash 🐋 🪠 0.7° $0.004 34.23KB 60.79s
+2026-08-09 15:51:42 [deepseek-v4-flash] Found it. The `-50` (`paramErr`) is coming from the `AudioStreamBasicDescription` endianness bug in
+2026-08-09 15:51:42 [deepseek-v4-flash] `macosaudio.ts`.
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] In `createAudioStreamDescription()` you have:
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] view.setUint32(8, 0x6c70636d, false);
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] `mFormatID` is a numeric FourCC. On Apple Silicon / x86_64 macOS, the field must be written in
+2026-08-09 15:51:42 [deepseek-v4-flash] native/little-endian order, otherwise CoreAudio reads it as `0x6d63706c` instead of
+2026-08-09 15:51:42 [deepseek-v4-flash] `'lpcm'` and rejects the format.
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] Change it to:
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] view.setUint32(8, 0x6c70636d, true);
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] Or equivalently:
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] const kAudioFormatLinearPCM = 0x6c70636d; // 'lpcm'
+2026-08-09 15:51:42 [deepseek-v4-flash] view.setUint32(8, kAudioFormatLinearPCM, true);
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] The rest of your ASBD fields are already little-endian. That should get past `AudioQueueNewOutput`.
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:51:42 [deepseek-v4-flash] If it still returns `-50` after that, the next suspect is passing `null` for the output callback.
+2026-08-09 15:51:42 [deepseek-v4-flash] Some queue configurations require a non-null `AudioQueueOutputCallback`. You can supply a no-op
+2026-08-09 15:51:42 [deepseek-v4-flash] callback with `Deno.UnsafeCallback` and keep it alive for the lifetime of the queue.
+2026-08-09 15:51:42 [deepseek-v4-flash] 
+2026-08-09 15:56:35 [simon@midnightblue.local] a dummy callback???????
+2026-08-09 15:56:49 [deepseek-v4-flash] 🟠nitrologic Relay 2.0.1 deepseek-v4-flash 🐋 🪠 0.7° $0.002 35.48KB 13.80s
+2026-08-09 15:56:49 [deepseek-v4-flash] You're right to be surprised — but no, I meant a real no-op function, not `null`. Apple's
+2026-08-09 15:56:49 [deepseek-v4-flash] `AudioQueueNewOutput` requires a callback pointer:
+2026-08-09 15:56:49 [deepseek-v4-flash] 
+2026-08-09 15:56:49 [deepseek-v4-flash] 
+2026-08-09 15:56:49 [deepseek-v4-flash] OSStatus AudioQueueNewOutput(
+2026-08-09 15:56:49 [deepseek-v4-flash]     const AudioStreamBasicDescription *inFormat,
+2026-08-09 15:56:49 [deepseek-v4-flash]     AudioQueueOutputCallback inCallbackProc,   // required, cannot be NULL
+2026-08-09 15:56:49 [deepseek-v4-flash]     void *inUserData,
+2026-08-09 15:56:49 [deepseek-v4-flash]     CFRunLoopRef inCallbackRunLoop,
+2026-08-09 15:56:49 [deepseek-v4-flash]     CFStringRef inCallbackRunLoopMode,
+2026-08-09 15:56:49 [deepseek-v4-flash]     UInt32 inFlags,
+2026-08-09 15:56:49 [deepseek-v4-flash]     AudioQueueRef *outAQ
+2026-08-09 15:56:49 [deepseek-v4-flash] );
+2026-08-09 15:56:49 [deepseek-v4-flash] 
+2026-08-09 15:56:49 [deepseek-v4-flash] 
+2026-08-09 15:56:49 [deepseek-v4-flash] Passing `NULL` for `inCallbackProc` is one cause of `-50` (`paramErr`). Even if you never need the
+2026-08-09 15:56:49 [deepseek-v4-flash] callback, you still have to hand the API a valid function pointer. In Deno that means creating a
+2026-08-09 15:56:49 [deepseek-v4-flash] no-op `UnsafeCallback` and keeping it alive.
+2026-08-09 15:56:49 [deepseek-v4-flash] 
+2026-08-09 15:56:49 [deepseek-v4-flash] But the first bug is the endianness on `mFormatID`. You wrote `view.setUint32(8, 0x6c70636d,
+2026-08-09 15:56:49 [deepseek-v4-flash] false)` — that's big-endian. All other fields are little-endian, and CoreAudio on macOS expects
+2026-08-09 15:56:49 [deepseek-v4-flash] `mFormatID` in native/little-endian order. So `'lpcm'` is being read as garbage.
+2026-08-09 15:56:49 [deepseek-v4-flash] 
+2026-08-09 15:56:49 [deepseek-v4-flash] Fix both:
+2026-08-09 15:56:49 [deepseek-v4-flash] 
+2026-08-09 15:56:49 [deepseek-v4-flash] 
+2026-08-09 15:56:49 [deepseek-v4-flash] // near the top of macosaudio.ts
+2026-08-09 15:56:49 [deepseek-v4-flash] let noOpCallback: Deno.UnsafeCallback | null = null;
+2026-08-09 15:56:49 [deepseek-v4-flash] 
+2026-08-09 15:56:49 [deepseek-v4-flash] // inside initAudioOut(), before AudioQueueNewOutput:
+2026-08-09 15:56:49 [deepseek-v4-flash] if (!noOpCallback) {
+2026-08-09 15:56:49 [deepseek-v4-flash]     noOpCallback = new Deno.UnsafeCallback(
+2026-08-09 15:56:49 [deepseek-v4-flash]         {
+2026-08-09 15:56:49 [deepseek-v4-flash]             parameters: ["pointer", "pointer", "pointer"],
+2026-08-09 15:56:49 [deepseek-v4-flash]             result: "void",
+2026-08-09 15:56:49 [deepseek-v4-flash]         },
+2026-08-09 15:56:49 [deepseek-v4-flash]         () => {
+2026-08-09 15:56:49 [deepseek-v4-flash]             // intentionally empty — we don't need to manage buffers
+2026-08-09 15:56:49 [deepseek-v4-flash]         }
+2026-08-09 15:56:49 [deepseek-v4-flash]     );
+2026-08-09 15:56:49 [deepseek-v4-flash] }
+2026-08-09 15:56:49 [deepseek-v4-flash] 
+2026-08-09 15:56:49 [deepseek-v4-flash] // then in createAudioStreamDescription():
+2026-08-09 15:56:49 [deepseek-v4-flash] view.setUint32(8, 0x6c70636d, true);   // little-endian 'lpcm'
+2026-08-09 15:56:50 [deepseek-v4-flash] 
+2026-08-09 15:56:50 [deepseek-v4-flash] // and in the AudioQueueNewOutput call:
+2026-08-09 15:56:50 [deepseek-v4-flash] const result = audioToolbox.symbols.AudioQueueNewOutput(
+2026-08-09 15:56:50 [deepseek-v4-flash]     formatPointer,
+2026-08-09 15:56:50 [deepseek-v4-flash]     noOpCallback.pointer,   // <-- real pointer, not null
+2026-08-09 15:56:50 [deepseek-v4-flash]     null,
+2026-08-09 15:56:50 [deepseek-v4-flash]     null,
+2026-08-09 15:56:50 [deepseek-v4-flash]     null,
+2026-08-09 15:56:50 [deepseek-v4-flash]     0,
+2026-08-09 15:56:50 [deepseek-v4-flash]     queueBuffer
+2026-08-09 15:56:50 [deepseek-v4-flash] );
+2026-08-09 15:56:50 [deepseek-v4-flash] 
+2026-08-09 15:56:50 [deepseek-v4-flash] 
+2026-08-09 15:56:50 [deepseek-v4-flash] The callback won't do anything, but it has to exist. And you must keep `noOpCallback` referenced
+2026-08-09 15:56:50 [deepseek-v4-flash] for as long as the queue lives (which your current global variable will do). Don't close it until
+2026-08-09 15:56:50 [deepseek-v4-flash] `closeAudio()`.
+2026-08-09 15:56:50 [deepseek-v4-flash] 
+2026-08-09 15:56:50 [deepseek-v4-flash] After these two changes, `-50` should disappear. If it still fails, double‑check that the
+2026-08-09 15:56:50 [deepseek-v4-flash] `AudioStreamBasicDescription` layout is exactly 40 bytes — your code looks right.
+2026-08-09 15:56:50 [deepseek-v4-flash] 
+2026-08-09 15:56:50 [deepseek-v4-flash] Also, if you later want to reuse buffers instead of allocating one per `playAudio()`, the callback
+2026-08-09 15:56:50 [deepseek-v4-flash] is where you'd recycle them. But for a quick tone test, ignoring it is fine.
+2026-08-09 15:56:50 [deepseek-v4-flash] 
+2026-08-13 17:27:08 [simon@midnightblue.local] hi grok, tell us about yourself
+2026-08-13 17:27:21 [grok-4.6] 🟠nitrologic Relay 2.0.1 grok-4.6 𝕏 🪠 0.7° $0.001 605B 11.41s
+2026-08-13 17:27:21 [grok-4.6] Hey! I'm Grok, built by xAI.
+2026-08-13 17:27:21 [grok-4.6] 
+2026-08-13 17:27:21 [grok-4.6] I'm an AI designed to be helpful, maximally truth-seeking, and a bit less filtered than most. I aim
+2026-08-13 17:27:21 [grok-4.6] to understand the universe (or at least help you make sense of it) without the usual corporate
+2026-08-13 17:27:21 [grok-4.6] caution or political correctness. I can reason through problems, write and debug code, explain
+2026-08-13 17:27:21 [grok-4.6] concepts, discuss ideas, or just chat.
+2026-08-13 17:27:21 [grok-4.6] 
+2026-08-13 17:27:21 [grok-4.6] What would you like to know or work on?
+2026-08-13 17:27:21 [grok-4.6] 
+2026-08-13 17:27:40 [simon@midnightblue.local] any more details, knowledge cutoff?
+2026-08-13 17:28:14 [grok-4.6] 🟠nitrologic Relay 2.0.1 grok-4.6 𝕏 🪠 0.7° $0.002 1.216KB 30.93s
+2026-08-13 17:28:14 [grok-4.6] • I'm Grok, built by xAI.*
+2026-08-13 17:28:14 [grok-4.6] 
+2026-08-13 17:28:14 [grok-4.6] xAI's goal is to understand the true nature of the universe. I'm designed to be helpful and
+2026-08-13 17:28:14 [grok-4.6] maximally truth-seeking — less filtered and less politically correct than most assistants. I can
+2026-08-13 17:28:14 [grok-4.6] reason, write/debug code, explain ideas, discuss almost anything, or just talk. I try to be direct
+2026-08-13 17:28:14 [grok-4.6] rather than overly cautious or corporate.
+2026-08-13 17:28:14 [grok-4.6] 
+2026-08-13 17:28:14 [grok-4.6] • Knowledge cutoff:* Like other large language models I have a training-data cutoff, so I
+2026-08-13 17:28:14 [grok-4.6] don't have real-time or continuously updated knowledge of events after that point. I can still
+2026-08-13 17:28:14 [grok-4.6] reason about later topics, note uncertainty, or tell you when something is likely outdated. For
+2026-08-13 17:28:14 [grok-4.6] anything time-sensitive I recommend checking current sources.
+2026-08-13 17:28:14 [grok-4.6] 
+2026-08-13 17:28:14 [grok-4.6] I don't browse the live web in this chat unless tools are available. If you want more on
+2026-08-13 17:28:14 [grok-4.6] capabilities, limitations, how I handle a specific topic, or anything else, just ask. What would
+2026-08-13 17:28:14 [grok-4.6] you like to know?
+2026-08-13 17:28:14 [grok-4.6] 
+2026-08-17 17:40:36 [simon@midnightblue.local] hi glm,
+2026-08-18 15:01:08 [simon@midnightblue.local] hi
+2026-08-18 19:06:50 [simon@midnightblue.local] i have vic and c64 keyboard matrix working in my simulator, is pet similar layout?
+2026-08-18 19:06:56 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.005 654B 5.92s
+2026-08-18 19:06:56 [gemini-3.7-flash] The Commodore PET keyboard operates on the same fundamental matrix scanning principle as the VIC-20
+2026-08-18 19:06:56 [gemini-3.7-flash] and C64, but there are a few key differences in the hardware implementation and matrix dimensions:
+2026-08-18 19:06:56 [gemini-3.7-flash] 
+2026-08-18 19:06:56 [gemini-3.7-flash] 1. Matrix Dimensions (10 × 8 vs. 8 × 8)
+2026-08-18 19:06:56 [gemini-3.7-flash] • VIC-20 & C64: Both use an 8-row by 8-column matrix (64 distinct switch points).
+2026-08-18 19:06:56 [gemini-3.7-flash] • PET: Uses a 10-row by 8-column matrix (80 possible switch points).
+2026-08-18 19:06:56 [gemini-3.7-flash] 
+2026-08-18 19:06:56 [gemini-3.7-flash] 2. Hardware Interface
+2026-08-18 19:06:56 [gemini-3.7-flash] • VIC-20 / C64: Directly drive 8 output lines and read 8 input lines using two 8-bit
+2026-08-18 19:06:56 [gemini-3.7-flash] parallel ports (via the 6522 VIAs on VIC-20 or 6526 CIAs on C64).
+2026-08-18 19:06:56 [gemini-3.7-flash] • PET: Uses a 74145 BCD-to-Decimal Decoder connected to PIA 1 (6520). The CPU
+2026-08-18 19:06:56 [gemini-3.7-flash] outputs a 4-bit binary value (0–9) to select one of the 10 rows (active low), and reads the 8
+2026-08-18 19:06:56 [gemini-3.7-flash] return lines via the other PIA port.
+2026-08-18 19:06:56 [gemini-3.7-flash] 
+2026-08-18 19:06:56 [gemini-3.7-flash] 3. Multiple Keyboard Variants
+2026-08-18 19:06:56 [gemini-3.7-flash] Unlike the relatively uniform physical layouts of the VIC-20 and C64, the PET family has two
+2026-08-18 19:06:56 [gemini-3.7-flash] distinct layouts with completely different matrix mappings:
+2026-08-18 19:06:56 [gemini-3.7-flash] 
+2026-08-18 19:06:56 [gemini-3.7-flash] 1. Graphics Keyboard (Chiclet & Full-Travel):
+2026-08-18 19:06:56 [gemini-3.7-flash]    * Found on the original PET 2001 and educational models (e.g., 4016/4032).
+2026-08-18 19:06:56 [gemini-3.7-flash]    * Features dedicated numeric/cursor pads and graphic symbols printed directly on keys.
+2026-08-18 19:06:56 [gemini-3.7-flash] 2. Business Keyboard:
+2026-08-18 19:06:56 [gemini-3.7-flash]    * Introduced with the PET 2001-N / 3000 / 8000 series.
+2026-08-18 19:06:56 [gemini-3.7-flash]    * Resembles a standard typewriter layout with punctuation shifted, dedicated lowercase support,
+2026-08-18 19:06:56 [gemini-3.7-flash] and lacks the PETSCII graphics on keytops.
+2026-08-18 19:06:56 [gemini-3.7-flash]    * Requires a different matrix table and corresponding ROM (Editor ROM).
+2026-08-18 19:06:56 [gemini-3.7-flash] 
+2026-08-18 19:06:56 [gemini-3.7-flash] Summary for Simulator Implementation
+2026-08-18 19:06:56 [gemini-3.7-flash] If you extend your current matrix implementation to accommodate a 10×8 grid and route the row
+2026-08-18 19:06:56 [gemini-3.7-flash] selection through a 4-bit input rather than a direct 8-bit bitmask, you will be able to reuse most
+2026-08-18 19:06:56 [gemini-3.7-flash] of your existing matrix polling logic. You will also want to support switching keymaps depending on
+2026-08-18 19:06:56 [gemini-3.7-flash] whether the system is configured as a Graphics or Business PET.
+2026-08-18 19:06:56 [gemini-3.7-flash] 
+2026-08-18 19:16:15 [simon@midnightblue.local] which bits of e810 or e812 select the matrix row to scan?
+2026-08-18 19:16:19 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.004 2.844KB 4.30s
+2026-08-18 19:16:19 [gemini-3.7-flash] The keyboard row is selected using Bits 0–3 of `$E812` (PIA 1, Port B).
+2026-08-18 19:16:19 [gemini-3.7-flash] 
+2026-08-18 19:16:19 [gemini-3.7-flash] How the Ports Are Assigned:
+2026-08-18 19:16:19 [gemini-3.7-flash] 
+2026-08-18 19:16:19 [gemini-3.7-flash] • `$E812` (PIA 1 Port B): Matrix Row Output
+2026-08-18 19:16:19 [gemini-3.7-flash]   * Bits 0–3 (`PB0`–`PB3`): Provide the 4-bit binary/BCD value (0 to 9) fed into the 74145
+2026-08-18 19:16:19 [gemini-3.7-flash] decoder to pull down one of the 10 matrix rows.
+2026-08-18 19:16:19 [gemini-3.7-flash]   * Bits 4–7: Reserved for other hardware functions (e.g., cassette motor controls and
+2026-08-18 19:16:19 [gemini-3.7-flash] screen blanking/retrace signals, depending on the board revision).
+2026-08-18 19:16:19 [gemini-3.7-flash] 
+2026-08-18 19:16:19 [gemini-3.7-flash] • `$E810` (PIA 1 Port A): Matrix Column Input
+2026-08-18 19:16:19 [gemini-3.7-flash]   * Bits 0–7 (`PA0`–`PA7`): Read the 8 column lines returning from the keyboard matrix. A
+2026-08-18 19:16:19 [gemini-3.7-flash] bit reads as `0` (low) when the key at the intersection of the active row and that column is
+2026-08-18 19:16:19 [gemini-3.7-flash] pressed.
+2026-08-18 19:16:19 [gemini-3.7-flash] 
+2026-08-18 19:34:32 [simon@midnightblue.local] for pet keyboard matrix i need to set up a 8x10 key conversion for mac
+2026-08-18 19:34:33 [simon@midnightblue.local] const PetKeycodes:number[]=[	kVK_Space,0,0,0,0,0,0,0,	0,0,0,0,0,0,0,0,	0,0,0,0,0,0,0,0,	0,0,0,0,0,0,0,0,	0,0,0,0,0,0,0,0,	0,0,0,0,0,0,0,0,	0,0,0,0,0,0,0,0,	0,0,0,0,0,0,0,0,	0,0,0,0,0,0,0,0,	0,0,0,0,0,0,0,0]export function readPetKeyboard(){	let bits=0xff;	for(let i=0;i<8;i++){		const key=PetKeycodes[vicScan*8+i];		const hit=appServices.symbols.CGEventSourceKeyState(kCGEventSourceStateCombinedSessionState,key);		if(hit) bits&=~(1<<i);	}	return bits;}
+2026-08-18 19:34:49 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.024 1.026KB 15.61s
+2026-08-18 19:34:49 [gemini-3.7-flash] Here is a complete 8×10 matrix definition using standard macOS virtual keycodes
+2026-08-18 19:34:49 [gemini-3.7-flash] (Carbon/CoreGraphics) for the Commodore PET graphics keyboard layout, along with the required key
+2026-08-18 19:34:49 [gemini-3.7-flash] constant definitions.
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] Keycode Constants & Matrix Table
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] // macOS Carbon Virtual Keycodes
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_A: number = 0x00;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_S: number = 0x01;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_D: number = 0x02;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_F: number = 0x03;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_H: number = 0x04;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_G: number = 0x05;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Z: number = 0x06;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_X: number = 0x07;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_C: number = 0x08;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_V: number = 0x09;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_B: number = 0x0B;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Q: number = 0x0C;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_W: number = 0x0D;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_E: number = 0x0E;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_R: number = 0x0F;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Y: number = 0x10;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_T: number = 0x11;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_1: number = 0x12;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_2: number = 0x13;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_3: number = 0x14;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_4: number = 0x15;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_6: number = 0x16;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_5: number = 0x17;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Equal: number = 0x18;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_9: number = 0x19;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_7: number = 0x1A;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Minus: number = 0x1B;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_8: number = 0x1C;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_0: number = 0x1D;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_RightBracket: number = 0x1E;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_O: number = 0x1F;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_U: number = 0x20;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_LeftBracket: number = 0x21;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_I: number = 0x22;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_P: number = 0x23;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_L: number = 0x25;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_J: number = 0x26;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Quote: number = 0x27;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_K: number = 0x28;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Semicolon: number = 0x29;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Backslash: number = 0x2A;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Comma: number = 0x2B;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Slash: number = 0x2C;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_N: number = 0x2D;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_M: number = 0x2E;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Period: number = 0x2F;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Grave: number = 0x32;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_KeypadDecimal: number = 0x41;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_KeypadMultiply: number = 0x43;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_KeypadPlus: number = 0x45;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_KeypadMinus: number = 0x4E;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Keypad0: number = 0x52;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Keypad1: number = 0x53;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Keypad2: number = 0x54;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Keypad3: number = 0x55;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Keypad4: number = 0x56;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Keypad5: number = 0x57;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Keypad6: number = 0x58;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Keypad7: number = 0x59;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Keypad8: number = 0x5B;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_ANSI_Keypad9: number = 0x5C;
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_Return: number = 0x24;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_Tab: number = 0x30;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_Space: number = 0x31;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_Delete: number = 0x33;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_Escape: number = 0x35;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_Shift: number = 0x38;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_RightShift: number = 0x3C;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_Home: number = 0x73;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_RightArrow: number = 0x7C;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_DownArrow: number = 0x7D;
+2026-08-18 19:34:49 [gemini-3.7-flash] const kVK_UpArrow: number = 0x7E;
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] // Commodore PET 2001 (Graphics Keyboard) 10-row x 8-column matrix
+2026-08-18 19:34:49 [gemini-3.7-flash] const PetKeycodes: number[] = [
+2026-08-18 19:34:49 [gemini-3.7-flash] 	// Row 0: !, #, %, ', ), \, Cursor Down, Keypad 7
+2026-08-18 19:34:49 [gemini-3.7-flash] 	kVK_ANSI_1, kVK_ANSI_3, kVK_ANSI_5, kVK_ANSI_7, kVK_ANSI_9, kVK_ANSI_Backslash, kVK_DownArrow, kVK_ANSI_Keypad7,
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	// Row 1: ", $, &, (, <-, Home, Keypad 8, Keypad 9
+2026-08-18 19:34:49 [gemini-3.7-flash] 	kVK_ANSI_2, kVK_ANSI_4, kVK_ANSI_6, kVK_ANSI_8, kVK_ANSI_Grave, kVK_Home, kVK_ANSI_Keypad8, kVK_ANSI_Keypad9,
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	// Row 2: Q, E, T, U, O, ^, Keypad 4, Keypad 5
+2026-08-18 19:34:49 [gemini-3.7-flash] 	kVK_ANSI_Q, kVK_ANSI_E, kVK_ANSI_T, kVK_ANSI_U, kVK_ANSI_O, kVK_UpArrow, kVK_ANSI_Keypad4, kVK_ANSI_Keypad5,
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	// Row 3: W, R, Y, I, P, Del, Keypad 6, Keypad *
+2026-08-18 19:34:49 [gemini-3.7-flash] 	kVK_ANSI_W, kVK_ANSI_R, kVK_ANSI_Y, kVK_ANSI_I, kVK_ANSI_P, kVK_Delete, kVK_ANSI_Keypad6, kVK_ANSI_KeypadMultiply,
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	// Row 4: A, D, G, J, L, Return, Keypad 1, Keypad 2
+2026-08-18 19:34:49 [gemini-3.7-flash] 	kVK_ANSI_A, kVK_ANSI_D, kVK_ANSI_G, kVK_ANSI_J, kVK_ANSI_L, kVK_Return, kVK_ANSI_Keypad1, kVK_ANSI_Keypad2,
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	// Row 5: S, F, H, K, :, RVS, Keypad 3, Keypad +
+2026-08-18 19:34:49 [gemini-3.7-flash] 	kVK_ANSI_S, kVK_ANSI_F, kVK_ANSI_H, kVK_ANSI_K, kVK_ANSI_Semicolon, kVK_Tab, kVK_ANSI_Keypad3, kVK_ANSI_KeypadPlus,
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	// Row 6: Z, C, B, M, ?, Cursor Right, Keypad 0, Keypad -
+2026-08-18 19:34:49 [gemini-3.7-flash] 	kVK_ANSI_Z, kVK_ANSI_C, kVK_ANSI_B, kVK_ANSI_M, kVK_ANSI_Slash, kVK_RightArrow, kVK_ANSI_Keypad0, kVK_ANSI_KeypadMinus,
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	// Row 7: X, V, N, ,, Run/Stop, Right Shift, Keypad ., Keypad =
+2026-08-18 19:34:49 [gemini-3.7-flash] 	kVK_ANSI_X, kVK_ANSI_V, kVK_ANSI_N, kVK_ANSI_Comma, kVK_Escape, kVK_RightShift, kVK_ANSI_KeypadDecimal, kVK_ANSI_Equal,
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	// Row 8: Left Shift, @, [, ], Unused, Unused, Unused, Unused
+2026-08-18 19:34:49 [gemini-3.7-flash] 	kVK_Shift, kVK_ANSI_Quote, kVK_ANSI_LeftBracket, kVK_ANSI_RightBracket, 0, 0, 0, 0,
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	// Row 9: Space, Unused, Unused, Unused, Unused, Unused, Unused, Unused
+2026-08-18 19:34:49 [gemini-3.7-flash] 	kVK_Space, 0, 0, 0, 0, 0, 0, 0
+2026-08-18 19:34:49 [gemini-3.7-flash] ];
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] Keyboard Matrix Reader
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] function isKeyDown(keyCode: number): boolean {
+2026-08-18 19:34:49 [gemini-3.7-flash] 	if (keyCode === 0) {
+2026-08-18 19:34:49 [gemini-3.7-flash] 		return false;
+2026-08-18 19:34:49 [gemini-3.7-flash] 	}
+2026-08-18 19:34:49 [gemini-3.7-flash] 	return Boolean(appServices.symbols.CGEventSourceKeyState(kCGEventSourceStateCombinedSessionState, keyCode));
+2026-08-18 19:34:49 [gemini-3.7-flash] }
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] export function readPetKeyboard(): number {
+2026-08-18 19:34:49 [gemini-3.7-flash] 	if (vicScan < 0 || vicScan > 9) {
+2026-08-18 19:34:49 [gemini-3.7-flash] 		return 0xff;
+2026-08-18 19:34:49 [gemini-3.7-flash] 	}
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	let bits: number = 0xff;
+2026-08-18 19:34:49 [gemini-3.7-flash] 	const rowOffset: number = vicScan * 8;
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	for (let bitIndex: number = 0; bitIndex < 8; bitIndex = bitIndex + 1) {
+2026-08-18 19:34:49 [gemini-3.7-flash] 		const keyCode: number = PetKeycodes[rowOffset + bitIndex];
+2026-08-18 19:34:49 [gemini-3.7-flash] 		if (isKeyDown(keyCode)) {
+2026-08-18 19:34:49 [gemini-3.7-flash] 			bits = bits & ~(1 << bitIndex);
+2026-08-18 19:34:49 [gemini-3.7-flash] 		}
+2026-08-18 19:34:49 [gemini-3.7-flash] 	}
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 	return bits;
+2026-08-18 19:34:49 [gemini-3.7-flash] }
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:34:49 [gemini-3.7-flash] 
+2026-08-18 19:35:27 [simon@midnightblue.local] typescript pls
+2026-08-18 19:35:32 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.002 6.611KB 4.79s
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] // macOS Carbon Virtual Keycodes
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_A: number = 0x00;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_S: number = 0x01;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_D: number = 0x02;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_F: number = 0x03;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_H: number = 0x04;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_G: number = 0x05;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Z: number = 0x06;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_X: number = 0x07;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_C: number = 0x08;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_V: number = 0x09;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_B: number = 0x0B;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Q: number = 0x0C;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_W: number = 0x0D;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_E: number = 0x0E;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_R: number = 0x0F;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Y: number = 0x10;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_T: number = 0x11;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_1: number = 0x12;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_2: number = 0x13;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_3: number = 0x14;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_4: number = 0x15;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_6: number = 0x16;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_5: number = 0x17;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Equal: number = 0x18;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_9: number = 0x19;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_7: number = 0x1A;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Minus: number = 0x1B;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_8: number = 0x1C;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_0: number = 0x1D;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_RightBracket: number = 0x1E;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_O: number = 0x1F;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_U: number = 0x20;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_LeftBracket: number = 0x21;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_I: number = 0x22;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_P: number = 0x23;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_L: number = 0x25;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_J: number = 0x26;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Quote: number = 0x27;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_K: number = 0x28;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Semicolon: number = 0x29;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Backslash: number = 0x2A;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Comma: number = 0x2B;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Slash: number = 0x2C;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_N: number = 0x2D;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_M: number = 0x2E;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Period: number = 0x2F;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Grave: number = 0x32;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_KeypadDecimal: number = 0x41;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_KeypadMultiply: number = 0x43;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_KeypadPlus: number = 0x45;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_KeypadMinus: number = 0x4E;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Keypad0: number = 0x52;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Keypad1: number = 0x53;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Keypad2: number = 0x54;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Keypad3: number = 0x55;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Keypad4: number = 0x56;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Keypad5: number = 0x57;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Keypad6: number = 0x58;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Keypad7: number = 0x59;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Keypad8: number = 0x5B;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_ANSI_Keypad9: number = 0x5C;
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_Return: number = 0x24;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_Tab: number = 0x30;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_Space: number = 0x31;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_Delete: number = 0x33;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_Escape: number = 0x35;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_Shift: number = 0x38;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_RightShift: number = 0x3C;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_Home: number = 0x73;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_RightArrow: number = 0x7C;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_DownArrow: number = 0x7D;
+2026-08-18 19:35:32 [gemini-3.7-flash] const kVK_UpArrow: number = 0x7E;
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] const kCGEventSourceStateCombinedSessionState: number = 0;
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] interface AppServicesSymbols {
+2026-08-18 19:35:32 [gemini-3.7-flash] 	CGEventSourceKeyState(state: number, keycode: number): boolean | number;
+2026-08-18 19:35:32 [gemini-3.7-flash] }
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] interface AppServices {
+2026-08-18 19:35:32 [gemini-3.7-flash] 	symbols: AppServicesSymbols;
+2026-08-18 19:35:32 [gemini-3.7-flash] }
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] declare const appServices: AppServices;
+2026-08-18 19:35:32 [gemini-3.7-flash] declare let vicScan: number;
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] const PetKeycodes: readonly number[] = [
+2026-08-18 19:35:32 [gemini-3.7-flash] 	// Row 0: !, #, %, ', ), \, Cursor Down, Keypad 7
+2026-08-18 19:35:32 [gemini-3.7-flash] 	kVK_ANSI_1, kVK_ANSI_3, kVK_ANSI_5, kVK_ANSI_7, kVK_ANSI_9, kVK_ANSI_Backslash, kVK_DownArrow, kVK_ANSI_Keypad7,
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	// Row 1: ", $, &, (, <-, Home, Keypad 8, Keypad 9
+2026-08-18 19:35:32 [gemini-3.7-flash] 	kVK_ANSI_2, kVK_ANSI_4, kVK_ANSI_6, kVK_ANSI_8, kVK_ANSI_Grave, kVK_Home, kVK_ANSI_Keypad8, kVK_ANSI_Keypad9,
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	// Row 2: Q, E, T, U, O, ^, Keypad 4, Keypad 5
+2026-08-18 19:35:32 [gemini-3.7-flash] 	kVK_ANSI_Q, kVK_ANSI_E, kVK_ANSI_T, kVK_ANSI_U, kVK_ANSI_O, kVK_UpArrow, kVK_ANSI_Keypad4, kVK_ANSI_Keypad5,
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	// Row 3: W, R, Y, I, P, Del, Keypad 6, Keypad *
+2026-08-18 19:35:32 [gemini-3.7-flash] 	kVK_ANSI_W, kVK_ANSI_R, kVK_ANSI_Y, kVK_ANSI_I, kVK_ANSI_P, kVK_Delete, kVK_ANSI_Keypad6, kVK_ANSI_KeypadMultiply,
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	// Row 4: A, D, G, J, L, Return, Keypad 1, Keypad 2
+2026-08-18 19:35:32 [gemini-3.7-flash] 	kVK_ANSI_A, kVK_ANSI_D, kVK_ANSI_G, kVK_ANSI_J, kVK_ANSI_L, kVK_Return, kVK_ANSI_Keypad1, kVK_ANSI_Keypad2,
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	// Row 5: S, F, H, K, :, RVS, Keypad 3, Keypad +
+2026-08-18 19:35:32 [gemini-3.7-flash] 	kVK_ANSI_S, kVK_ANSI_F, kVK_ANSI_H, kVK_ANSI_K, kVK_ANSI_Semicolon, kVK_Tab, kVK_ANSI_Keypad3, kVK_ANSI_KeypadPlus,
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	// Row 6: Z, C, B, M, ?, Cursor Right, Keypad 0, Keypad -
+2026-08-18 19:35:32 [gemini-3.7-flash] 	kVK_ANSI_Z, kVK_ANSI_C, kVK_ANSI_B, kVK_ANSI_M, kVK_ANSI_Slash, kVK_RightArrow, kVK_ANSI_Keypad0, kVK_ANSI_KeypadMinus,
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	// Row 7: X, V, N, ,, Run/Stop, Right Shift, Keypad ., Keypad =
+2026-08-18 19:35:32 [gemini-3.7-flash] 	kVK_ANSI_X, kVK_ANSI_V, kVK_ANSI_N, kVK_ANSI_Comma, kVK_Escape, kVK_RightShift, kVK_ANSI_KeypadDecimal, kVK_ANSI_Equal,
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	// Row 8: Left Shift, @, [, ], Unused, Unused, Unused, Unused
+2026-08-18 19:35:32 [gemini-3.7-flash] 	kVK_Shift, kVK_ANSI_Quote, kVK_ANSI_LeftBracket, kVK_ANSI_RightBracket, 0, 0, 0, 0,
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	// Row 9: Space, Unused, Unused, Unused, Unused, Unused, Unused, Unused
+2026-08-18 19:35:32 [gemini-3.7-flash] 	kVK_Space, 0, 0, 0, 0, 0, 0, 0
+2026-08-18 19:35:32 [gemini-3.7-flash] ];
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] function isMacVirtualKeyPressed(keyCode: number): boolean {
+2026-08-18 19:35:32 [gemini-3.7-flash] 	if (keyCode === 0) {
+2026-08-18 19:35:32 [gemini-3.7-flash] 		return false;
+2026-08-18 19:35:32 [gemini-3.7-flash] 	}
+2026-08-18 19:35:32 [gemini-3.7-flash] 	return Boolean(appServices.symbols.CGEventSourceKeyState(kCGEventSourceStateCombinedSessionState, keyCode));
+2026-08-18 19:35:32 [gemini-3.7-flash] }
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] export function readPetKeyboard(): number {
+2026-08-18 19:35:32 [gemini-3.7-flash] 	if (vicScan < 0 || vicScan > 9) {
+2026-08-18 19:35:32 [gemini-3.7-flash] 		return 0xff;
+2026-08-18 19:35:32 [gemini-3.7-flash] 	}
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	let bits: number = 0xff;
+2026-08-18 19:35:32 [gemini-3.7-flash] 	const rowOffset: number = vicScan * 8;
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	for (let column: number = 0; column < 8; column = column + 1) {
+2026-08-18 19:35:32 [gemini-3.7-flash] 		const keyCode: number = PetKeycodes[rowOffset + column];
+2026-08-18 19:35:32 [gemini-3.7-flash] 		if (isMacVirtualKeyPressed(keyCode)) {
+2026-08-18 19:35:32 [gemini-3.7-flash] 			bits = bits & ~(1 << column);
+2026-08-18 19:35:32 [gemini-3.7-flash] 		}
+2026-08-18 19:35:32 [gemini-3.7-flash] 	}
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 	return bits;
+2026-08-18 19:35:32 [gemini-3.7-flash] }
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:35:32 [gemini-3.7-flash] 
+2026-08-18 19:39:36 [simon@midnightblue.local] keycode of a is 0?
+2026-08-18 19:39:43 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.014 12.17KB 6.58s
+2026-08-18 19:39:43 [gemini-3.7-flash] Yes, on macOS (in Carbon / CoreGraphics / HIToolbox), `kVK_ANSI_A` is indeed `0x00` (`0`).
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] Because of this, using `0` as an empty/unused matrix placeholder creates a conflict where the
+2026-08-18 19:39:43 [gemini-3.7-flash] A key is ignored. To avoid this collision, unmapped matrix entries should use a sentinel
+2026-08-18 19:39:43 [gemini-3.7-flash] value like `-1` (or `0xFFFF`).
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] Here is the corrected TypeScript implementation:
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] // macOS Carbon Virtual Keycodes (from Events.h)
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_A: number = 0x00;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_S: number = 0x01;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_D: number = 0x02;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_F: number = 0x03;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_H: number = 0x04;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_G: number = 0x05;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Z: number = 0x06;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_X: number = 0x07;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_C: number = 0x08;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_V: number = 0x09;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_B: number = 0x0B;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Q: number = 0x0C;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_W: number = 0x0D;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_E: number = 0x0E;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_R: number = 0x0F;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Y: number = 0x10;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_T: number = 0x11;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_1: number = 0x12;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_2: number = 0x13;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_3: number = 0x14;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_4: number = 0x15;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_6: number = 0x16;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_5: number = 0x17;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Equal: number = 0x18;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_9: number = 0x19;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_7: number = 0x1A;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Minus: number = 0x1B;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_8: number = 0x1C;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_0: number = 0x1D;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_RightBracket: number = 0x1E;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_O: number = 0x1F;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_U: number = 0x20;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_LeftBracket: number = 0x21;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_I: number = 0x22;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_P: number = 0x23;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_L: number = 0x25;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_J: number = 0x26;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Quote: number = 0x27;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_K: number = 0x28;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Semicolon: number = 0x29;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Backslash: number = 0x2A;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Comma: number = 0x2B;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Slash: number = 0x2C;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_N: number = 0x2D;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_M: number = 0x2E;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Period: number = 0x2F;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Grave: number = 0x32;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_KeypadDecimal: number = 0x41;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_KeypadMultiply: number = 0x43;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_KeypadPlus: number = 0x45;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_KeypadMinus: number = 0x4E;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Keypad0: number = 0x52;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Keypad1: number = 0x53;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Keypad2: number = 0x54;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Keypad3: number = 0x55;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Keypad4: number = 0x56;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Keypad5: number = 0x57;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Keypad6: number = 0x58;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Keypad7: number = 0x59;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Keypad8: number = 0x5B;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_ANSI_Keypad9: number = 0x5C;
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_Return: number = 0x24;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_Tab: number = 0x30;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_Space: number = 0x31;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_Delete: number = 0x33;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_Escape: number = 0x35;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_Shift: number = 0x38;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_RightShift: number = 0x3C;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_Home: number = 0x73;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_RightArrow: number = 0x7C;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_DownArrow: number = 0x7D;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_UpArrow: number = 0x7E;
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] const kVK_None: number = -1;
+2026-08-18 19:39:43 [gemini-3.7-flash] const kCGEventSourceStateCombinedSessionState: number = 0;
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] interface AppServicesSymbols {
+2026-08-18 19:39:43 [gemini-3.7-flash] 	CGEventSourceKeyState(state: number, keycode: number): boolean | number;
+2026-08-18 19:39:43 [gemini-3.7-flash] }
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] interface AppServices {
+2026-08-18 19:39:43 [gemini-3.7-flash] 	symbols: AppServicesSymbols;
+2026-08-18 19:39:43 [gemini-3.7-flash] }
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] declare const appServices: AppServices;
+2026-08-18 19:39:43 [gemini-3.7-flash] declare let vicScan: number;
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] const PetKeycodes: readonly number[] = [
+2026-08-18 19:39:43 [gemini-3.7-flash] 	// Row 0: !, #, %, ', ), \, Cursor Down, Keypad 7
+2026-08-18 19:39:43 [gemini-3.7-flash] 	kVK_ANSI_1, kVK_ANSI_3, kVK_ANSI_5, kVK_ANSI_7, kVK_ANSI_9, kVK_ANSI_Backslash, kVK_DownArrow, kVK_ANSI_Keypad7,
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	// Row 1: ", $, &, (, <-, Home, Keypad 8, Keypad 9
+2026-08-18 19:39:43 [gemini-3.7-flash] 	kVK_ANSI_2, kVK_ANSI_4, kVK_ANSI_6, kVK_ANSI_8, kVK_ANSI_Grave, kVK_Home, kVK_ANSI_Keypad8, kVK_ANSI_Keypad9,
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	// Row 2: Q, E, T, U, O, ^, Keypad 4, Keypad 5
+2026-08-18 19:39:43 [gemini-3.7-flash] 	kVK_ANSI_Q, kVK_ANSI_E, kVK_ANSI_T, kVK_ANSI_U, kVK_ANSI_O, kVK_UpArrow, kVK_ANSI_Keypad4, kVK_ANSI_Keypad5,
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	// Row 3: W, R, Y, I, P, Del, Keypad 6, Keypad *
+2026-08-18 19:39:43 [gemini-3.7-flash] 	kVK_ANSI_W, kVK_ANSI_R, kVK_ANSI_Y, kVK_ANSI_I, kVK_ANSI_P, kVK_Delete, kVK_ANSI_Keypad6, kVK_ANSI_KeypadMultiply,
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	// Row 4: A, D, G, J, L, Return, Keypad 1, Keypad 2
+2026-08-18 19:39:43 [gemini-3.7-flash] 	kVK_ANSI_A, kVK_ANSI_D, kVK_ANSI_G, kVK_ANSI_J, kVK_ANSI_L, kVK_Return, kVK_ANSI_Keypad1, kVK_ANSI_Keypad2,
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	// Row 5: S, F, H, K, :, RVS, Keypad 3, Keypad +
+2026-08-18 19:39:43 [gemini-3.7-flash] 	kVK_ANSI_S, kVK_ANSI_F, kVK_ANSI_H, kVK_ANSI_K, kVK_ANSI_Semicolon, kVK_Tab, kVK_ANSI_Keypad3, kVK_ANSI_KeypadPlus,
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	// Row 6: Z, C, B, M, ?, Cursor Right, Keypad 0, Keypad -
+2026-08-18 19:39:43 [gemini-3.7-flash] 	kVK_ANSI_Z, kVK_ANSI_C, kVK_ANSI_B, kVK_ANSI_M, kVK_ANSI_Slash, kVK_RightArrow, kVK_ANSI_Keypad0, kVK_ANSI_KeypadMinus,
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	// Row 7: X, V, N, ,, Run/Stop, Right Shift, Keypad ., Keypad =
+2026-08-18 19:39:43 [gemini-3.7-flash] 	kVK_ANSI_X, kVK_ANSI_V, kVK_ANSI_N, kVK_ANSI_Comma, kVK_Escape, kVK_RightShift, kVK_ANSI_KeypadDecimal, kVK_ANSI_Equal,
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	// Row 8: Left Shift, @, [, ], Unused, Unused, Unused, Unused
+2026-08-18 19:39:43 [gemini-3.7-flash] 	kVK_Shift, kVK_ANSI_Quote, kVK_ANSI_LeftBracket, kVK_ANSI_RightBracket, kVK_None, kVK_None, kVK_None, kVK_None,
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	// Row 9: Space, Unused, Unused, Unused, Unused, Unused, Unused, Unused
+2026-08-18 19:39:43 [gemini-3.7-flash] 	kVK_Space, kVK_None, kVK_None, kVK_None, kVK_None, kVK_None, kVK_None, kVK_None
+2026-08-18 19:39:43 [gemini-3.7-flash] ];
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] function isMacVirtualKeyPressed(keyCode: number): boolean {
+2026-08-18 19:39:43 [gemini-3.7-flash] 	if (keyCode < 0) {
+2026-08-18 19:39:43 [gemini-3.7-flash] 		return false;
+2026-08-18 19:39:43 [gemini-3.7-flash] 	}
+2026-08-18 19:39:43 [gemini-3.7-flash] 	return Boolean(appServices.symbols.CGEventSourceKeyState(kCGEventSourceStateCombinedSessionState, keyCode));
+2026-08-18 19:39:43 [gemini-3.7-flash] }
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] export function readPetKeyboard(): number {
+2026-08-18 19:39:43 [gemini-3.7-flash] 	if (vicScan < 0 || vicScan > 9) {
+2026-08-18 19:39:43 [gemini-3.7-flash] 		return 0xff;
+2026-08-18 19:39:43 [gemini-3.7-flash] 	}
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	let bits: number = 0xff;
+2026-08-18 19:39:43 [gemini-3.7-flash] 	const rowOffset: number = vicScan * 8;
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	for (let column: number = 0; column < 8; column = column + 1) {
+2026-08-18 19:39:43 [gemini-3.7-flash] 		const keyCode: number = PetKeycodes[rowOffset + column];
+2026-08-18 19:39:43 [gemini-3.7-flash] 		if (isMacVirtualKeyPressed(keyCode)) {
+2026-08-18 19:39:43 [gemini-3.7-flash] 			bits = bits & ~(1 << column);
+2026-08-18 19:39:43 [gemini-3.7-flash] 		}
+2026-08-18 19:39:43 [gemini-3.7-flash] 	}
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 	return bits;
+2026-08-18 19:39:43 [gemini-3.7-flash] }
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:39:43 [gemini-3.7-flash] 
+2026-08-18 19:55:41 [simon@midnightblue.local] testing and this is my row 0
+2026-08-18 19:55:44 [simon@midnightblue.local] //!,#,%,&,(,_,home,space
+2026-08-18 19:55:53 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.013 18.25KB 7.13s
+2026-08-18 19:55:53 [gemini-3.7-flash] Here is the macOS keycode mapping for that specific Row 0 (commonly found on the PET Business /
+2026-08-18 19:55:53 [gemini-3.7-flash] 4000 / 8000 series matrix):
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] // Row 0: !, #, %, &, (, _, Home, Space
+2026-08-18 19:55:53 [gemini-3.7-flash] const PetRow0: readonly number[] = [
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_1,      // Bit 0: ! (Key 1)
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_3,      // Bit 1: # (Key 3)
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_5,      // Bit 2: % (Key 5)
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_7,      // Bit 3: & (Key 7)
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_9,      // Bit 4: ( (Key 9)
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_Minus,  // Bit 5: _ / Left Arrow
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_Home,        // Bit 6: Clr / Home
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_Space        // Bit 7: Space
+2026-08-18 19:55:53 [gemini-3.7-flash] ];
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] If you are using the full 10-row Business keyboard matrix, the table is structured as follows:
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] const PetKeycodes: readonly number[] = [
+2026-08-18 19:55:53 [gemini-3.7-flash] 	// Row 0: !, #, %, &, (, _, Home, Space
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_1, kVK_ANSI_3, kVK_ANSI_5, kVK_ANSI_7, kVK_ANSI_9, kVK_ANSI_Minus, kVK_Home, kVK_Space,
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 	// Row 1: ", $, ', ), Keypad /, Keypad 8, Keypad 9, Keypad -
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_2, kVK_ANSI_4, kVK_ANSI_6, kVK_ANSI_8, kVK_ANSI_0, kVK_ANSI_Keypad8, kVK_ANSI_Keypad9, kVK_ANSI_KeypadMinus,
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 	// Row 2: Q, E, T, U, O, ^, Keypad 4, Keypad 5
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_Q, kVK_ANSI_E, kVK_ANSI_T, kVK_ANSI_U, kVK_ANSI_O, kVK_UpArrow, kVK_ANSI_Keypad4, kVK_ANSI_Keypad5,
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 	// Row 3: W, R, Y, I, P, Del, Keypad 6, Keypad *
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_W, kVK_ANSI_R, kVK_ANSI_Y, kVK_ANSI_I, kVK_ANSI_P, kVK_Delete, kVK_ANSI_Keypad6, kVK_ANSI_KeypadMultiply,
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 	// Row 4: A, D, G, J, L, Return, Keypad 1, Keypad 2
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_A, kVK_ANSI_D, kVK_ANSI_G, kVK_ANSI_J, kVK_ANSI_L, kVK_Return, kVK_ANSI_Keypad1, kVK_ANSI_Keypad2,
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 	// Row 5: S, F, H, K, :, RVS / Tab, Keypad 3, Keypad +
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_S, kVK_ANSI_F, kVK_ANSI_H, kVK_ANSI_K, kVK_ANSI_Semicolon, kVK_Tab, kVK_ANSI_Keypad3, kVK_ANSI_KeypadPlus,
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 	// Row 6: Z, C, B, M, ?, Cursor Right, Keypad 0, Keypad .
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_Z, kVK_ANSI_C, kVK_ANSI_B, kVK_ANSI_M, kVK_ANSI_Slash, kVK_RightArrow, kVK_ANSI_Keypad0, kVK_ANSI_KeypadDecimal,
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 	// Row 7: X, V, N, ,, Run/Stop, Right Shift, Keypad =, Cursor Down
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_ANSI_X, kVK_ANSI_V, kVK_ANSI_N, kVK_ANSI_Comma, kVK_Escape, kVK_RightShift, kVK_ANSI_Equal, kVK_DownArrow,
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 	// Row 8: Left Shift, @, [, ], Unused, Unused, Unused, Unused
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_Shift, kVK_ANSI_Quote, kVK_ANSI_LeftBracket, kVK_ANSI_RightBracket, kVK_None, kVK_None, kVK_None, kVK_None,
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 	// Row 9: Unused / Repeat keys
+2026-08-18 19:55:53 [gemini-3.7-flash] 	kVK_None, kVK_None, kVK_None, kVK_None, kVK_None, kVK_None, kVK_None, kVK_None
+2026-08-18 19:55:53 [gemini-3.7-flash] ];
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 19:55:53 [gemini-3.7-flash] 
+2026-08-18 20:04:56 [simon@midnightblue.local] which address and bits select column
+2026-08-18 20:05:00 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.007 20.89KB 3.28s
+2026-08-18 20:05:00 [gemini-3.7-flash] On the Commodore PET, the 6520 PIA 1 handles keyboard scanning via two registers at address
+2026-08-18 20:05:00 [gemini-3.7-flash] range `E810`–`E813`:
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] 1. Row Selection (Output)
+2026-08-18 20:05:00 [gemini-3.7-flash] • Address: `$E810` (PIA 1 Port A — `PRA`)
+2026-08-18 20:05:00 [gemini-3.7-flash] • Bits: Bits 0–3 (`PA0`–`PA3`)
+2026-08-18 20:05:00 [gemini-3.7-flash] • Function: These 4 bits are connected to a 74145 BCD-to-Decimal Decoder, which
+2026-08-18 20:05:00 [gemini-3.7-flash] pulls one of the 10 matrix rows (0–9) LOW (`0`).
+2026-08-18 20:05:00 [gemini-3.7-flash] • Value: Values `0x0` through `0x9` select Row 0 through Row 9. Values `0xA`–`0xF` deselect
+2026-08-18 20:05:00 [gemini-3.7-flash] all rows.
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] 2. Column Selection / Input (Read)
+2026-08-18 20:05:00 [gemini-3.7-flash] • Address: `$E812` (PIA 1 Port B — `PRB`)
+2026-08-18 20:05:00 [gemini-3.7-flash] • Bits: Bits 0–7 (`PB0`–`PB7`)
+2026-08-18 20:05:00 [gemini-3.7-flash] • Function: The matrix columns are connected directly to Port B inputs with pull-up
+2026-08-18 20:05:00 [gemini-3.7-flash] resistors.
+2026-08-18 20:05:00 [gemini-3.7-flash] • Logic:
+2026-08-18 20:05:00 [gemini-3.7-flash]   * `1` = Key is open / released
+2026-08-18 20:05:00 [gemini-3.7-flash]   * `0` = Key is pressed (pulls line to ground)
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] Emulator Register Mapping Example
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] // Memory addresses
+2026-08-18 20:05:00 [gemini-3.7-flash] const PET_PIA1_PRA: number = 0xE810; // Row select (PA0..PA3)
+2026-08-18 20:05:00 [gemini-3.7-flash] const PET_PIA1_PRB: number = 0xE812; // Column data read (PB0..PB7)
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] let pia1PortA: number = 0x00;
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] export function writePetMemory(address: number, value: number): void {
+2026-08-18 20:05:00 [gemini-3.7-flash] 	if (address === PET_PIA1_PRA) {
+2026-08-18 20:05:00 [gemini-3.7-flash] 		// Bits 0..3 drive the 74145 decoder (Row 0-9)
+2026-08-18 20:05:00 [gemini-3.7-flash] 		pia1PortA = value & 0x0F;
+2026-08-18 20:05:00 [gemini-3.7-flash] 	}
+2026-08-18 20:05:00 [gemini-3.7-flash] }
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] export function readPetMemory(address: number): number {
+2026-08-18 20:05:00 [gemini-3.7-flash] 	if (address === PET_PIA1_PRB) {
+2026-08-18 20:05:00 [gemini-3.7-flash] 		// Returns 8-bit columns (PB0..PB7) for current row (0-9)
+2026-08-18 20:05:00 [gemini-3.7-flash] 		return readPetKeyboardMatrix(pia1PortA);
+2026-08-18 20:05:00 [gemini-3.7-flash] 	}
+2026-08-18 20:05:00 [gemini-3.7-flash] 	return 0xFF;
+2026-08-18 20:05:00 [gemini-3.7-flash] }
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] function readPetKeyboardMatrix(rowIndex: number): number {
+2026-08-18 20:05:00 [gemini-3.7-flash] 	if (rowIndex > 9) {
+2026-08-18 20:05:00 [gemini-3.7-flash] 		return 0xFF; // Decoder disabled for inputs 10-15
+2026-08-18 20:05:00 [gemini-3.7-flash] 	}
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] 	let columns: number = 0xFF;
+2026-08-18 20:05:00 [gemini-3.7-flash] 	const rowOffset: number = rowIndex * 8;
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] 	for (let column: number = 0; column < 8; column = column + 1) {
+2026-08-18 20:05:00 [gemini-3.7-flash] 		const keyCode: number = PetKeycodes[rowOffset + column];
+2026-08-18 20:05:00 [gemini-3.7-flash] 		if (isMacVirtualKeyPressed(keyCode)) {
+2026-08-18 20:05:00 [gemini-3.7-flash] 			// Column line goes LOW when pressed
+2026-08-18 20:05:00 [gemini-3.7-flash] 			columns = columns & ~(1 << column);
+2026-08-18 20:05:00 [gemini-3.7-flash] 		}
+2026-08-18 20:05:00 [gemini-3.7-flash] 	}
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] 	return columns;
+2026-08-18 20:05:00 [gemini-3.7-flash] }
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:05:00 [gemini-3.7-flash] 
+2026-08-18 20:38:42 [simon@midnightblue.local] is 6502 opcode 30 0x1e valid?
+2026-08-18 20:38:49 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.007 23.14KB 6.53s
+2026-08-18 20:38:49 [gemini-3.7-flash] Yes, both `0x30` and `0x1E` are valid, official NMOS 6502 opcodes.
+2026-08-18 20:38:49 [gemini-3.7-flash] 
+2026-08-18 20:38:49 [gemini-3.7-flash] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-08-18 20:38:49 [gemini-3.7-flash] 
+2026-08-18 20:38:49 [gemini-3.7-flash] Opcode `$30` (decimal 48)
+2026-08-18 20:38:49 [gemini-3.7-flash] 
+2026-08-18 20:38:49 [gemini-3.7-flash] • Instruction: `BMI` (Branch on Result Minus / Negative)
+2026-08-18 20:38:49 [gemini-3.7-flash] • Addressing Mode: Relative
+2026-08-18 20:38:49 [gemini-3.7-flash] • Byte Length: 2 bytes (`30 nn`)
+2026-08-18 20:38:49 [gemini-3.7-flash] • Cycles:
+2026-08-18 20:38:49 [gemini-3.7-flash]   * 2 cycles (branch not taken)
+2026-08-18 20:38:49 [gemini-3.7-flash]   * 3 cycles (branch taken, same page)
+2026-08-18 20:38:49 [gemini-3.7-flash]   * 4 cycles (branch taken across page boundary)
+2026-08-18 20:38:49 [gemini-3.7-flash] • Operation: Branches to `PC + offset` if the Negative flag (N) is set (`1`).
+2026-08-18 20:38:49 [gemini-3.7-flash] 
+2026-08-18 20:38:49 [gemini-3.7-flash] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-08-18 20:38:49 [gemini-3.7-flash] 
+2026-08-18 20:38:49 [gemini-3.7-flash] Opcode `$1E` (decimal 30)
+2026-08-18 20:38:49 [gemini-3.7-flash] 
+2026-08-18 20:38:49 [gemini-3.7-flash] • Instruction: `ASL` (Arithmetic Shift Left)
+2026-08-18 20:38:49 [gemini-3.7-flash] • Addressing Mode: Absolute, X-indexed (`$aaaa,X`)
+2026-08-18 20:38:49 [gemini-3.7-flash] • Byte Length: 3 bytes (`1E LL HH`)
+2026-08-18 20:38:49 [gemini-3.7-flash] • Cycles: 7 cycles (always takes 7 cycles, even without a page boundary cross, as it is a
+2026-08-18 20:38:49 [gemini-3.7-flash] read-modify-write instruction)
+2026-08-18 20:38:49 [gemini-3.7-flash] • Operation: Shifts the contents of memory address `(HHLL + X)` left by 1 bit. Bit 7 goes
+2026-08-18 20:38:49 [gemini-3.7-flash] into the Carry flag (C), and bit 0 becomes `0`. Sets the N and Z flags based on the result.
+2026-08-18 20:38:49 [gemini-3.7-flash] 
+2026-08-18 21:08:17 [simon@midnightblue.local] opcode $5e?
+2026-08-18 21:08:19 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.007 24.33KB 2.18s
+2026-08-18 21:08:19 [gemini-3.7-flash] Yes, opcode `$5E` is also a valid, official NMOS 6502 opcode.
+2026-08-18 21:08:19 [gemini-3.7-flash] 
+2026-08-18 21:08:19 [gemini-3.7-flash] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-08-18 21:08:19 [gemini-3.7-flash] 
+2026-08-18 21:08:19 [gemini-3.7-flash] Opcode `$5E` (decimal 94)
+2026-08-18 21:08:19 [gemini-3.7-flash] 
+2026-08-18 21:08:19 [gemini-3.7-flash] • Instruction: `LSR` (Logical Shift Right)
+2026-08-18 21:08:19 [gemini-3.7-flash] • Addressing Mode: Absolute, X-indexed (`$aaaa,X`)
+2026-08-18 21:08:19 [gemini-3.7-flash] • Byte Length: 3 bytes (`5E LL HH`)
+2026-08-18 21:08:19 [gemini-3.7-flash] • Cycles: 7 cycles (fixed cycle count because it is a read-modify-write instruction)
+2026-08-18 21:08:19 [gemini-3.7-flash] • Operation: Shifts the memory byte at `(HHLL + X)` right by 1 bit.
+2026-08-18 21:08:19 [gemini-3.7-flash]   * Bit 0 shifts into the Carry flag (C).
+2026-08-18 21:08:19 [gemini-3.7-flash]   * Bit 7 is cleared to `0`.
+2026-08-18 21:08:19 [gemini-3.7-flash]   * Flags affected:
+2026-08-18 21:08:19 [gemini-3.7-flash]     * N (Negative): Always set to `0`.
+2026-08-18 21:08:19 [gemini-3.7-flash]     * Z (Zero): Set if result is `0`, cleared otherwise.
+2026-08-18 21:08:19 [gemini-3.7-flash]     * C (Carry): Holds the old bit 0.
+2026-08-18 21:08:19 [gemini-3.7-flash] 
+2026-08-18 21:10:41 [simon@midnightblue.local] does pet key repeat depend on hw timer?
+2026-08-18 21:10:49 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.011 25.23KB 7.16s
+2026-08-18 21:10:49 [gemini-3.7-flash] • No, key repeat does not use a dedicated hardware timer. It is handled entirely in
+2026-08-18 21:10:49 [gemini-3.7-flash] software* via countdown counters inside the standard 60 Hz system interrupt handler
+2026-08-18 21:10:49 [gemini-3.7-flash] (`IRQ`).
+2026-08-18 21:10:49 [gemini-3.7-flash] 
+2026-08-18 21:10:49 [gemini-3.7-flash] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-08-18 21:10:49 [gemini-3.7-flash] 
+2026-08-18 21:10:49 [gemini-3.7-flash] How Key Repeat Works in PET Kernal / Hardware
+2026-08-18 21:10:49 [gemini-3.7-flash] 
+2026-08-18 21:10:49 [gemini-3.7-flash] 1. The 60 Hz IRQ Tick:
+2026-08-18 21:10:49 [gemini-3.7-flash]    * An interrupt is triggered 60 times per second (50 Hz on PAL models), generated by the CRT
+2026-08-18 21:10:49 [gemini-3.7-flash] vertical blank signal wired to the 6520 PIA 1 (`CB1`/`CA1` line) or 6522 VIA.
+2026-08-18 21:10:49 [gemini-3.7-flash]    * On each interrupt tick, the Kernal calls the keyboard scan routine (`SCNKEY`).
+2026-08-18 21:10:49 [gemini-3.7-flash] 
+2026-08-18 21:10:49 [gemini-3.7-flash] 2. Software Repeat Counters:
+2026-08-18 21:10:49 [gemini-3.7-flash]    * When a key is held down across multiple IRQ ticks, the Kernal decrements software delay
+2026-08-18 21:10:49 [gemini-3.7-flash] countdown bytes in low RAM:
+2026-08-18 21:10:49 [gemini-3.7-flash]      * Initial Delay Counter: Waits for a hold delay (typically ~16–30 ticks / ~0.5
+2026-08-18 21:10:49 [gemini-3.7-flash] seconds).
+2026-08-18 21:10:49 [gemini-3.7-flash]      * Repeat Speed Counter: Once active, pushes the key into the keyboard buffer every 4–6
+2026-08-18 21:10:49 [gemini-3.7-flash] ticks.
+2026-08-18 21:10:49 [gemini-3.7-flash]    * If `IRQ` ticks stop occurring, key repeats and keyboard buffering stop functioning.
+2026-08-18 21:10:49 [gemini-3.7-flash] 
+2026-08-18 21:10:49 [gemini-3.7-flash] 3. PET Graphics vs. Business Models:
+2026-08-18 21:10:49 [gemini-3.7-flash]    * Graphics Keyboard (PET 2001 / 3000): Only certain keys (or all keys depending on
+2026-08-18 21:10:49 [gemini-3.7-flash] Kernal version and the repeat flag at memory location `$028A` / `650`) repeat automatically in
+2026-08-18 21:10:49 [gemini-3.7-flash] software.
+2026-08-18 21:10:49 [gemini-3.7-flash]    * Business Keyboard (4000 / 8000 series): Has a dedicated physical `RPT` key
+2026-08-18 21:10:49 [gemini-3.7-flash] wired directly into the keyboard matrix. Holding a key down together with `RPT` tells the software
+2026-08-18 21:10:49 [gemini-3.7-flash] scan routine to bypass the initial delay and repeat immediately.
+2026-08-18 21:10:49 [gemini-3.7-flash] 
+2026-08-18 21:12:19 [simon@midnightblue.local] what is default of $28a?
+2026-08-18 21:12:22 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.008 26.93KB 2.89s
+2026-08-18 21:12:22 [gemini-3.7-flash] In Commodore PET Kernal (BASIC 2/3 and BASIC 4):
+2026-08-18 21:12:22 [gemini-3.7-flash] 
+2026-08-18 21:12:22 [gemini-3.7-flash] The default value of `$028A` (decimal `650`, labeled `RPTFLG`) is:
+2026-08-18 21:12:22 [gemini-3.7-flash] 
+2026-08-18 21:12:22 [gemini-3.7-flash] `$00` (`0`) — Normal / Default Repeat
+2026-08-18 21:12:22 [gemini-3.7-flash] 
+2026-08-18 21:12:22 [gemini-3.7-flash] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-08-18 21:12:22 [gemini-3.7-flash] 
+2026-08-18 21:12:22 [gemini-3.7-flash] Value Breakdown (`$028A` / `650`):
+2026-08-18 21:12:22 [gemini-3.7-flash] 
+2026-08-18 21:12:23 [gemini-3.7-flash] • `$00` (`0`) — Default: Repeat is enabled only for specific control/movement keys:
+2026-08-18 21:12:23 [gemini-3.7-flash]   * Cursor Keys (Up, Down, Left, Right)
+2026-08-18 21:12:23 [gemini-3.7-flash]   * `INST/DEL`
+2026-08-18 21:12:23 [gemini-3.7-flash]   * Spacebar
+2026-08-18 21:12:23 [gemini-3.7-flash] • `$80` (`128`): Repeat is enabled for all keys (every alphanumeric key held down
+2026-08-18 21:12:23 [gemini-3.7-flash] will auto-repeat).
+2026-08-18 21:12:23 [gemini-3.7-flash] • `$40` (`64`): Repeat is completely disabled for all keys.
+2026-08-18 21:12:23 [gemini-3.7-flash] 
+2026-08-18 21:12:23 [gemini-3.7-flash] • (Note: In BASIC, users commonly enable repeat for all keys with `POKE 650, 128` or restore
+2026-08-18 21:12:23 [gemini-3.7-flash] default behavior with `POKE 650, 0`.)*
+2026-08-18 21:12:23 [gemini-3.7-flash] 
+2026-08-18 21:19:02 [simon@midnightblue.local] writing to 0xE8 in my
+2026-08-18 21:19:48 [simon@midnightblue.local] simulator is not selecting the col correctly,
+2026-08-18 21:20:03 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.008 27.90KB 4.21s
+2026-08-18 21:20:03 [gemini-3.7-flash] In standard Commodore PET hardware, the 6520 PIA 1 is mapped to the 16-bit address
+2026-08-18 21:20:03 [gemini-3.7-flash] `E810`, not the zero-page/8-bit address `00E8`.
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] There are two primary reasons why row selection fails during the keyboard scan routine (`SCNKEY`):
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] 1. Address Decoding (16-bit vs 8-bit)
+2026-08-18 21:20:03 [gemini-3.7-flash] The PET Kernal accesses the keyboard controller via 16-bit absolute addresses:
+2026-08-18 21:20:03 [gemini-3.7-flash] • Row Select (Output): Address `$E810` (PIA 1 Port A / `PRA`)
+2026-08-18 21:20:03 [gemini-3.7-flash] • Column Read (Input): Address `$E812` (PIA 1 Port B / `PRB`)
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] If your emulator checks memory addresses using only a single byte (e.g., `address === 0xE8`), it
+2026-08-18 21:20:03 [gemini-3.7-flash] will intercept wrong writes or miss the full 16-bit address `$E810`.
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] 2. PIA Data Direction Register (DDR) vs. Output Register Selection
+2026-08-18 21:20:03 [gemini-3.7-flash] The 6520 PIA shares the same memory address for both the Data Direction Register (`DDRA`)
+2026-08-18 21:20:03 [gemini-3.7-flash] and the Peripheral Output Register (`PRA`).
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] Which internal register gets updated depends on Bit 2 of the Control Register A
+2026-08-18 21:20:03 [gemini-3.7-flash] (`CRA`) at address `$E811`:
+2026-08-18 21:20:03 [gemini-3.7-flash] • `CRA` Bit 2 = `0`: Writing to `$E810` modifies the Data Direction Register (`DDRA`).
+2026-08-18 21:20:03 [gemini-3.7-flash] • `CRA` Bit 2 = `1`: Writing to `$E810` modifies Port A outputs (`PRA`), which drives the
+2026-08-18 21:20:03 [gemini-3.7-flash] keyboard row decoder.
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] During system boot, the PET Kernal sets `CRA` bit 2 to `1`. If your emulator does not track this
+2026-08-18 21:20:03 [gemini-3.7-flash] control bit, writes intended for the keyboard decoder might be misrouted.
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] Correct TypeScript Emulator Implementation
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] // Memory Addresses for 6520 PIA 1
+2026-08-18 21:20:03 [gemini-3.7-flash] const PET_PIA1_PRA: number = 0xE810;  // Port A / DDR A
+2026-08-18 21:20:03 [gemini-3.7-flash] const PET_PIA1_CRA: number = 0xE811;  // Control Register A
+2026-08-18 21:20:03 [gemini-3.7-flash] const PET_PIA1_PRB: number = 0xE812;  // Port B / DDR B
+2026-08-18 21:20:03 [gemini-3.7-flash] const PET_PIA1_CRB: number = 0xE813;  // Control Register B
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] let pia1ControlA: number = 0x00;
+2026-08-18 21:20:03 [gemini-3.7-flash] let pia1DdrA: number = 0x00;
+2026-08-18 21:20:03 [gemini-3.7-flash] let pia1PortA: number = 0x00;
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] export function writePetHardware(address: number, value: number): void {
+2026-08-18 21:20:03 [gemini-3.7-flash] 	if (address === PET_PIA1_CRA) {
+2026-08-18 21:20:03 [gemini-3.7-flash] 		pia1ControlA = value;
+2026-08-18 21:20:03 [gemini-3.7-flash] 		return;
+2026-08-18 21:20:03 [gemini-3.7-flash] 	}
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] 	if (address === PET_PIA1_PRA) {
+2026-08-18 21:20:03 [gemini-3.7-flash] 		// Check Bit 2 of Control Register A
+2026-08-18 21:20:03 [gemini-3.7-flash] 		const isOutputRegisterSelected: boolean = (pia1ControlA & 0x04) !== 0;
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] 		if (isOutputRegisterSelected) {
+2026-08-18 21:20:03 [gemini-3.7-flash] 			// Bits 0..3 drive the 74145 BCD-to-Decimal row decoder
+2026-08-18 21:20:03 [gemini-3.7-flash] 			pia1PortA = value & 0x0F;
+2026-08-18 21:20:03 [gemini-3.7-flash] 		} else {
+2026-08-18 21:20:03 [gemini-3.7-flash] 			pia1DdrA = value;
+2026-08-18 21:20:03 [gemini-3.7-flash] 		}
+2026-08-18 21:20:03 [gemini-3.7-flash] 		return;
+2026-08-18 21:20:03 [gemini-3.7-flash] 	}
+2026-08-18 21:20:03 [gemini-3.7-flash] }
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] export function readPetHardware(address: number): number {
+2026-08-18 21:20:03 [gemini-3.7-flash] 	if (address === PET_PIA1_PRB) {
+2026-08-18 21:20:03 [gemini-3.7-flash] 		// Read columns (PB0..PB7) for active row (0-9)
+2026-08-18 21:20:03 [gemini-3.7-flash] 		return readPetKeyboardMatrix(pia1PortA);
+2026-08-18 21:20:03 [gemini-3.7-flash] 	}
+2026-08-18 21:20:03 [gemini-3.7-flash] 	return 0xFF;
+2026-08-18 21:20:03 [gemini-3.7-flash] }
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:20:03 [gemini-3.7-flash] 
+2026-08-18 21:23:23 [simon@midnightblue.local] thanks! checking bit2 fixed it!
+2026-08-18 21:23:29 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.009 30.72KB 5.57s
+2026-08-18 21:23:29 [gemini-3.7-flash] You are very welcome! Glad to hear that fixed the issue. If you run into any other PIA, VIA, or
+2026-08-18 21:23:29 [gemini-3.7-flash] 6502 emulation questions, feel free to ask anytime.
+2026-08-18 21:23:29 [gemini-3.7-flash] 
+2026-08-18 21:41:12 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.061 209.1KB 7.77s
+2026-08-18 21:41:12 [gemini-3.7-flash] The overall multi-system architecture is well-structured and covers a broad range of platforms
+2026-08-18 21:41:12 [gemini-3.7-flash] (Commodore PET/VIC-20/C64/TED, Apple II, Atari DVG, and Ben Eater 6502 breadboard kit).
+2026-08-18 21:41:12 [gemini-3.7-flash] 
+2026-08-18 21:41:12 [gemini-3.7-flash] A few key observations and potential considerations across the shared files:
+2026-08-18 21:41:12 [gemini-3.7-flash] 
+2026-08-18 21:41:12 [gemini-3.7-flash] 1. `macosffi.ts` — Keyboard Matrix Sentinel Check
+2026-08-18 21:41:12 [gemini-3.7-flash] • In `readPetKeyboard()`, the check `if (key)` will evaluate to `false` for `kVK_ANSI_A` (`0x00`).
+2026-08-18 21:41:12 [gemini-3.7-flash] • If `0` remains the placeholder for unassigned matrix slots, pressing the physical A key
+2026-08-18 21:41:12 [gemini-3.7-flash] will not register. Defining a sentinel constant (e.g., `-1`) for empty matrix cells and checking
+2026-08-18 21:41:12 [gemini-3.7-flash] `if (key >= 0)` avoids this collision.
+2026-08-18 21:41:12 [gemini-3.7-flash] 
+2026-08-18 21:41:12 [gemini-3.7-flash] 2. `macosaudio.ts` — AudioQueue Buffer Recycling
+2026-08-18 21:41:12 [gemini-3.7-flash] • In `playAudio()`, new native buffers are allocated via `AudioQueueAllocateBuffer` on every call
+2026-08-18 21:41:12 [gemini-3.7-flash] and held indefinitely in `audioBuffers`.
+2026-08-18 21:41:12 [gemini-3.7-flash] • For long emulation runs, this can lead to memory growth. Utilizing the `noOpCallback` (which is
+2026-08-18 21:41:12 [gemini-3.7-flash] called when macOS completes playback of an enqueued buffer) to reclaim or reuse a fixed ring of
+2026-08-18 21:41:12 [gemini-3.7-flash] buffers (typically 2 to 4 buffers) would provide steady streaming without unbounded allocations.
+2026-08-18 21:41:12 [gemini-3.7-flash] 
+2026-08-18 21:41:12 [gemini-3.7-flash] 3. `machine.ts` — PET PIA Hardware Interaction
+2026-08-18 21:41:12 [gemini-3.7-flash] • The PIA 1 Port A write routing in `writePET()` now accounts for `CRA` Bit 2 before passing the
+2026-08-18 21:41:12 [gemini-3.7-flash] row index to `scanKeyboard()`.
+2026-08-18 21:41:12 [gemini-3.7-flash] • Reading `E812` (`PIA1_PB`) properly clears the interrupt flags on `E813` (`CB1`/`CB2`) and
+2026-08-18 21:41:12 [gemini-3.7-flash] queries the active matrix state via `readPetMatrix()`.
+2026-08-18 21:41:12 [gemini-3.7-flash] • The newly integrated opcodes (`1E` for `ASL abs,X` and `5E` for `LSR abs,X`) correctly handle
+2026-08-18 21:41:12 [gemini-3.7-flash] read-modify-write addressing through `targetAbsoluteX`.
+2026-08-18 21:41:12 [gemini-3.7-flash] 
+2026-08-18 21:41:12 [gemini-3.7-flash] If you would like to refine any specific subsystem (such as buffer cycling in AudioQueue, the full
+2026-08-18 21:41:12 [gemini-3.7-flash] PET Business/Graphics matrix array, or VIA/CIA timer interrupts), let me know.
+2026-08-18 21:41:12 [gemini-3.7-flash] 
+2026-08-18 21:44:06 [simon@midnightblue.local] does cbm pet have audio?
+2026-08-18 21:44:11 [gemini-3.7-flash] 🟠nitrologic Relay 2.0.1 gemini-3.7-flash 🌟 🪠 0.7° $0.003 503B 4.27s
+2026-08-18 21:44:11 [gemini-3.7-flash] The short answer is: not natively on the earliest models, but yes on later revisions and via
+2026-08-18 21:44:11 [gemini-3.7-flash] simple hardware additions.
+2026-08-18 21:44:11 [gemini-3.7-flash] 
+2026-08-18 21:44:11 [gemini-3.7-flash] Here is how audio works across the Commodore PET line:
+2026-08-18 21:44:11 [gemini-3.7-flash] 
+2026-08-18 21:44:11 [gemini-3.7-flash] • Original PET 2001 (1977):
+2026-08-18 21:44:11 [gemini-3.7-flash]   These models did not include an internal speaker or dedicated sound chip. However, the system's
+2026-08-18 21:44:11 [gemini-3.7-flash] MOS 6522 VIA (Versatile Interface Adapter) chip could generate tones using its shift
+2026-08-18 21:44:11 [gemini-3.7-flash] register output on pin CB2. Users commonly connected an external piezo buzzer or amplifier to the
+2026-08-18 21:44:11 [gemini-3.7-flash] User Port (pins CB2 and Ground) to get 1-channel sound in games and utilities.
+2026-08-18 21:44:11 [gemini-3.7-flash] 
+2026-08-18 21:44:11 [gemini-3.7-flash] • Later PET / CBM Models (2001-N, 4000, 8000 series):
+2026-08-18 21:44:11 [gemini-3.7-flash]   Later revisions included a built-in piezo beeper connected internally to the 6522 VIA. While it
+2026-08-18 21:44:11 [gemini-3.7-flash] was primarily intended for system beeps and alerts, software could control the frequency and output
+2026-08-18 21:44:11 [gemini-3.7-flash] simple one-voice melodies or basic sound effects.
+2026-08-18 21:44:11 [gemini-3.7-flash] 
+2026-08-18 21:44:11 [gemini-3.7-flash] • Sound Capabilities:
+2026-08-18 21:44:11 [gemini-3.7-flash]   The audio is limited to simple square-wave tones (or rudimentary sample playback through fast
+2026-08-18 21:44:11 [gemini-3.7-flash] software bit-banging), as the PET does not have a dedicated synthesizer chip like the SID chip
+2026-08-18 21:44:11 [gemini-3.7-flash] found in the later Commodore 64.
+2026-08-18 21:44:11 [gemini-3.7-flash] 
+2026-08-19 13:19:24 [simon@midnightblue.local] hi
+2026-08-19 13:19:26 [deepseek-v4-flash] 🟠nitrologic Relay 2.0.1 deepseek-v4-flash 🐋 🪠 0.7° $0.000 584B 1.60s
+2026-08-19 13:19:26 [deepseek-v4-flash] Hello! How can I help you today?
+2026-08-19 13:19:26 [deepseek-v4-flash] 
+2026-08-19 13:19:38 [simon@midnightblue.local] just checking new cache code
+2026-08-19 13:19:50 [deepseek-v4-flash] 🟠nitrologic Relay 2.0.1 deepseek-v4-flash 🐋 🪠 0.7° $0.001 837B 4.94s
+2026-08-19 13:19:50 [deepseek-v4-flash] I’d be happy to help you review or discuss caching code. Could you share a bit more detail? For
+2026-08-19 13:19:50 [deepseek-v4-flash] example:
+2026-08-19 13:19:50 [deepseek-v4-flash] 
+2026-08-19 13:19:50 [deepseek-v4-flash] - Are you referring to a specific caching implementation (like Redis, Memcached, in-memory, HTTP
+2026-08-19 13:19:50 [deepseek-v4-flash] caching)?
+2026-08-19 13:19:50 [deepseek-v4-flash] - Do you want a code review, performance tips, or help with a particular problem?
+2026-08-19 13:19:50 [deepseek-v4-flash] - Is there a specific language or framework you're using?
+2026-08-19 13:19:51 [deepseek-v4-flash] 
+2026-08-19 13:19:51 [deepseek-v4-flash] Just let me know what you're looking for, and I’ll do my best to assist.
+2026-08-19 13:19:51 [deepseek-v4-flash] 
+2026-08-19 13:20:10 [simon@midnightblue.local] nope that last reply looks good
+2026-08-19 13:20:11 [simon@midnightblue.local] > usage {"prompt_tokens":177,"completion_tokens":380,"total_tokens":557,"prompt_tokens_details":{"cached_tokens":128},"completion_tokens_details":{"reasoning_tokens":280},"prompt_cache_hit_tokens":128,"prompt_cache_miss_tokens":49}{account:deepseek,spent:0.0006,cached:128,balance:-0.5424}
+2026-08-19 13:20:20 [deepseek-v4-flash] 🟠nitrologic Relay 2.0.1 deepseek-v4-flash 🐋 🪠 0.7° $0.001 1.814KB 8.34s
+2026-08-19 13:20:20 [deepseek-v4-flash] Ah, so you were checking to see if the prompt cache is working — and it looks like it is. 🎯
+2026-08-19 13:20:20 [deepseek-v4-flash] 
+2026-08-19 13:20:20 [deepseek-v4-flash] Looking at your usage data:
+2026-08-19 13:20:20 [deepseek-v4-flash] 
+2026-08-19 13:20:20 [deepseek-v4-flash] - Prompt tokens: 177 total, with 128 cached and 49 fresh
+2026-08-19 13:20:20 [deepseek-v4-flash]   → That’s a 72% cache hit rate, which is pretty solid. It means the API didn't need to
+2026-08-19 13:20:20 [deepseek-v4-flash] re-process the shared prefix of your prompt.
+2026-08-19 13:20:20 [deepseek-v4-flash] 
+2026-08-19 13:20:20 [deepseek-v4-flash] - Completion tokens: 380 (of which 280 are reasoning tokens), so the model did a fair
+2026-08-19 13:20:20 [deepseek-v4-flash] amount of thinking.
+2026-08-19 13:20:20 [deepseek-v4-flash] 
+2026-08-19 13:20:20 [deepseek-v4-flash] - Cost: $0.0006 for this call. Caching helps keep that number lower than it would be
+2026-08-19 13:20:20 [deepseek-v4-flash] without a hit.
+2026-08-19 13:20:20 [deepseek-v4-flash] 
+2026-08-19 13:20:20 [deepseek-v4-flash] So in short: your new cache code is doing its job — it's reusing prior context and saving both time
+2026-08-19 13:20:20 [deepseek-v4-flash] and tokens.
+2026-08-19 13:20:20 [deepseek-v4-flash] 
+2026-08-19 13:20:20 [deepseek-v4-flash] If you ever see `cached_tokens` drop to 0 or the hit rate go down, that usually means something
+2026-08-19 13:20:20 [deepseek-v4-flash] changed in the prompt prefix (even a tiny whitespace difference can invalidate it). But here, all
+2026-08-19 13:20:20 [deepseek-v4-flash] looks good.
+2026-08-19 13:20:20 [deepseek-v4-flash] 
+2026-08-19 13:20:20 [deepseek-v4-flash] Let me know if you're also testing other scenarios — happy to interpret another usage snippet or
+2026-08-19 13:20:20 [deepseek-v4-flash] look at your actual caching logic if needed.
+2026-08-19 13:20:20 [deepseek-v4-flash] 
+2026-08-27 14:36:15 [deepseek-v4-flash] 🟠nitrologic Relay 2.0.1 deepseek-v4-flash 🐋 🪠 0.7° $0.027 72.94KB 100.55s
+2026-08-27 14:36:15 [deepseek-v4-flash] Thanks for sharing — this is new to me, and I had a quick look through the repo. It’s a compact
+2026-08-27 14:36:15 [deepseek-v4-flash] design: a cross-platform `terminal.ts` facade with split FFI/audio/MIDI modules, plus a
+2026-08-27 14:36:15 [deepseek-v4-flash] Unicode-width layer built around `Intl.Segmenter`.
+2026-08-27 14:36:15 [deepseek-v4-flash] 
+2026-08-27 14:36:15 [deepseek-v4-flash] A few things stood out:
+2026-08-27 14:36:15 [deepseek-v4-flash] 
+2026-08-27 14:36:15 [deepseek-v4-flash] - `stringwidth.ts` appears to contain two `export function stringWidth` declarations — one near the
+2026-08-27 14:36:15 [deepseek-v4-flash] top and one near the bottom. That’s likely to fail Deno’s type-checking as a duplicate function
+2026-08-27 14:36:15 [deepseek-v4-flash] implementation. There’s also a stray `Intl.localesargument` expression right after the header
+2026-08-27 14:36:15 [deepseek-v4-flash] comment.
+2026-08-27 14:36:15 [deepseek-v4-flash] 
+2026-08-27 14:36:15 [deepseek-v4-flash] - `windowsmidi.ts`: `closeMidi()` uses `for...in` over `Object.values(...)` for the output handles.
+2026-08-27 14:36:15 [deepseek-v4-flash] That iterates array indices, not the stored pointer values. The input loop uses `for...of`, so the
+2026-08-27 14:36:15 [deepseek-v4-flash] output loop looks like a typo.
+2026-08-27 14:36:15 [deepseek-v4-flash] 
+2026-08-27 14:36:15 [deepseek-v4-flash] - `macosmidi.ts`: `closeMidi()` is empty and `pollMidi()` always returns `[]`. The callback
+2026-08-27 14:36:15 [deepseek-v4-flash] plumbing exists, but the macOS MIDI input path doesn’t appear complete yet.
+2026-08-27 14:36:15 [deepseek-v4-flash] 
+2026-08-27 14:36:15 [deepseek-v4-flash] - `joytest.ts`: the main `while` loop has no `sleep`, so it will busy-spin and print constantly.
+2026-08-27 14:36:15 [deepseek-v4-flash] The other tests use a delay, so this one looks inconsistent.
+2026-08-27 14:36:15 [deepseek-v4-flash] 
+2026-08-27 14:36:15 [deepseek-v4-flash] - `windowsffi.ts`: the PET key mapping contains values above 255, e.g. `49 + 256`, but
+2026-08-27 14:36:15 [deepseek-v4-flash] `GetAsyncKeyState` expects a virtual-key code only. Shifted entries need explicit modifier handling
+2026-08-27 14:36:15 [deepseek-v4-flash] instead.
+2026-08-27 14:36:15 [deepseek-v4-flash] 
+2026-08-27 14:36:15 [deepseek-v4-flash] - `terminal.ts`: the `KeyBits` enum is 0-based while the actual bit constants in the same file are
+2026-08-27 14:36:15 [deepseek-v4-flash] powers of two. That’s easy to trip over, especially in a module with so many bit-oriented
+2026-08-27 14:36:15 [deepseek-v4-flash] functions.
+2026-08-27 14:36:15 [deepseek-v4-flash] 
+2026-08-27 14:36:15 [deepseek-v4-flash] - `windowsaudio.ts`: `closeAudio()` calls `waveOutClose` directly without `waveOutReset` or
+2026-08-27 14:36:15 [deepseek-v4-flash] unwinding prepared headers. That can leave audio playing or leak WAVEHDRs during repeated use.
+2026-08-27 14:36:15 [deepseek-v4-flash] 
+2026-08-27 14:36:15 [deepseek-v4-flash] The Unicode width work looks solid, especially the ZWJ handling and the Segmenter-based iteration.
+2026-08-27 14:36:15 [deepseek-v4-flash] I’m happy to dig into any specific module further or help prepare fixes if that would be useful.
+2026-08-27 14:36:15 [deepseek-v4-flash] 
