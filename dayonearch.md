@@ -28,21 +28,27 @@ so many spelling boo boos in this second age of the prompt
 
 ![displayconfig](dayone/displayconfig.png)
 
-no focus on markdown preview, click required berfore page
+fartfox, unwelcome liberal armpit of failure
 
 ![fartox](dayone/fartox.png)
 
-silo godot is not the way, those wanting to publish please use
-
-> 
+silo godot is not the way, if you want to publish avoid the flatpack
 
 ![godot](dayone/godot.png)
 
 old friends 
-![discord](dayone/discord.png)
 
-touch grass
+![discord](dayone/installdiscord.png)
+
+steam is in the house, controller not supported in store?
+
+![steam on arch](dayone/steamwindow.png)
+
+touch some grass - standing not sitting if you please
 
 ![touchgrass](dayone/touchgrass.png)
 
+
 TBC
+
+## hint: You have divergent branches and need to specify how to reconcile them.
