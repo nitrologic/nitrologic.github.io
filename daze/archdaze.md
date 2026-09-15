@@ -5,48 +5,48 @@ from brown on grey on grey on grey calendars we white wash the lower status to a
 * time and region, check
 * american english, check
 
-<img src="./fuglyfonts.png" width="66%"/>
+<img src="https://nitrologic.github.io/daze/archdaze/fuglyfonts.png" width="66%"/>
 
 * open with Kate more memories..
 * 0 reason to trust any of these other unknowns
 
-<img src="./openwithkate.png" width="66%"/>
+<img src="https://nitrologic.github.io/daze/archdaze/openwithkate.png" width="66%"/>
 
 * how and why would .txt files open in this wannabe browser, 
 * oh no, oh no
 
-<img src="./sobroken.png" width="66%"/>
+<img src="https://nitrologic.github.io/daze/archdaze/sobroken.png" width="66%"/>
 
 * fun fact - the clock is my favourite character in Alice in Wonderland
 
-<img src="./greytogreytobrown.png" width="66%"/>
+<img src="https://nitrologic.github.io/daze/archdaze/greytogreytobrown.png" width="66%"/>
 
 
 spell check settings is confused, broken, unable to save, and generally problematic when selected
 
-<img src="./spellcheckbugamnesia.png" width="66%"/>
+<img src="https://nitrologic.github.io/daze/archdaze/spellcheckbugamnesia.png" width="66%"/>
 
 mobile sensibilities, umm ok
 
-<img src="./permissions.png" width="66%"/>
+<img src="https://nitrologic.github.io/daze/archdaze/permissions.png" width="66%"/>
 
 * two days later we undestand warnings about void returns are now errors / impenetrable crash sites
 
 * warnings are errors - c++ committee
 
-<img src="./homebrewfail.png" width="66%"/>
+<img src="https://nitrologic.github.io/daze/archdaze/homebrewfail.png" width="66%"/>
 
 * hurrah stable service
 
-<img src="./dspstudio.png" width="66%"/>
+<img src="https://nitrologic.github.io/daze/archdaze/dspstudio.png" width="66%"/>
 
 * default midi endpoints better than none
 
-<img src="./midithrough.png" width="66%"/>
+<img src="https://nitrologic.github.io/daze/archdaze/midithrough.png" width="66%"/>
 
 * and where were we...
 
-<img src="./githubstats.png" width="66%"/>
+<img src="https://nitrologic.github.io/daze/archdaze/githubstats.png" width="66%"/>
 
 ## previously 
 
