@@ -49,6 +49,7 @@ touch some grass - standing not sitting if you please
 ![touchgrass](dayone/touchgrass.png)
 
 
-TBC
-
 ## hint: You have divergent branches and need to specify how to reconcile them.
+
+[arch daze](daze/archdaze.md)
+
