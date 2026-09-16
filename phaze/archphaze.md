@@ -6,9 +6,13 @@ with new bunny skills from recent alibaba hosting its desktop server with bunny 
 
 <img src="https://nitrologic.github.io/phaze/5cbunny.png" width="66%"/>
 
-some teeting problems setting up roa hosting
+some teething problems setting up roa hosting
+
+this one solved after complete memory lapse
 
 <img src="https://nitrologic.github.io/phaze/doh.png" width="66%"/>
+
+another issue involving json from json.gz at the gateway yet to be resolved 
 
 ## previously
 
