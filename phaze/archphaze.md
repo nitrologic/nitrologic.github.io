@@ -10,9 +10,15 @@ some teething problems setting up roa hosting
 
 this one solved after complete memory lapse
 
+another issue involving json from json.gz at the gateway yet to be resolved 
+
 <img src="https://nitrologic.github.io/phaze/doh.png" width="66%"/>
 
-another issue involving json from json.gz at the gateway yet to be resolved 
+looking forward to dusting off project roa
+
+<img src="https://nitrologic.github.io/phaze/3767_10966.jpg" width="66%"/>
+
+
 
 ## previously
 
