@@ -8,9 +8,18 @@ with new bunny skills from recent alibaba hosting its desktop server with bunny 
 
 some teething problems setting up roa hosting
 
-this one solved after complete memory lapse
+* this one solved after complete memory lapse
 
-another issue involving json from json.gz at the gateway yet to be resolved 
+* another issue involving json from json.gz at the gateway yet to be resolved 
+
+* (edit) and another issue..
+```
+HttpTaskCount++ : 1
+parseJSON unexpected : while parsing array
+./host.sh: line 4:  7385 Segmentation fault         (core dumped) ./fit3
+~
+[skid@archlinux ~]$ ./host.sh 
+```
 
 <img src="https://nitrologic.github.io/phaze/doh.png" width="66%"/>
 
