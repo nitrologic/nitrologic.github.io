@@ -52,6 +52,10 @@ mobile sensibilities, umm ok
 
 [dayone](../dayonearch.md)
 
+## next up this way
+
+[phaze](../phaze/archphaze.md)
+
 ## notes from before then
 ```
 sudo systemctl start sddm
