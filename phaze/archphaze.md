@@ -4,7 +4,7 @@
 
 wow, so all the threads all the means search index literally stalled system as if under attack
 
-<img src="https://nitrologic.github.io/phaze/wastemoreyes" width="66%"/>
+<img src="https://nitrologic.github.io/phaze/wastemoreyes.png" width="66%"/>
 
 with new bunny skills from recent alibaba hosting its desktop server with bunny cdn
 
