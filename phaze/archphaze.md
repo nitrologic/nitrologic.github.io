@@ -1,6 +1,14 @@
 # arch phaze
 
-## multihead main driver day 3
+
+## unreadable gallery
+
+a combination of Code - OSS making a sinple ls command optically borked aka broken
+
+<img src="https://nitrologic.github.io/phaze/unreadablegreen.png" width="66%"/>
+
+
+## multihead main driver, what was he thinking
 
 wow, so all the threads all the means search index literally stalled system as if under attack
 
