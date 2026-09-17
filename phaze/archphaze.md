@@ -10,7 +10,9 @@ a simple ls command optically borked aka broken
 
 ## multihead main driver, what was he thinking
 
-wow, so all the threads all the means search index literally stalled system as if under attack
+wow, so all the threads all the time aka pegged CPU
+
+> this kind of cpu abuse means search index and anyone else can literally stall desktop aka system denial
 
 <img src="https://nitrologic.github.io/phaze/wastemoreyes.png" width="66%"/>
 
