@@ -6,6 +6,10 @@ with new bunny skills from recent alibaba hosting its desktop server with bunny 
 
 <img src="https://nitrologic.github.io/phaze/5cbunny.png" width="66%"/>
 
+wow, so all the threads all the means search index literally stalled system as if under attack
+
+<img src="https://nitrologic.github.io/phaze/wastemoreyes" width="66%"/>
+
 some teething problems setting up roa hosting
 
 * this one solved after complete memory lapse
@@ -19,6 +23,21 @@ parseJSON unexpected : while parsing array
 ./host.sh: line 4:  7385 Segmentation fault         (core dumped) ./fit3
 ~
 [skid@archlinux ~]$ ./host.sh 
+```
+
+## personal c++ may be fragile
+
+> and this is getting a tad personal, skid.nz current state is sandbox dump site
+
+```
+(gdb) bt
+#0  0x000055555556b847 in JSValue::stringMember (this=this@entry=0x0, name="id") at /home/skid/nitrologic/dsptool/native/json.h:208
+#1  0x00005555555782d6 in parseRPC (header=std::map with 10 elements = {...}, 
+    content="------WebKitFormBoundaryN**sTongueMy****\r\nContent-Disposition: form-data; name="0"\r\n\r\n{"then":"$1:proto:then","status":"resolved_model","reason":-1,"value":"{\"then\":\"$B1337\"}","_response":{"...) at /home/skid/nitrologic/dsptool/native/headless.h:821
+#2  0x000055555558c701 in HttpConnection::onRequest (this=this@entry=0x5555560fa250) at /usr/include/c++/16/bits/stl_tree.h:1353
+#3  0x000055555557a7a8 in httpTask (args=0x5555560fa250) at /home/skid/nitrologic/dsptool/native/http.h:371
+#4  0x00007ffff70980a2 in start_thread (arg=<optimized out>) at pthread_create.c:454
+#5  0x00007ffff712080c in GI_clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
 ```
 
 <img src="https://nitrologic.github.io/phaze/doh.png" width="66%"/>
