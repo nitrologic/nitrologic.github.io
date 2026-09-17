@@ -1,14 +1,14 @@
 # arch phaze
 
-multihead main driver day 3
-
-with new bunny skills from recent alibaba hosting its desktop server with bunny cdn
-
-<img src="https://nitrologic.github.io/phaze/5cbunny.png" width="66%"/>
+## multihead main driver day 3
 
 wow, so all the threads all the means search index literally stalled system as if under attack
 
 <img src="https://nitrologic.github.io/phaze/wastemoreyes" width="66%"/>
+
+with new bunny skills from recent alibaba hosting its desktop server with bunny cdn
+
+<img src="https://nitrologic.github.io/phaze/5cbunny.png" width="66%"/>
 
 some teething problems setting up roa hosting
 
