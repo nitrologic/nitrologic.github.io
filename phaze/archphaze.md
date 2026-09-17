@@ -1,12 +1,12 @@
 # arch phaze
 
-
 ## unreadable gallery
 
-a combination of Code - OSS making a sinple ls command optically borked aka broken
+a combination of Arch arcanery and or "Code - OSS"
+
+a simple ls command optically borked aka broken
 
 <img src="https://nitrologic.github.io/phaze/unreadablegreen.png" width="66%"/>
-
 
 ## multihead main driver, what was he thinking
 
