@@ -1,5 +1,11 @@
 # arch phaze
 
+## free slop
+
+without login openai will happily lie slop aka reply like it is 2024
+
+<img src="https://nitrologic.github.io/phaze/freeslop.png" width="66%"/>
+
 ## unreadable gallery
 
 a combination of Arch arcanery and or "Code - OSS"
