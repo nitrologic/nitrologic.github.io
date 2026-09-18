@@ -1,5 +1,13 @@
 # arch phaze
 
+## oops, am seriously impressed
+
+locating reverse gear......
+
+and engage, share removed, logs checked
+
+confirm file contents not shared in nitrologic relay logs
+
 ## free slop
 
 without login openai will happily lie slop aka reply like it is 2024
