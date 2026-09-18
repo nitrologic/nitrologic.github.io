@@ -1,5 +1,21 @@
 # arch phaze
 
+before switching from model of the day gemini flash, we feed it a large amount of arch journal, not this much:
+
+> journalctl --no-pager > journal.txt
+
+<img src="https://nitrologic.github.io/phaze/lastquarter.png" width="66%"/>
+
+
+## hey Konsole, why don't you have an about menu item?
+
+and who do i blame for the holes in the retina your design choices have cratered?
+
+who who
+
+<img src="https://nitrologic.github.io/phaze/cmusbash.png" width="66%"/>
+
+
 ## oops, am seriously impressed
 
 locating reverse gear......
