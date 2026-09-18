@@ -16,7 +16,7 @@ Note to self - nginx should be able to mirror .json.gz to bunny CDN that which s
 
 <img src="https://nitrologic.github.io/phaze3/failhow.png" width="66%"/>
 
-Oh yuck, i dunno about this, back to some spdif testing with [this morning's wipe](https://www.youtube.com/watch?v=P72aZ3rLUQE&)
+Oh yuck, i dunno about this
 
 <img src="https://nitrologic.github.io/phaze3/audacityglitch.png" width="66%"/>
 
@@ -36,11 +36,11 @@ serial port pico2 connections still to come on Arch desktop
 
 <img src="https://nitrologic.github.io/phaze3/saywhatnow.png" width="66%"/>
 
-north of China we check out some factories
+north China we check out some factories, curious about all the factories
 
 <img src="https://nitrologic.github.io/phaze3/whatandwhere.png" width="66%"/>
 
-TBC
+and yet more spdif testing with [this morning's wipe](https://www.youtube.com/watch?v=P72aZ3rLUQE&)
 
 ## previously
 

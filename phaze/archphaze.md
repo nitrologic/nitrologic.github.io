@@ -89,9 +89,12 @@ looking forward to dusting off project roa
 <img src="https://nitrologic.github.io/phaze/3767_10966.jpg" width="66%"/>
 
 
-
 ## previously
 
 * [dayone](../dayonearch.md)
 
 * [daze](../daze/archdaze.md)
+
+## next
+
+* [phaze 3](../phaze3/phaze3.md) the pain continues - contains bonus daily wipe
