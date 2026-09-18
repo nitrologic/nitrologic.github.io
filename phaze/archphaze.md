@@ -7,6 +7,8 @@ before switching from model of the day gemini flash, we feed it a large amount o
 <img src="https://nitrologic.github.io/phaze/lastquarter.png" width="66%"/>
 
 
+oh wait, it costs another quarter to say goodbye? - likely nitrologic accounting error - homebrew harness r us
+
 ## hey Konsole, why don't you have an about menu item?
 
 and who do i blame for the holes in the retina your design choices have cratered?
