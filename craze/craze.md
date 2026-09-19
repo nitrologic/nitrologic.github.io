@@ -1,24 +1,5 @@
 # craze - arch weekend driver
 
-!allthefiles.png
-
-<img src="https://nitrologic.github.io/craze/allthefiles.png" width="66%"/>
-
-<img src="https://nitrologic.github.io/craze/greatcrack.png" width="66%"/>
-
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/.png" width="66%"/>
-
-<img src="https://nitrologic.github.io/craze/craze.md" width="66%"/>
 <img src="https://nitrologic.github.io/craze/greatcrack.png" width="66%"/>
 <img src="https://nitrologic.github.io/craze/drivingintothevoid.png" width="66%"/>
 <img src="https://nitrologic.github.io/craze/before.png" width="66%"/>
