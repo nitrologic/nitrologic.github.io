@@ -49,3 +49,7 @@ and yet more spdif testing with [this morning's wipe](https://www.youtube.com/wa
 * [daze](../daze/archdaze.md)
 
 * [phaze](../phaze/archphaze.md)
+
+## next
+
+* [craze](../craze/craze.md)
