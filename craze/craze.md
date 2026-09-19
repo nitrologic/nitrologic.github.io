@@ -10,7 +10,7 @@
 <img src="https://nitrologic.github.io/craze/takemetothebridge.png" width="66%"/>
 <img src="https://nitrologic.github.io/craze/processfail.png" width="66%"/>
 <img src="https://nitrologic.github.io/craze/webpain.png" width="66%"/>
-<img src="https://nitrologic.github.io/craze/apple2.pngv
+<img src="https://nitrologic.github.io/craze/apple2.png" width="66%"/>
 
 ```
 > ls -1t
