@@ -2,6 +2,18 @@
 
 > be aware - this log is most recent at top
 
+A collection of screenshots from Simon's Arch Linux server / daily driver
+
+<img src="https://nitrologic.github.io/craze/toleaveyourlover.png" width="66%"/>
+
+Maximum exit velocity of Oakley Creek tunnel is how fast?
+
+<img src="https://nitrologic.github.io/craze/bigjobs.png" width="66%"/>
+
+During the search for context cross origin issues we ended up in some daunting corners of the modern web.
+
+<img src="https://nitrologic.github.io/craze/devtoolsconfig.png" width="66%"/>
+
 they tore up the sprint circuit, and put up a parking lot
 
 <img src="https://nitrologic.github.io/craze/putupaparkinglog.png" width="66%"/>
