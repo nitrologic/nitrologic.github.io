@@ -58,13 +58,25 @@ i will return later and add some words
 
 <img src="https://nitrologic.github.io/craze/allthefiles.png" width="66%"/>
 
+rangitoto has so many profiles from the ground plane, but from above...
+
+> glowing cones of magma : 0
+
 <img src="https://nitrologic.github.io/craze/rangi.png" width="66%"/>
+
+I miss my Maungawhau
 
 <img src="https://nitrologic.github.io/craze/soclose.png" width="66%"/>
 
+take me to the bridge...
+
 <img src="https://nitrologic.github.io/craze/takemetothebridge.png" width="66%"/>
 
+process fail
+
 <img src="https://nitrologic.github.io/craze/processfail.png" width="66%"/>
+
+web pain...
 
 <img src="https://nitrologic.github.io/craze/webpain.png" width="66%"/>
 
@@ -72,10 +84,8 @@ vintage pic of the day from the algorithm
 
 <img src="https://nitrologic.github.io/craze/apple2.png" width="66%"/>
 
-
 ```
 > ls -1t
-
 
 [skid@archlinux craze]$ ls -1t
 putupaparkinglog.png
@@ -89,9 +99,7 @@ goodanswerclaude.png
 french.png
 killfalkonsdontthey.png
 
-
 ```
-
 
 ## previously
 
