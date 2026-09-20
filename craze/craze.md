@@ -1,19 +1,20 @@
 # craze - arch weekend driver
 
+> be aware - this log is most recent at top
+
 they tore up the sprint circuit, and put up a parking lot
 
 <img src="https://nitrologic.github.io/craze/putupaparkinglog.png" width="66%"/>
 
-
-watamata 
+Waitematā and favorite windsurfing spot opposite Tamaki boat club
 
 <img src="https://nitrologic.github.io/craze/northhead.png" width="66%"/>
 
-
+boats boats, cue miami vice music
 
 <img src="https://nitrologic.github.io/craze/shinyak.png" width="66%"/>
 
-thanks sonnet
+thanks sonnet, anonymous cross origin contexts are us
 
 <img src="https://nitrologic.github.io/craze/thankssonnet.png" width="66%"/>
 
