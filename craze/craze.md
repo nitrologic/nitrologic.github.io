@@ -4,6 +4,26 @@
 
 A collection of screenshots from Simon's Arch Linux server / daily driver
 
+# latest batch
+
+bare necessities
+
+<img src="https://nitrologic.github.io/craze/barenecessities.png" width="66%"/>
+
+bunny watch 1
+
+<img src="https://nitrologic.github.io/craze/bunnywatch.png" width="66%"/>
+
+bunny watch 2
+
+<img src="https://nitrologic.github.io/craze/herewego.png" width="66%"/>
+
+what is in that hole?
+
+<img src="https://nitrologic.github.io/craze/hole3774_10997.png" width="66%"/>
+
+# morning brew
+
 <img src="https://nitrologic.github.io/craze/toleaveyourlover.png" width="66%"/>
 
 Maximum exit velocity of Oakley Creek tunnel is how fast?
