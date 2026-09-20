@@ -1,6 +1,47 @@
 # craze - arch weekend driver
 
-these screenshots tell a story
+they tore up the sprint circuit, and put up a parking lot
+
+<img src="https://nitrologic.github.io/craze/putupaparkinglog.png" width="66%"/>
+
+
+watamata 
+
+<img src="https://nitrologic.github.io/craze/northhead.png" width="66%"/>
+
+
+
+<img src="https://nitrologic.github.io/craze/shinyak.png" width="66%"/>
+
+thanks sonnet
+
+<img src="https://nitrologic.github.io/craze/thankssonnet.png" width="66%"/>
+
+maunga maunga maunga maunga
+
+<img src="https://nitrologic.github.io/craze/maungamaungamaunga.png" width="66%"/>
+
+choo choo, waiting for the train
+
+<img src="https://nitrologic.github.io/craze/choochoo.png" width="66%"/>
+
+cross origin makes developers angus
+
+<img src="https://nitrologic.github.io/craze/crossorigin.png" width="66%"/>
+
+thanks again claudius
+
+<img src="https://nitrologic.github.io/craze/goodanswerclaude.png" width="66%"/>
+
+excuse my french
+
+<img src="https://nitrologic.github.io/craze/french.png" width="66%"/>
+
+they kill falkons don't they 
+
+<img src="https://nitrologic.github.io/craze/killfalkonsdontthey.png" width="66%"/>
+
+these earlier in the morning screenshots tell a story
 
 i will return later and add some words
 
@@ -33,6 +74,20 @@ vintage pic of the day from the algorithm
 
 ```
 > ls -1t
+
+
+[skid@archlinux craze]$ ls -1t
+putupaparkinglog.png
+northhead.png
+shinyak.png
+thankssonnet.png
+maungamaungamaunga.png
+choochoo.png
+crossorigin.png
+goodanswerclaude.png
+french.png
+killfalkonsdontthey.png
+
 
 ```
 
