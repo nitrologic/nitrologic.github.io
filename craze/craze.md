@@ -142,3 +142,7 @@ killfalkonsdontthey.png
 * [phaze](../phaze/archphaze.md)
 
 * [phaze3](../phaze3/phaze3.md)
+
+## next
+
+* [crazed](../crazed/crazed.md)
