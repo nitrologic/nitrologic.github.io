@@ -1,8 +1,6 @@
-# maze1
+# maze1 - yet another daily brain dump from skid 
 
-## daily mites
-
-<img src="https://nitrologic.github.io/maze1/dailymites.png" width="72%"/>
+> putting the tyre in  
 
 ## roa lives - 
 
@@ -34,7 +32,14 @@
 
 <img src="https://nitrologic.github.io/maze1/3774_10997.jpg" width="66%"/>
 
-## Welcome to your new attack surface- default arch is kde krud all the way down
+
+## the daily mite - kimi roast persona under observation
+
+<img src="https://nitrologic.github.io/maze1/dailymite.png" width="72%"/>
+
+## Arch KDE - welcome to your new attack surface
+
+### default arch is kde krud all the way down
 
 * audit in progress
 
