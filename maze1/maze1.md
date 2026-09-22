@@ -1,5 +1,9 @@
 # maze1
 
+## daily mites
+
+<img src="https://nitrologic.github.io/maze1/dailymites.png" width="72%"/>
+
 ## roa lives - 
 
 <img src="https://nitrologic.github.io/maze1/roalives.png" width="92%"/>
