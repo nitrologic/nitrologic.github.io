@@ -51,11 +51,11 @@ bunny content delivery still early days with comprehension
 
 ## previously
 
-* [dayone](../dayonearch.md)
-* [daze](../daze/archdaze.md)
-* [phaze](../phaze/archphaze.md)
-* [phaze3](../phaze3/phaze3.md)
-* [crazed](../crazed/crazed.md)
+* [dayone](../../dayonearch.md)
+* [daze](../../daze/archdaze.md)
+* [phaze](../../phaze/archphaze.md)
+* [phaze3](../../phaze3/phaze3.md)
+* [crazed](../crazed.md)
 
 
 ## next
