@@ -1,5 +1,18 @@
 # maze1 - yet another daily brain dump from skid 
 
+## part 2
+
+<img src="https://nitrologic.github.io/maze1/kimisays.png" width="92%"/>
+
+<img src="https://nitrologic.github.io/maze1/lidar.png" width="92%"/>
+
+<img src="https://nitrologic.github.io/maze1/oddhoneypot.png" width="92%"/>
+
+<img src="https://nitrologic.github.io/maze1/singleuser.png" width="92%"/>
+
+<img src="https://nitrologic.github.io/maze1/surfaceelevation.png" width="92%"/>
+
+
 > putting the tyre in  
 
 ## roa lives - 
