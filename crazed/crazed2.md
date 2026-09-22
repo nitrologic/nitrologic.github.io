@@ -4,13 +4,15 @@
 
 A collection of screenshots from Simon's Arch Linux server / daily driver
 
-dayzed 3
-
-in an attempt to solicit sol's 5c only so many times today...
+## dazed 3 - in an attempt to solicit sol's 5c only so many times today...
 
 <img src="https://nitrologic.github.io/crazed/lostcount.png" width="66%"/>
 
 we lose count how many icrosofts there are in the world
+
+I count 2, gpt sol says what? none... 
+
+icrosoft is correct according to that bot
 
 <img src="https://nitrologic.github.io/crazed/icrosoft.png" width="66%"/>
 

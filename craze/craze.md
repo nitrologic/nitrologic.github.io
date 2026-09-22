@@ -146,3 +146,4 @@ killfalkonsdontthey.png
 ## next
 
 * [crazed](../crazed/crazed.md)
+* [crazed2](../crazed/crazed2/crazed2.md)
