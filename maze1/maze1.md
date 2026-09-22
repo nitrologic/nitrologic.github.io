@@ -1,19 +1,30 @@
 # maze1 - yet another daily brain dump from skid 
 
-## part 2
+## part 2 of 1
+
+kimi says - yet more free fandom to keep it real
 
 <img src="https://nitrologic.github.io/maze1/kimisays.png" width="92%"/>
 
+* lidar layer is enabled with a flick of a switch, source code had comment "simon come here"
+
 <img src="https://nitrologic.github.io/maze1/lidar.png" width="92%"/>
+
+* another honey pot layout, more bees
 
 <img src="https://nitrologic.github.io/maze1/oddhoneypot.png" width="92%"/>
 
+single user, how will this scale???
+
 <img src="https://nitrologic.github.io/maze1/singleuser.png" width="92%"/>
+
+* with surface DSM and elevation DEM meshes separated we ponder the geometry
+
+* building footprints used to be visible, diggable in previous version???
 
 <img src="https://nitrologic.github.io/maze1/surfaceelevation.png" width="92%"/>
 
-
-> putting the tyre in  
+# putting the tyre in  
 
 ## roa lives - 
 
