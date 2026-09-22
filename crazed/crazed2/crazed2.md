@@ -56,3 +56,8 @@ bunny content delivery still early days with comprehension
 * [phaze](../phaze/archphaze.md)
 * [phaze3](../phaze3/phaze3.md)
 * [crazed](../crazed/crazed.md)
+
+
+## next
+
+* [maze1](../maze1/maze1.md)
