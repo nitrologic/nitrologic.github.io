@@ -14,6 +14,8 @@ A collection of screenshots from skid's Arch Linux server / daily driver
 
 ## show me your papers
 
+## with some help from kimi bot - who I am able to chat with again
+
 <img src="https://nitrologic.github.io/crazed/crazed2/slowmode.png" width="66%"/>
 
 ## mmm honey, like bees to my garden - pooh bear
