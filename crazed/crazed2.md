@@ -39,3 +39,7 @@ even with that identity
 ## previously
 
 [craze](../craze/craze.md)
+
+## next
+
+* [crazed2](../crazed/crazed2/crazed2.md)
