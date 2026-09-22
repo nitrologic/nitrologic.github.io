@@ -13,6 +13,14 @@ bravoelgar.png
 3774_10997.jpg
 ```
 
+# roa lives - 
+
+<img src="https://nitrologic.github.io/maze1/roalives.png" width="92%"/>
+
+# time to live yet to be resolved
+
+<img src="https://nitrologic.github.io/maze1/rootttl.png" width="92%"/>
+
 # Upland Road gas station, back in the day
 
 * local petrol heads from east side / meadowbank hood
@@ -37,6 +45,12 @@ bravoelgar.png
 
 # Welcome to your new attack surface- default arch is kde krud all the way down
 
+* audit in progress
+
+* clean kruft free kde would be kinda kool 
+
+* not a fan of the gpl license
+
 <img src="https://nitrologic.github.io/maze1/mazed.png" width="66%"/>
 
 <img src="https://nitrologic.github.io/maze1/mazec.png" width="66%"/>
@@ -44,6 +58,3 @@ bravoelgar.png
 <img src="https://nitrologic.github.io/maze1/mazeb.png" width="66%"/>
 
 <img src="https://nitrologic.github.io/maze1/mazea.png" width="66%"/>
-
-
-
