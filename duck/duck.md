@@ -1,6 +1,8 @@
 # duck
 
-## skid is back on windows, the arch desktop thought experiment behind him
+## developer skid is back on windows, the arch desktop thought experiment behind him
+
+local arch server remains serving world wide web sans desktop 
 
 > sudo systemctl disable sddm
 
