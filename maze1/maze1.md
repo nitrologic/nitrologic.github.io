@@ -103,3 +103,6 @@ bravoelgar.png
 * [crazed](../crazed/crazed.md)
 * [crazed2](../crazed/crazed2/crazed.md)
 
+## next 
+
+* [duck](../duck/duck.md)
