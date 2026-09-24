@@ -6,11 +6,13 @@
 
 windsurfing in the channel, but the windsurfer is a duck
 
-<img src="https://nitrologic.github.io/duck/linksbounds.png" width="66%"/>
+<img src="https://nitrologic.github.io/duck/linksbounds.png" width="92%"/>
 
 latest relay models means many high usage versions replaced with shiny new toys
 
 <img src="https://nitrologic.github.io/duck/models.png" width="66%"/>
+
+many many many moons ago
 
 the detritus cruft zone, where mesh building episodes failed / were cancelled regularly
 
@@ -22,11 +24,11 @@ back on windows, and to shake things up we check out chrome dev tools as plausib
 
 OK, I guess, indeed.
 
-<img src="https://nitrologic.github.io/duck/chromeworkspace.png" width="66%"/>
+<img src="https://nitrologic.github.io/duck/chromeworkspace.png" width="88%"/>
 
 kimi no search
 
-<img src="https://nitrologic.github.io/duck/kiminosearch.png" width="66%"/>
+<img src="https://nitrologic.github.io/duck/kiminosearch.png" width="88%"/>
 
 my mate Pete doing the lord's work and feeding claude the genesis tokens
 
@@ -34,12 +36,11 @@ my mate Pete doing the lord's work and feeding claude the genesis tokens
 
 kimi say what now?
 
-<img src="https://nitrologic.github.io/duck/kimichat.png" width="66%"/>
-
+<img src="https://nitrologic.github.io/duck/kimichat.png" width="92%"/>
 
 this concludes our arch desktop thought experiment
 
-<img src="https://nitrologic.github.io/duck/archconcluded.png" width="66%"/>
+<img src="https://nitrologic.github.io/duck/archconcluded.png" width="92%"/>
 
 heli pads incoming
 
