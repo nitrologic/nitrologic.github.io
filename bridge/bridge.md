@@ -40,7 +40,7 @@ little cars obscured by trees
 
 <img src="https://nitrologic.github.io/bridge/obscured.png" width="42%"/>
 
-lidar
+lidar buildings get draped with dark / no normal work in progress mesh curtains
 
 <img src="https://nitrologic.github.io/bridge/lidar.png" width="42%"/>
 
