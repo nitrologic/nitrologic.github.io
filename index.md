@@ -103,8 +103,18 @@ Educational value of this technique worth a case study.
 
 Only 4 new opcodes added to get this far, too cool for school.
 
-
-# nitrologic index
+## nitrologic index
 
 * [biblispec testbed](https://nitrologic.github.io/biblispec/maze/vanilla.html)
 * [nitrologic profile](https://github.com/nitrologic)
+
+## september 2026 blog
+
+* [dayone](./dayonearch.md)
+* [daze](./daze/archdaze.md)
+* [phaze](./phaze/archphaze.md)
+* [phaze3](./phaze3/phaze3.md)
+* [crazed](./crazed/crazed.md)
+* [crazed2](./crazed/crazed2/crazed.md)
+* [maze1](./maze1/maze1.md)
+* [bridge](./bridge/bridge.md)
