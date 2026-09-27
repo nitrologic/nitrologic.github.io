@@ -34,22 +34,31 @@ after updates, cue track rose royce after the love is gone
 
 lidar flora on 5x
 
-<img src="https://nitrologic.github.io/bridge/5xlidar.png" width="42%"/>
+<img src="https://nitrologic.github.io/bridge/5xlidar.png" width="82%"/>
 
 little cars obscured by trees
 
-
-tbc
-
 <img src="https://nitrologic.github.io/bridge/obscured.png" width="42%"/>
+
+lidar
 
 <img src="https://nitrologic.github.io/bridge/lidar.png" width="42%"/>
 
+northern line a rail corridor connects to northland 
+
 <img src="https://nitrologic.github.io/bridge/bigzoom.png" width="42%"/>
 
-<img src="https://nitrologic.github.io/bridge/railtight.png" width="42%"/>
+the tight tolerance with rail and image data is very satisfying, great job LINZ and providers
+
+<img src="https://nitrologic.github.io/bridge/railtight.png" width="12%"/>
+
+i dont have any visitors, but the odd wordpress roach sniffs the server on my desk
 
 <img src="https://nitrologic.github.io/bridge/1visitormenandsniffers.png" width="42%"/>
+
+## missing in transit
+
+one of those odd moments when you realise checkerboard loader would give you sharp contour lines likes these tiles
 
 <img src="https://nitrologic.github.io/bridge/tilen.png" width="42%"/>
 
