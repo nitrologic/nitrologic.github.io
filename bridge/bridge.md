@@ -1,38 +1,57 @@
 # bridge
 
-<img src="https://nitrologic.github.io/bridge/bridgeweek2.png" width="92%"/>
+some lidar tests on various highway overbridges
 
-<img src="https://nitrologic.github.io/bridge/bridgeweek.png" width="92%"/>
+<img src="https://nitrologic.github.io/bridge/bridgeweek2.png" width="52%"/>
 
-<img src="https://nitrologic.github.io/bridge/nodice.png" width="92%"/>
+<img src="https://nitrologic.github.io/bridge/bridgeweek.png" width="42%"/>
 
-<img src="https://nitrologic.github.io/bridge/mabridges.png" width="92%"/>
+do not adjust your rulers
 
-<img src="https://nitrologic.github.io/bridge/buildbridges.png" width="92%"/>
+optical illusions at play
 
-<img src="https://nitrologic.github.io/bridge/allow.png" width="92%"/>
+<img src="https://nitrologic.github.io/bridge/nodice.png" width="52%"/>
 
-<img src="https://nitrologic.github.io/bridge/scratch.png" width="92%"/>
+yet another letter to my fave student radio dj back in the day jon bridges 
 
-<img src="https://nitrologic.github.io/bridge/poser.png" width="92%"/>
+<img src="https://nitrologic.github.io/bridge/mabridges.png" width="42%"/>
 
-<img src="https://nitrologic.github.io/bridge/stillnotcool.png" width="92%"/>
 
-<img src="https://nitrologic.github.io/bridge/donothing.png" width="92%"/>
+<img src="https://nitrologic.github.io/bridge/buildbridges.png" width="42%"/>
 
-<img src="https://nitrologic.github.io/bridge/5xlidar.png" width="92%"/>
 
-<img src="https://nitrologic.github.io/bridge/obscured.png" width="92%"/>
+poser
 
-<img src="https://nitrologic.github.io/bridge/lidar.png" width="92%"/>
+<img src="https://nitrologic.github.io/bridge/poser.png" width="42%"/>
 
-<img src="https://nitrologic.github.io/bridge/bigzoom.png" width="92%"/>
+bunny spike - we have no cache coherency...
 
-<img src="https://nitrologic.github.io/bridge/railtight.png" width="92%"/>
+<img src="https://nitrologic.github.io/bridge/stillnotcool.png" width="42%"/>
 
-<img src="https://nitrologic.github.io/bridge/1visitormenandsniffers.png" width="92%"/>
+after updates, cue track rose royce after the love is gone
 
-<img src="https://nitrologic.github.io/bridge/tilen.png" width="92%"/>
+<img src="https://nitrologic.github.io/bridge/donothing.png" width="42%"/>
+
+lidar flora on 5x
+
+<img src="https://nitrologic.github.io/bridge/5xlidar.png" width="42%"/>
+
+little cars obscured by trees
+
+
+tbc
+
+<img src="https://nitrologic.github.io/bridge/obscured.png" width="42%"/>
+
+<img src="https://nitrologic.github.io/bridge/lidar.png" width="42%"/>
+
+<img src="https://nitrologic.github.io/bridge/bigzoom.png" width="42%"/>
+
+<img src="https://nitrologic.github.io/bridge/railtight.png" width="42%"/>
+
+<img src="https://nitrologic.github.io/bridge/1visitormenandsniffers.png" width="42%"/>
+
+<img src="https://nitrologic.github.io/bridge/tilen.png" width="42%"/>
 
 ## previously
 
