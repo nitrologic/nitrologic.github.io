@@ -8,7 +8,10 @@
 
 import { format } from "@std/datetime";
 
+const dayMillis=24*60*60*1000;
 const epoch:number=Date.UTC(2025,4,12);
+
+const recent:number=Date.now()-dayMillis*32;
 
 function slopmark():string{
 	return Math.floor((Date.now()-epoch)/62.5).toString(16);
@@ -16,6 +19,11 @@ function slopmark():string{
 
 let minDate=Number.MAX_SAFE_INTEGER;
 let maxDate=0;
+
+function slopSeconds(sixteenths:number){
+	const millis=epoch+sixteenths*62.5;
+	return millis/1000;
+}
 
 function slopDate(sixteenths:number){
 	minDate=Math.min(minDate,sixteenths);
@@ -94,6 +102,16 @@ async function reduce(text:string,name:string):Promise<number>{
 		}
 		const s1=trim.indexOf(" ");
 		const s2=trim.indexOf(" ",s1+1);
+
+		const hashed=(trim.substring(s2,s2+2)==" #");
+		const trim2=hashed?trim.slice(0,s2+1)+trim.slice(s2+2):trim;
+		const mark=parseInt(trim2.substring(0,s1),16);
+		const millis=1e3*slopSeconds(mark);
+
+		if(millis<recent){
+			continue;
+		}
+
 		const tag=trim.substring(s1+1,s2);
 		const s3=trim.indexOf("[roha] [FORGE]");
 		if(s3>0){
@@ -105,6 +123,9 @@ async function reduce(text:string,name:string):Promise<number>{
 		}else{
 			inHeader=false;
 		}
+
+//		console.log("millis:",millis,"recent:",recent);
+
 
 		if(!tag.startsWith("[") || tag=="[roha]" || tag=="[remote]" || tag=="[PORT]"){
 			count++;
@@ -131,9 +152,6 @@ async function reduce(text:string,name:string):Promise<number>{
 			models[tag]=stats;
 		}
 
-		const hashed=(trim.substring(s2,s2+2)==" #");
-		const trim2=hashed?trim.slice(0,s2+1)+trim.slice(s2+2):trim;
-		const mark=parseInt(trim2.substring(0,s1),16);
 		const date=slopDate(mark);
 		const line2=date+trim2.substring(s1);
 		result.push(line2);
@@ -166,3 +184,5 @@ console.log(vendors);
 
 const sortedModels=Object.fromEntries(Object.entries(models).sort((a, b) => b[1].sessions - a[1].sessions));
 console.log(sortedModels);
+
+
