@@ -87,7 +87,7 @@ oi buddy indeed, acrid slashdot aroma in my feedback, what gives universe?
 
 ---
 
-concept art for what ever I am vibe coding come christams
+more concept art for what ever I am vibe coding come christmas
 
 <a href="#"><img src="https://nitrologic.github.io/week2/mistrals.png" width="66%"/></a>
 
