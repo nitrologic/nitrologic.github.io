@@ -90,11 +90,36 @@ retro grade de-orbit burn, light 1 engine for 6 seconds, check
 replay that
 
 <a href="../replay.png"><img src="https://nitrologic.github.io/week2s/replay.png" width="66%"/></a>
-<a href="../.png"><img src="https://nitrologic.github.io/week2s/wash.png" width="66%"/></a>
-<a href="../.png"><img src="https://nitrologic.github.io/week2s/snap.png" width="66%"/></a>
-<a href="../.png"><img src="https://nitrologic.github.io/week2s/oddnight.png" width="66%"/></a>
-<a href="../.png"><img src="https://nitrologic.github.io/week2s/aerial.png" width="66%"/></a>
-<a href="../.png"><img src="https://nitrologic.github.io/week2s/musiciansgetwhat.png" width="66%"/></a>
+---
+
+## its a wash
+
+to celebrate listening to pink floyd courtesy spinning rust
+
+recent starship adventure on video replay
+
+<a href="../wash.png"><img src="https://nitrologic.github.io/week2s/wash.png" width="66%"/></a>
+---
+
+snap
+
+<a href="../snap.png"><img src="https://nitrologic.github.io/week2s/snap.png" width="66%"/></a>
+---
+
+odd night
+
+<a href="../oddnight.png"><img src="https://nitrologic.github.io/week2s/oddnight.png" width="66%"/></a>
+---
+
+aerial
+
+<a href="../aerial.png"><img src="https://nitrologic.github.io/week2s/aerial.png" width="66%"/></a>
+
+---
+
+musicians get what?
+
+<a href="../musiciansgetwhat.png"><img src="https://nitrologic.github.io/week2s/musiciansgetwhat.png" width="66%"/></a>
 
 ## previously
 
