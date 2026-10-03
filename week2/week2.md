@@ -22,13 +22,13 @@ sharing your source with a discord chatbot - column quick hack
 
 hi grok bot, what should we do next? - elon and trump
 
-<a href=""><img src="https://nitrologic.github.io/week2/grokgov.png" width="44%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/grokgov.png" width="44%"/></a>
 
 ---
 
 luxury porn side hussle
 
-<a href=""><img src="https://nitrologic.github.io/week2/anthrox.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/anthrox.png" width="66%"/></a>
 
 ---
 
@@ -48,20 +48,20 @@ mitac navman patent memories
 
 shadow angle first pass, remove shadows second pass
 
-<a href=""><img src="https://nitrologic.github.io/week2/navmanpatent.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/navmanpatent.png" width="66%"/></a>
 
 ---
 
 scooting about google gmaps and spotting some superb wakemarks
 
 
-<a href=""><img src="https://nitrologic.github.io/week2/gmaps.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/gmaps.png" width="66%"/></a>
 
 ---
 
 cmus jukebox music collection, served from spinning rust
 
-<a href=""><img src="https://nitrologic.github.io/week2/eclectic.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/eclectic.png" width="66%"/></a>
 
 ---
 
@@ -77,19 +77,19 @@ the real action becomes the surrounding strets
 
 chinaman hill at one end, that mean gradient next to the zoo at the other
 
-<a href=""><img src="https://nitrologic.github.io/week2/breaking.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/breaking.png" width="66%"/></a>
 
 ---
 
 oi buddy indeed, acrid slashdot aroma in my feedback, what gives universe?
 
-<a href=""><img src="https://nitrologic.github.io/week2/oibuddy.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/oibuddy.png" width="66%"/></a>
 
 ---
 
 concept art for what ever I am vibe coding come christams
 
-<a href=""><img src="https://nitrologic.github.io/week2/mistrals.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/mistrals.png" width="66%"/></a>
 
 ---
 
@@ -103,47 +103,47 @@ beware transients +3V +6V and beyond on ALL analog cables
 
 play it safe with spdif optical connection to entertainment
 
-<a href=""><img src="https://nitrologic.github.io/week2/spdif.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/spdif.png" width="66%"/></a>
 
 ---
 
 so broken - sting
 
-<a href=""><img src="https://nitrologic.github.io/week2/sobroken.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/sobroken.png" width="66%"/></a>
 
 ---
 
 panda diplomacy with AI sprinkles discussion
 
-<a href=""><img src="https://nitrologic.github.io/week2/morningslop.png" width="92%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/morningslop.png" width="92%"/></a>
 
 ---
 
 prompted with 
 
-<a href=""><img src="https://nitrologic.github.io/week2/verbose.png" width="22%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/verbose.png" width="22%"/></a>
 
 kimi discord bot reacts with typical enthusiasm
 
-<a href=""><img src="https://nitrologic.github.io/week2/withlove.png" width="44%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/withlove.png" width="44%"/></a>
 
 ---
 
 an entire minute raging at my old man eyesight failing to detect the thin blue line
 
-<a href=""><img src="https://nitrologic.github.io/week2/letmeknow.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/letmeknow.png" width="66%"/></a>
 
 ---
 
 the frontier of the day
 
-<a href=""><img src="https://nitrologic.github.io/week2/frontiertoday.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/frontiertoday.png" width="66%"/></a>
 
 ---
 
 deepseek going at it with tables, and seems to get the gist of my rather larger project from the past
 
-<a href=""><img src="https://nitrologic.github.io/week2/deepseek.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/deepseek.png" width="66%"/></a>
 
 ---
 
@@ -163,31 +163,31 @@ faster jim
 
 ma bugs
 
-<a href=""><img src="https://nitrologic.github.io/week2/mabugs.png" width="22%"/></a>
+<a href="../mabugs.png"><img src="https://nitrologic.github.io/week2/mabugs.png" width="22%"/></a>
 
 ---
 
 bugs fixed 1
 
-<a href=""><img src="https://nitrologic.github.io/week2/badwinding.png" width="22%"/></a>
+<a href="../badwinding.png"><img src="https://nitrologic.github.io/week2/badwinding.png" width="22%"/></a>
 
 ---
 
 bugs fixed 2
 
-<a href=""><img src="https://nitrologic.github.io/week2/bugfixed.png" width="22%"/></a>
+<a href="../bugfixed.png"><img src="https://nitrologic.github.io/week2/bugfixed.png" width="22%"/></a>
 
 ---
 
 local fish of the day poster
 
-<a href=""><img src="https://nitrologic.github.io/week2/kaimoana.png" width="66%"/></a>
+<a href="../kaimoana.png"><img src="https://nitrologic.github.io/week2/kaimoana.png" width="66%"/></a>
 
 ---
 
 yes I am a kind person
 
-<a href=""><img src="https://nitrologic.github.io/week2/yesiamkind.png" width="66%"/></a>
+<a href="#"><img src="https://nitrologic.github.io/week2/yesiamkind.png" width="66%"/></a>
 
 ## previously
 
