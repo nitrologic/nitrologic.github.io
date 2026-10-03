@@ -109,7 +109,7 @@ async function reduce(text:string,name:string):Promise<number>{
 		const millis=1e3*slopSeconds(mark);
 
 		if(millis<recent){
-			continue;
+//			continue;
 		}
 
 		const tag=trim.substring(s1+1,s2);

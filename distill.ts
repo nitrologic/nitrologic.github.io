@@ -1,0 +1,188 @@
+// distill.ts
+// (c) 2026 nitrologic
+
+// for all files in history/
+
+
+import { format } from "@std/datetime";
+
+const dayMillis=24*60*60*1000;
+const epoch:number=Date.UTC(2025,4,12);
+
+const recent:number=Date.now()-dayMillis*320;
+
+function slopmark():string{
+	return Math.floor((Date.now()-epoch)/62.5).toString(16);
+}
+
+let minDate=Number.MAX_SAFE_INTEGER;
+let maxDate=0;
+
+function slopSeconds(sixteenths:number){
+	const millis=epoch+sixteenths*62.5;
+	return millis/1000;
+}
+
+function slopDate(sixteenths:number){
+	minDate=Math.min(minDate,sixteenths);
+	maxDate=Math.max(maxDate,sixteenths);
+	const secs=epoch+sixteenths*62.5;
+	const date=new Date(secs);
+	return format(date, "yyyy-MM-dd HH:mm:ss");
+}
+
+let sessionCount=0;
+let failCount=0;
+
+const vendors={};
+const models={};
+
+// extract modelcount and connection time and add to vendor histogram
+// Connected to moonshot 13 0.48s 
+
+function parseHeader(line:string){
+//	console.log(line);
+	const words=line.split(" ");
+// Endpoint failure for account openai
+	if(words[1]=="failure"){
+		const vendor=words[4];
+		const stats=vendors[vendor]??{connections:0,failures:0,minTime:0,maxTime:0};
+		stats.failures++;
+		vendors[vendor]=stats;
+		return;
+	}
+	if(words[0]=="Connected"&&words[1]=="to"){
+		const n=words.length;
+		const s=parseFloat(words[n-1]);
+		const m=parseInt(words[n-2]);
+		const vendor=words[n-3];
+		const stats=vendors[vendor]??{connections:0,failures:0,minTime:s,maxTime:s};
+		stats.minTime=Math.min(s,stats.minTime);
+		stats.maxTime=Math.max(s,stats.maxTime);
+		stats.connections++;
+		vendors[vendor]=stats;
+		return;
+	}
+	if(words[0]=="modifying"&&words[1]=="modelList"){
+		return;
+	}
+	if(words[0]=="Saved"&&words[1]=="session"){
+		return;
+	}
+	if(words[0]=="callcommand"){
+		return;
+	}
+	if(words[0]=="added"&&words[1]=="model"){
+		return;
+	}
+//	console.log("[parseHeader]",line);
+}
+
+let lineCount=0;
+
+async function distill(text:string,name:string):Promise<number>{
+	let lineNumber=0;
+	let bigCount=0;
+	let skipCount=0;
+	let inHeader=false;
+	let model="";
+	const result=new Array<string>();  
+	const lines=text.split("\n");
+	for(const line of lines){
+		lineCount++;
+        lineNumber++;
+		const trim=line.trim();
+		if(trim.length==0){
+			skipCount++;
+			continue;
+		}
+		if(trim.length>1e6){
+			bigCount++;
+			console.log("BIG!",{name,lineNumber});
+			continue;
+		}
+		const s1=trim.indexOf(" ");
+		const s2=trim.indexOf(" ",s1+1);
+
+		const hashed=(trim.substring(s2,s2+2)==" #");
+		const trim2=hashed?trim.slice(0,s2+1)+trim.slice(s2+2):trim;
+		const mark=parseInt(trim2.substring(0,s1),16);
+		const millis=1e3*slopSeconds(mark);
+
+		if(millis<recent){
+			continue;
+		}
+
+		const tag=trim.substring(s1+1,s2);
+		const s3=trim.indexOf("[roha] [FORGE]");
+		if(s3>0){
+			if(!inHeader){
+				inHeader=true;
+				sessionCount++;
+			}
+			parseHeader(trim.substring(s3+14).trim());
+		}else{
+			inHeader=false;
+		}
+
+//		console.log("millis:",millis,"recent:",recent);
+		if(!tag.startsWith("[") || tag=="[roha]" || tag=="[remote]" || tag=="[PORT]"){
+			skipCount++;
+			continue;
+		}
+		if(tag=="[FAIL]"){
+//			console.log(line);
+			failCount++;
+			continue;
+		}
+
+		const user=tag.indexOf("@")!=-1 || tag.indexOf(":")!=-1 || tag=="[stdin]" || tag=="[simon]";
+		if(!user){
+			const stats=models[tag]??{sessions:0,prompts:0,lines:0,recent:0};
+			if(tag!=model){
+				model=tag;
+				stats.prompts++;
+				if(stats.recent!=sessionCount){
+					stats.recent=sessionCount;
+					stats.sessions++;
+				}
+			}
+			stats.lines++;
+			models[tag]=stats;
+		}
+
+		const date=slopDate(mark);
+		const line2=date+trim2.substring(s1);
+		result.push(line2);
+	}
+//	Deno.writeTextFile("history/"+name,result.join("\n"));
+	return lineNumber;
+}
+
+const dir=await Deno.readDir("history");
+for await (const file of dir){
+	try{
+		const lines=await Deno.readTextFile("raw/"+file.name);
+		let count=await distill(lines,file.name);
+//		console.log(file.name,lines.length,count);
+	}catch(e){
+		console.log("[DISTILL] error",file.name);
+	}
+}
+
+for (const vendor in vendors) {
+	if(vendors[vendor].maxTime==0) {
+//		console.log("[vendor] removing ",vendor,vendors[vendor]);
+		delete vendors[vendor];
+	}
+}
+
+console.log("nitrologic slop fountain relay distoilling from",slopDate(minDate),"to",slopDate(maxDate));
+console.log({sessionCount,failCount});
+
+console.log({lineCount});
+
+const sortedModels=Object.fromEntries(Object.entries(models).sort((a, b) => b[1].sessions - a[1].sessions));
+//console.log(sortedModels);
+
+

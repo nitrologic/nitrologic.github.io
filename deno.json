@@ -3,6 +3,7 @@
 		"@std/datetime": "jsr:@std/datetime@^0.225.0"			
 	},
  	"tasks":{
-		"refine": "deno run --allow-write --allow-read refine.ts"
+		"refine": "deno run --allow-write --allow-read refine.ts",
+		"distill": "deno run --allow-write --allow-read distill.ts"
 	}   
 }
