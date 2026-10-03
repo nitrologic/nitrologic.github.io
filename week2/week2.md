@@ -34,7 +34,7 @@ luxury porn side hussle
 
 dusting off the onnx yolo install for some more aerial research
 
-<a href="yolokimi.png"><img src="https://nitrologic.github.io/week2/yolokimi.png" width="66%"/></a>
+<a href="../yolokimi.png"><img src="https://nitrologic.github.io/week2/yolokimi.png" width="66%"/></a>
 
 ---
 
