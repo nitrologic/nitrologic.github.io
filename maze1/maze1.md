@@ -106,5 +106,5 @@ bravoelgar.png
 ## next 
 
 * [duck](../duck/duck.md)
-
 * [bridge](../bridge/bridge.md)
+* [week2](../week2/week2.md)

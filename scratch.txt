@@ -1,3 +1,11 @@
+## scratch
+
+> img src="https://nitrologic.github.io/week2/crack.png" width="66%"
+> img src="https://nitrologic.github.io/week2/asphyx.png" width="66%"
+
+## next 
+
+
 <video controls width="1048" height="454">
 <source src="media/shortbump.mp4" type="video/mp4" />
 </video>

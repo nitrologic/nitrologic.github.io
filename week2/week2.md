@@ -1,6 +1,6 @@
 # week 2 - yet another week on arch
 
-> be aware - this log is most recent at top
+> week 1 of October 2026
 
 A collection of screenshots from Simon's Arch Linux server / daily driver
 
@@ -20,7 +20,7 @@ sharing your source with a discord chatbot - column quick hack
 
 hi grok bot, what should we do next? - elon and trump
 
-<img src="https://nitrologic.github.io/week2/grokgov.png" width="66%"/>
+<img src="https://nitrologic.github.io/week2/grokgov.png" width="44%"/>
 
 ---
 
@@ -111,53 +111,71 @@ so broken - sting
 
 ---
 
-<img src="https://nitrologic.github.io/week2/morningslop.png" width="66%"/>
+panda diplomacy with AI sprinkles discussion
+
+<img src="https://nitrologic.github.io/week2/morningslop.png" width="92%"/>
 
 ---
 
-<img src="https://nitrologic.github.io/week2/withlove.png" width="66%"/>
+prompted with 
+
+<img src="https://nitrologic.github.io/week2/verbose.png" width="22%"/>
+
+kimi discord bot reacts with typical enthusiasm
+
+<img src="https://nitrologic.github.io/week2/withlove.png" width="44%"/>
 
 ---
 
-<img src="https://nitrologic.github.io/week2/verbose.png" width="66%"/>
-
----
+an entire minute raging at my old man eyesight failing to detect the thin blue line
 
 <img src="https://nitrologic.github.io/week2/letmeknow.png" width="66%"/>
 
 ---
 
-<img src="https://nitrologic.github.io/week2/asphyx.png" width="66%"/>
-
----
+the frontier of the day
 
 <img src="https://nitrologic.github.io/week2/frontiertoday.png" width="66%"/>
 
 ---
 
+deepseek going at it with tables, and seems to get the gist of my rather larger project from the past
+
 <img src="https://nitrologic.github.io/week2/deepseek.png" width="66%"/>
 
 ---
+
+strhanger dhanger
 
 <img src="https://nitrologic.github.io/week2/strangerderanger.png" width="66%"/>
 
 ---
 
+faster jim
+
 <img src="https://nitrologic.github.io/week2/fasterjim.png" width="66%"/>
 
 ---
 
-<img src="https://nitrologic.github.io/week2/mabugs.png" width="66%"/>
+ma bugs
+
+<img src="https://nitrologic.github.io/week2/mabugs.png" width="22%"/>
 
 ---
 
-<img src="https://nitrologic.github.io/week2/badwinding.png" width="66%"/>
+bugs fixed 1
+
+<img src="https://nitrologic.github.io/week2/badwinding.png" width="22%"/>
 
 ---
 
-<img src="https://nitrologic.github.io/week2/bugfixed.png" width="66%"/>
+bugs fixed 2
+
+<img src="https://nitrologic.github.io/week2/bugfixed.png" width="22%"/>
 
 ---
+
+local fish of the day poster
 
 <img src="https://nitrologic.github.io/week2/kaimoana.png" width="66%"/>
 
@@ -176,9 +194,7 @@ yes I am a kind person
 * [crazed](../craze/craze.md)
 * [crazed](../crazed/crazed.md)
 * [crazed2](../crazed/crazed2/crazed2.md)
+* [duck](../duck/duck.md)
+* [bridge](../bridge/bridge.md)
 * [maze1](../maze1/maze1.md)
 
-
-## scratch
-
-> img src="https://nitrologic.github.io/week2/crack.png" width="66%"/
