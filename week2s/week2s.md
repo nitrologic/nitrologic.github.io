@@ -14,6 +14,9 @@ umm ok, thats kind of childish, and yet, given creep stallman arch could do bett
 
 fix me!
 
+* north south seam in DEM data in Auckland maps
+* fails in wall and rooftop geometry
+
 <a href="../fixme.png"><img src="https://nitrologic.github.io/week2s/fixme.png" width="66%"/></a>
 
 ---
