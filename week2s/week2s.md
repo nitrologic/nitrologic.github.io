@@ -90,12 +90,14 @@ retro grade de-orbit burn, light 1 engine for 6 seconds, check
 
 --
 
+## the thick blue limb - life on earth
+
 replay that
 
 <a href="../replay.png"><img src="https://nitrologic.github.io/week2s/replay.png" width="66%"/></a>
 ---
 
-## its a wash
+## atom heart mother - single rip
 
 to celebrate listening to pink floyd courtesy spinning rust
 
