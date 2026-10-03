@@ -1,7 +1,11 @@
 # week2s
 
+> single man in search of the mythical clit
+
 ----
 umm ok, thats kind of childish, and yet, given creep stallman arch could do better
+
+> that would make baby Jesus what now?
 
 <a href="../clit2.png"><img src="https://nitrologic.github.io/week2s/clit2.png" width="66%"/></a>
 
