@@ -1,3 +1,8 @@
+const recent:number=Date.now()-dayMillis*32;
+
+
+
+
 ## scratch
 
 > img src="https://nitrologic.github.io/week2/crack.png" width="66%"

@@ -11,8 +11,6 @@ import { format } from "@std/datetime";
 const dayMillis=24*60*60*1000;
 const epoch:number=Date.UTC(2025,4,12);
 
-const recent:number=Date.now()-dayMillis*32;
-
 function slopmark():string{
 	return Math.floor((Date.now()-epoch)/62.5).toString(16);
 }
@@ -107,10 +105,6 @@ async function reduce(text:string,name:string):Promise<number>{
 		const trim2=hashed?trim.slice(0,s2+1)+trim.slice(s2+2):trim;
 		const mark=parseInt(trim2.substring(0,s1),16);
 		const millis=1e3*slopSeconds(mark);
-
-		if(millis<recent){
-//			continue;
-		}
 
 		const tag=trim.substring(s1+1,s2);
 		const s3=trim.indexOf("[roha] [FORGE]");
