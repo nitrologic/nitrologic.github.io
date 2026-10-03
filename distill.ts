@@ -9,7 +9,7 @@ import { format } from "@std/datetime";
 const dayMillis=24*60*60*1000;
 const epoch:number=Date.UTC(2025,4,12);
 
-const recent:number=Date.now()-dayMillis*320;
+const recent:number=Date.now()-dayMillis*72;
 
 function slopmark():string{
 	return Math.floor((Date.now()-epoch)/62.5).toString(16);
@@ -89,7 +89,6 @@ async function distill(text:string,name:string):Promise<number>{
 	const result=new Array<string>();  
 	const lines=text.split("\n");
 	for(const line of lines){
-		lineCount++;
         lineNumber++;
 		const trim=line.trim();
 		if(trim.length==0){
@@ -112,6 +111,8 @@ async function distill(text:string,name:string):Promise<number>{
 		if(millis<recent){
 			continue;
 		}
+
+		lineCount++;
 
 		const tag=trim.substring(s1+1,s2);
 		const s3=trim.indexOf("[roha] [FORGE]");
@@ -183,6 +184,7 @@ console.log({sessionCount,failCount});
 console.log({lineCount});
 
 const sortedModels=Object.fromEntries(Object.entries(models).sort((a, b) => b[1].sessions - a[1].sessions));
-//console.log(sortedModels);
+
+console.log(sortedModels);
 
 
