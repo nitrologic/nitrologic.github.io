@@ -1,4 +1,4 @@
-# week2s
+# week2s - most recent at top
 
 > single man in search of the mythical clit
 
@@ -118,6 +118,10 @@ aerial
 ---
 
 musicians get what?
+
+or am i paying the gatekeepers
+
+are YOU paying the gatekeepers?
 
 <a href="../musiciansgetwhat.png"><img src="https://nitrologic.github.io/week2s/musiciansgetwhat.png" width="66%"/></a>
 
