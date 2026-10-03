@@ -10,13 +10,13 @@ A collection of screenshots from Simon's Arch Linux server / daily driver
 
 full spectrum nostalgia maxing
 
-<a href="nostalgiamaxing.png"><img src="https://nitrologic.github.io/week2/nostalgiamaxing.png" width="66%"/></a>
+<a href="../nostalgiamaxing.png"><img src="https://nitrologic.github.io/week2/nostalgiamaxing.png" width="66%"/></a>
 
 ---
 
 sharing your source with a discord chatbot - column quick hack
 
-<a href="relaycols.png"><img src="https://nitrologic.github.io/week2/relaycols.png" width="66%"/></a>
+<a href="../relaycols.png"><img src="https://nitrologic.github.io/week2/relaycols.png" width="66%"/></a>
 
 ---
 
@@ -34,13 +34,13 @@ luxury porn side hussle
 
 dusting off the onnx yolo install for some more aerial research
 
-<a href=""><img src="https://nitrologic.github.io/week2/yolokimi.png" width="66%"/></a>
+<a href="yolokimi.png"><img src="https://nitrologic.github.io/week2/yolokimi.png" width="66%"/></a>
 
 ---
 
 task for yolo is obb, oriented bounding boxes are us
 
-<a href=""><img src="https://nitrologic.github.io/week2/yolo1.png" width="66%"/></a>
+<a href="../yolo1.png"><img src="https://nitrologic.github.io/week2/yolo1.png" width="66%"/></a>
 
 ---
 
@@ -67,7 +67,7 @@ cmus jukebox music collection, served from spinning rust
 
 the blue, the sky in the water in the sky blue
 
-<a href=""><img src="https://nitrologic.github.io/week2/city.png" width="66%"/></a>
+<a href="../city.png"><img src="https://nitrologic.github.io/week2/city.png" width="66%"/></a>
 
 ---
 
@@ -151,13 +151,13 @@ strhanger dhanger
 
 bad jelly 1
 
-<a href="strangerderanger.png"><img src="https://nitrologic.github.io/week2/strangerderanger.png" width="66%"/></a>
+<a href="../strangerderanger.png"><img src="https://nitrologic.github.io/week2/strangerderanger.png" width="66%"/></a>
 
 ---
 
 faster jim
 
-<a href="fasterjim.png"><img src="https://nitrologic.github.io/week2/fasterjim.png" width="66%"/></a>
+<a href="../fasterjim.png"><img src="https://nitrologic.github.io/week2/fasterjim.png" width="66%"/></a>
 
 ---
 
