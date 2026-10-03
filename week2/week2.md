@@ -10,13 +10,13 @@ A collection of screenshots from Simon's Arch Linux server / daily driver
 
 full spectrum nostalgia maxing
 
-<a href="../nostalgiamaxing.png"><img src="https://nitrologic.github.io/week2/nostalgiamaxing.png" width="66%"/></a>
+<a href="../nostalgiamaxing.png"><img src="https://nitrologic.github.io/week2/nostalgiamaxing.png" width="82%"/></a>
 
 ---
 
-sharing your source with a discord chatbot - column quick hack
+sharing your source with a discord chatbot - column quick hack not so much
 
-<a href="../relaycols.png"><img src="https://nitrologic.github.io/week2/relaycols.png" width="66%"/></a>
+<a href="../relaycols.png"><img src="https://nitrologic.github.io/week2/relaycols.png" width="44%"/></a>
 
 ---
 
@@ -73,9 +73,9 @@ the blue, the sky in the water in the sky blue
 
 circuit racing, with the oval turned into a parking lot
 
-the real action becomes the surrounding strets
+the real action becomes the surrounding streets
 
-chinaman hill at one end, that mean gradient next to the zoo at the other
+chinaman hill at one end, that mean gradient next to the zoo at the other...
 
 <a href="#"><img src="https://nitrologic.github.io/week2/breaking.png" width="66%"/></a>
 
@@ -143,7 +143,7 @@ the frontier of the day
 
 deepseek going at it with tables, and seems to get the gist of my rather larger project from the past
 
-<a href="#"><img src="https://nitrologic.github.io/week2/deepseek.png" width="66%"/></a>
+<a href=../deepseek.png"><img src="https://nitrologic.github.io/week2/deepseek.png" width="66%"/></a>
 
 ---
 
@@ -187,7 +187,7 @@ local fish of the day poster
 
 yes I am a kind person
 
-<a href="#"><img src="https://nitrologic.github.io/week2/yesiamkind.png" width="66%"/></a>
+<a href="../yesiamkind.png"><img src="https://nitrologic.github.io/week2/yesiamkind.png" width="66%"/></a>
 
 ## previously
 
