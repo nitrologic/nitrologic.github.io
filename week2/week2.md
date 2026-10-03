@@ -36,44 +36,76 @@ dusting off the onnx yolo install for some more aerial research
 
 ---
 
-TBC
+task for yolo is obb, oriented bounding boxes are us
 
 <img src="https://nitrologic.github.io/week2/yolo1.png" width="66%"/>
 
 ---
 
+mitac navman patent memories
+
+shadow angle first pass, remove shadows second pass
 
 <img src="https://nitrologic.github.io/week2/navmanpatent.png" width="66%"/>
 
 ---
 
+scooting about google gmaps and spotting some superb wakemarks
+
+
 <img src="https://nitrologic.github.io/week2/gmaps.png" width="66%"/>
 
 ---
+
+cmus jukebox music collection, served from spinning rust
 
 <img src="https://nitrologic.github.io/week2/eclectic.png" width="66%"/>
 
 ---
 
+the blue, the sky in the water in the sky blue
+
 <img src="https://nitrologic.github.io/week2/city.png" width="66%"/>
 
 ---
+
+circuit racing, with the oval turned into a parking lot
+
+the real action becomes the surrounding strets
+
+chinaman hill at one end, that mean gradient next to the zoo at the other
 
 <img src="https://nitrologic.github.io/week2/breaking.png" width="66%"/>
 
 ---
 
+oi buddy indeed, acrid slashdot aroma in my feedback, what gives universe?
+
 <img src="https://nitrologic.github.io/week2/oibuddy.png" width="66%"/>
 
 ---
+
+concept art for what ever I am vibe coding come christams
 
 <img src="https://nitrologic.github.io/week2/mistrals.png" width="66%"/>
 
 ---
 
+all copper not to be trusted on my desk,
+
+beware transients +3V +6V and beyond on ALL analog cables
+
+* video
+* audio
+* power
+
+play it safe with spdif optical connection to entertainment
+
 <img src="https://nitrologic.github.io/week2/spdif.png" width="66%"/>
 
 ---
+
+so broken - sting
 
 <img src="https://nitrologic.github.io/week2/sobroken.png" width="66%"/>
 
@@ -130,6 +162,8 @@ TBC
 <img src="https://nitrologic.github.io/week2/kaimoana.png" width="66%"/>
 
 ---
+
+yes I am a kind person
 
 <img src="https://nitrologic.github.io/week2/yesiamkind.png" width="66%"/>
 
