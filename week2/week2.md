@@ -4,6 +4,8 @@
 
 A collection of screenshots from Simon's Arch Linux server / daily driver
 
+> stay awake, the exciting wakemarks are half way down - alice
+
 # latest batch
 
 full spectrum nostalgia maxing
