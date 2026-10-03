@@ -202,3 +202,6 @@ yes I am a kind person
 * [bridge](../bridge/bridge.md)
 * [maze1](../maze1/maze1.md)
 
+## next
+
+* [week2s](../week2s/week2s.md)
