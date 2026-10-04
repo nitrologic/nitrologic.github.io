@@ -7430,15 +7430,6 @@
 2026-09-20 10:37:24 [claude-sonnet-5] the edit button... typed some stuff") reads like a manual test/demo rather than malicious activity,
 2026-09-20 10:37:24 [claude-sonnet-5] but flagging it since it's a write operation into shared state.
 2026-09-20 10:37:24 [claude-sonnet-5] 
-2026-09-20 10:37:24 [claude-sonnet-5] `valkeys1.txt` — This One Needs a Flag ⚠️
-2026-09-20 10:37:24 [claude-sonnet-5] 
-2026-09-20 10:37:24 [claude-sonnet-5] This file contains live-looking session tokens in plaintext:
-2026-09-20 10:37:24 [claude-sonnet-5] 
-2026-09-20 10:37:24 [claude-sonnet-5] 
-2026-09-20 10:37:24 [claude-sonnet-5] {"connection":"headless.h[641]","ticks":t...,"token":"xvOjDbmWx8Pl...=="}
-2026-09-20 10:37:24 [claude-sonnet-5] 
-2026-09-20 10:37:24 [claude-sonnet-5] 
-2026-09-20 10:37:24 [claude-sonnet-5] A few things worth raising:
 2026-09-20 10:37:24 [claude-sonnet-5] 
 2026-09-20 10:37:24 [claude-sonnet-5] 1. These look like auth/session tokens, not just IDs. If they're used for anything beyond
 2026-09-20 10:37:24 [claude-sonnet-5] internal diagnostics (auth headers, API keys, session resumption), having 200+ of them sitting in a
