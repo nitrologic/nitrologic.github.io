@@ -54,9 +54,9 @@ diamonds in the light of spent jet fuel
 
 ---
 
-man with track, needs in invite his mates over
+man with track, ready to invite his mates over
 
-<a href="../manwithtrack.png"><img src="https://nitrologic.github.io/week2m/manwithtrack.png" width="82%"/></a>
+<a href="../manwithtrack.png"><img src="https://nitrologic.github.io/week2m/manwithtrack.png" width="32%"/></a>
 
 ---
 
@@ -66,37 +66,37 @@ CDN news is maybe my new horizon, leaderboards for days
 
 --
 
-ma blog ma blog. often post slop, sometimes pre slop
+## ma blog ma blog. often post slop, sometimes pre slop
 
-<a href="../mablog.png"><img src="https://nitrologic.github.io/week2m/mablog.png" width="82%"/></a>
+<a href="../mablog.png"><img src="https://nitrologic.github.io/week2m/mablog.png" width="12%"/></a>
 
 --
 
-single user
+## single user avoid the click
 
-<a href="../singleuser.png"><img src="https://nitrologic.github.io/week2m/singleuser.png" width="82%"/></a>
-
+<a href="../singleuser.png"><img src="https://nitrologic.github.io/week2m/singleuser.png" width="32%"/></a>
 
 -- 
 
-doors
+## doors - jim morrison - patron saint of previous life
 
 <a href="../doors.png"><img src="https://nitrologic.github.io/week2m/doors.png" width="82%"/></a>
 
 ---
-so i decided to take the work underground
+
+## so i decided to take the work underground
 
 <a href="../sodecidedtotakeworkbackundergound.png"><img src="https://nitrologic.github.io/week2m/sodecidedtotakeworkbackundergound.png" width="82%"/></a>
 
 ---
 
-clankers
+## clankers all the way down
 
 <a href="../clankers.png"><img src="https://nitrologic.github.io/week2m/clankers.png" width="82%"/></a>
 
 ---
 
-yet another log
+## yet another log
 
 the bee emoji denote the honeypot resting their results with various timeouts
 
@@ -113,10 +113,6 @@ fee fi fo fumb,
 who's that flooding my journal with pointless security / manhood investigations?
 
 <a href="../whois.png"><img src="https://nitrologic.github.io/week2m/whois.png" width="82%"/></a>
-
-## watcha name
-
-<a href="../clit3.png"><img src="https://nitrologic.github.io/week2m/clit3.png" width="82%"/></a>
 
 ## previously
 
