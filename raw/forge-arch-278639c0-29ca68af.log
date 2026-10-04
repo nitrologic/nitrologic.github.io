@@ -9188,10 +9188,6 @@
 28dd4a4e [claude-sonnet-5] #`valkeys1.txt` — This One Needs a Flag ⚠️
 28dd4a4e [claude-sonnet-5] #
 28dd4a4e [claude-sonnet-5] #This file contains live-looking session tokens in plaintext:
-28dd4a4e [claude-sonnet-5] #
-28dd4a4e [claude-sonnet-5] #
-28dd4a4f [claude-sonnet-5] #{"connection":"headless.h[641]","ticks":t...,"token":"xvOjDbmWx8Pl...=="}
-28dd4a4f [claude-sonnet-5] #
 28dd4a4f [claude-sonnet-5] #
 28dd4a4f [claude-sonnet-5] #A few things worth raising:
 28dd4a4f [claude-sonnet-5] #

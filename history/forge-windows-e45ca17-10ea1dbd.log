@@ -15999,11 +15999,6 @@
 2025-11-25 12:22:30 [nitro@ryzen5] Task sloppyredis deno run --allow-net sloppyredis.ts
 2025-11-25 12:22:30 [nitro@ryzen5] sloppyredis 0.1
 2025-11-25 12:22:30 [nitro@ryzen5] banner Hello pi5m2 banner here.
-2025-11-25 12:22:30 [nitro@ryzen5] connection 233 [
-2025-11-25 12:22:30 [nitro@ryzen5]   '{"connection":"stereo.h[122]","ticks":t3489604522000,"token":"zVaxML3iccvXp98dw4rvS9FLUnhHhvgD+L5fVX,NUF3P3le2G9v,ZaZGTuuMgMld8aKLVhZGxy0w1gvhlqdIPQ=="}',
-2025-11-25 12:22:30 [nitro@ryzen5]   '{"connection":"stereo.h[122]","ticks":t7256542252000,"token":"xvOjDbmWx8PlIwlXYqbv,CKSy8A5kcuYH0VVl5Nh8gqKGbYCb0YUlIes3,wU7npoen4KxiZwydrd4rE5gPat0w=="}',
-2025-11-25 12:22:30 [nitro@ryzen5]   '{"connection":"stereo.h[122]","ticks":t44966258299000,"token":"HmHfsUf1hraZL8sDeNMhoZvDel29y6VimzMc20odlgQgZQE06L2kEmUMid7uottXI7,wkDAYJCzu3r80PbPf0A=="}'
-2025-11-25 12:22:30 [nitro@ryzen5] ]
 2025-11-25 12:22:30 [nitro@ryzen5] session 98 [
 2025-11-25 12:22:30 [nitro@ryzen5]   '{"src":"stereo.h __line__","id":"2cad0a2911ca8db2","host":"pi5m2","user":"skid","timestamp":m1729112849000,"ticks":t64535643730231000}',
 2025-11-25 12:22:30 [nitro@ryzen5]   '{"src":"stereo.h __line__","id":"2cad0a2911ca8db2","host":"pi5m2","user":"skid","timestamp":m1729195654000,"ticks":t147340319318436000}',
