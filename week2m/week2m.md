@@ -9,11 +9,11 @@ rules of engagement
 
 ---
 
-<a href="../feedtessel.png"><img src="https://nitrologic.github.io/week2/feedtessel.png" width="82%"/></a>
+<a href="../feedtessel.png"><img src="https://nitrologic.github.io/week2m/feedtessel.png" width="82%"/></a>
 
 ---
 tbc
-<a href="../todaysdj.png.png"><img src="https://nitrologic.github.io/week2m/todaysdj.png.png" width="82%"/></a>
+<a href="../todaysdj.png"><img src="https://nitrologic.github.io/week2m/todaysdj.png" width="82%"/></a>
 
 ---
 
