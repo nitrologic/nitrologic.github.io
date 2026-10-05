@@ -126,4 +126,5 @@ who's that flooding my journal with pointless security / manhood investigations?
 * [duck](../duck/duck.md)
 * [bridge](../bridge/bridge.md)
 * [maze1](../maze1/maze1.md)
+* [week2](../week2/week2.md)
 * [week2s](../week2s/week2s.md)

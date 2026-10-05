@@ -143,3 +143,7 @@ are YOU paying the gatekeepers?
 * [bridge](../bridge/bridge.md)
 * [maze1](../maze1/maze1.md)
 * [week2](../week2s/week2.md)
+
+## next
+
+* [week2m](../week2m/week2m.md)
